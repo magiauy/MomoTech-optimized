@@ -12,9 +12,6 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 public class Items {
-    interface string {
-        String str();
-    }
     public static String c(String s, String... s1) {
         StringBuilder ans = new StringBuilder();
         for (int x1 = 0; x1 < s1.length; x1++) {
@@ -49,9 +46,10 @@ public class Items {
         }
         return sb.toString();
     }
+
     public static final ItemStack QUANTITY_ITEM = new CustomItemStack(Material.PURPLE_DYE, c("量化插件", "748d8d", "858c9b", "978ca9", "a88bb8"), "&6一个材料而已");
     public static final ItemStack FROG_LIGHT_GENERATOR = new CustomItemStack(Material.OCHRE_FROGLIGHT, "&e蛙鸣灯生成器", "&7随机生成一种蛙鸣灯", "&7效率:4x");
-    public static final ItemStack STONE_GENERATOR = new CustomItemStack(Material.STONE, "&e石质&f生成器", "&7自动化生产三废石/圆石/深板岩圆石", "&7效率:8x");
+    public static final ItemStack STONE_GENERATOR = new CustomItemStack(Material.STONE, "&eStone &fGenerator", "&7Automatically generates Granite/Andesite/Diorite/Cobblestone", "&7Efficiency: 8x");
     public static final ItemStack ORE_GENERATOR = new CustomItemStack(Material.DIAMOND_ORE, "&e原矿&f生成器", "&7自动化生产各种原矿", "&7效率:1x");
     public static final ItemStack SAND_GENERATOR = new CustomItemStack(Material.SANDSTONE, "&e沙质&f生成器", "&7自动化红沙/沙子/砂砾/灵魂沙", "&7效率:8x");
     public static final ItemStack STONE_GENERATOR_I = new CustomItemStack(Material.COBBLESTONE, "&e定向圆石&f生成器", "&7自动化生产圆石", "&7效率:8x");
@@ -84,7 +82,7 @@ public class Items {
     public static final ItemStack BEE_GENERATOR = new CustomItemStack(Material.BEE_NEST, "&6&l蜜蜂&f生成器", "&7自动化生产各种蜜蜂相关的物品", "&7效率:1x");
     public static final ItemStack SPIDER_EYE_GENERATOR = new CustomItemStack(Material.SPAWNER, "&7&l蜘蛛眼&f生成器", "&7自动化生产蜘蛛眼,或许在至尊中用得上", "&7效率:2x");
     public static final ItemStack MOMOTECH_ORE_COLLECTOR = new CustomItemStack(Material.DEEPSLATE_COAL_ORE, c("§#849985锵§#8baa8c锵§#91bb93~ §#98cd9b自§#9edea2动§#a5efaa化§#aff6ad压§#bbf7ae缩§#c7f9af矿§#d3fab0物!"), "&7随机生成某种叁重压缩矿物");
-    public static final ItemStack MOMOTECH_EMPTY_SHELL = new CustomItemStack(Material.STRUCTURE_VOID, "§7空", "&f我真的不理解为什么这玩意是重要材料!", "§f§lNULL");
+    public static final ItemStack MOMOTECH_EMPTY_SHELL = new CustomItemStack(Material.STRUCTURE_VOID, "§7Null", MomoTech.languageManager.getItemLore("emptyShell"));
     public static final ItemStack MOMOTECH_SYMBOL_ADDITION = new CustomItemStack(Material.BLAZE_POWDER, "§a符号 +", "§f+");
     public static final ItemStack MOMOTECH_SYMBOL_SUBTRACTION = new CustomItemStack(Material.BLAZE_POWDER, "§a符号 -", "§f-");
     public static final ItemStack MOMOTECH_SYMBOL_MULTIPLICATION = new CustomItemStack(Material.BLAZE_POWDER, "§a符号 x", "§f*");
@@ -121,7 +119,9 @@ public class Items {
     public static final ItemStack ELSE_3 = new CustomItemStack(Material.PAPER, "&f特性:Bug - 日期", "&7如果你的计算器计算结果等于日期并且没有输出Bug - 日期, 或许你可以试试再给那个数字组件+0");
     public static final ItemStack FULL = new CustomItemStack(new ItemStack(Material.EGG), c("§#35c684饱§#2fc670和§#29c65c护§#24c648符"), "&b总是饿?前期做不起别的?用我!", "&b右键后消耗并立马获得饱和效果");
     public static final ItemStack DAMAGE_ITEM = new CustomItemStack(new ItemStack(Material.CHAIN_COMMAND_BLOCK), c("§#29c73a奇§#44ca39怪§#5fce38的§#7ad137东§#94d436西§#afd736（§#cadb35?"), "&6&l一击必杀!直接抹除!");
+
     public static final ItemStack[][] Mineral = new ItemStack[9][5];
+
     public static final ItemStack STONE_SWORD = new CustomItemStack(Material.DIAMOND_SWORD, "&7&l勝利誓約之劍", "&8石中剑...", "&8可以造成巨量伤害", "&8伤害+999999999999.99");
     public static final ItemStack FINAL_C_ = new CustomItemStack(Material.COBBLESTONE, c("§#e5de345§#c7df3d0§#a8df47重§#8ae050压§#6be15a缩§#4de163原§#2fe26c石§#10e376生§#10db7b成§#1ecf7d器"), "&7&l正确的, 你没听错", "&f谁知道呢 或许有点用处呢", "&7效率:8x");
     public static final ItemStack PROTECT_ITEM = new CustomItemStack(new ItemStack(Material.TURTLE_HELMET), c("§#2dc380原§#3bb883谅§#49ac85帽"), "&a戴在头上免疫实体攻击!", "&8不包括燃烧摔落等", "&7别问为啥是绿的");
@@ -261,7 +261,7 @@ public class Items {
     public static final ItemStack MOMOTECH_SALT_GENERATOR = new CustomItemStack(Material.WHITE_STAINED_GLASS, c("§#1cc9c9盐§#68b5c8矿§#b3a1c6井"));
     public static final ItemStack MOMOTECH_INGOT_CONSTRUCTOR = new CustomItemStack(Material.CRACKED_POLISHED_BLACKSTONE_BRICKS, c("§#ff8dc5合§#f2a0d6金§#e6b3e6生§#d9c6f7成§#b1a0d8器"), "&7效率:32x");
     public static final ItemStack MOMOTECH_METAL_STAR = new CustomItemStack(Material.GOLD_BLOCK, "&6&l金属因子", "&7在合金生成器内使用");
-    public static final ItemStack MOMOTECH_SAND_CHANGER = new CustomItemStack(Material.RED_SANDSTONE, c("§#8a79ba光§#62539b速§#8a8bba打§#b3c4da磨§#dbfcf9器"), "&7效率:INFINITY");
+   // public static final ItemStack MOMOTECH_SAND_CHANGER = new CustomItemStack(Material.RED_SANDSTONE, c("§#8a79ba光§#62539b速§#8a8bba打§#b3c4da磨§#dbfcf9器"), "&7效率:INFINITY");
     public static final ItemStack MOMOTECH_FINAL_ENERGY_GENERATOR = new CustomItemStack(Material.REDSTONE_LAMP, c("§#55ff55宇§#55ff6e宙§#55ff87超§#55ffa1级§#55ffba无§#55ffd3敌§#55ffec神§#5bfcf6秘§#74efd0史§#8ee3aa诗§#a7d684永§#c0c95e恒§#d9bd39无§#f2b013限§#ffa90c充§#ffa824能§#ffa73c循§#ffa654环§#ffa56c过§#ffa384载§#ffa29c能§#f7ac9f量§#ecb99b生§#e0c797成§#d5d494单§#cae190元§#bfef8cζ§#b4fc88型"), c("§#ffaa00§o无§#fca634§o穷§#f8a169§o无§#f59d9d§o尽§#f7bdac§o的§#fadcbb§o宇§#fcfcca§o宙§#d9ec92§o能§#b6db5b§o量§#93cb23§o…"), "§8⇨ §e⚡ &7999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999^0 J/t");
     public static final ItemStack MOMOTECH_SPECIAL_THINGS_CONSTRUCTOR = new CustomItemStack(Material.GLASS, "&f特制压缩机", "§8⇨ §e⚡ &7200 J/t");
     public static final ItemGroup MOMOTECH_ITEM;

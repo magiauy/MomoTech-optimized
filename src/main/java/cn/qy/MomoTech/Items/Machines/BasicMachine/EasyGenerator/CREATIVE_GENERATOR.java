@@ -2,6 +2,7 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.EasyGenerator;
 
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Maths;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -23,7 +24,7 @@ public class CREATIVE_GENERATOR extends AbstractElectricGUI implements RecipeDis
     @Override
     public @NotNull List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
-        it.add(new CustomItemStack(Material.BOOK, "&f每 1tick 生成 1 产物"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("creative_generator")));
         it.add(MomotechItem.creative_item.clone());
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         it.add(MomotechItem.creative_item_I.clone());

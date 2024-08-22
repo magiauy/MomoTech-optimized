@@ -2,6 +2,7 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Maths;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -97,9 +98,9 @@ public class RuleShineAndDarkConstructor extends AbstractElectricGUI implements 
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(18);
-        it.add(new CustomItemStack(Material.NETHERITE_PICKAXE, "&f需要输入下届合金镐", "&7机器高度<0时有50%概率出现"));
+        it.add(new CustomItemStack(Material.NETHERITE_PICKAXE, MomoTech.languageManager.getRecipeDescription("netherite_pickaxe_requirement"), MomoTech.languageManager.getRecipeDescription("rule_shine_and_dark_constructor_1")));
         it.add(MomotechItem.dark.clone());
-        it.add(new CustomItemStack(Material.NETHERITE_PICKAXE, "&f需要输入下届合金镐", "&7机器高度>256时有50%出现"));
+        it.add(new CustomItemStack(Material.NETHERITE_PICKAXE, MomoTech.languageManager.getRecipeDescription("netherite_pickaxe_requirement"), MomoTech.languageManager.getRecipeDescription("rule_shine_and_dark_constructor_2")));
         it.add(MomotechItem.shine.clone());
         return it;
     }

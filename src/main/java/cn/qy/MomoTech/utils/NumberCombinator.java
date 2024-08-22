@@ -16,7 +16,7 @@ public class NumberCombinator {
             throws Exceptions.NumberBugIException,
             Exceptions.NumberBugIIException, Exceptions.NumberBugIIIException,
             Exceptions.NumberBugIVException, Exceptions.NumberBugVException {
-        MomoTech.init(MomoTech.logger, MomoTech.server);
+        MomoTech.init(MomoTech.server);
         int date = Integer.parseInt(new SimpleDateFormat("yyyyMMdd").format(new Date()));
         int n;
 

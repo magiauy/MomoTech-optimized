@@ -39,15 +39,15 @@ public class ItemRegisterTask {
         ItemStack[] energyQuantum = {quantum_, null, null, null, null, null, null, null, null};
         ItemStack[] digital__ = {
                 digital_constructor, increment, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§l数字组件", "§f可以在 §b数字构造器 §f中获取", "§f可以在 §b基础数字运算机 §f中获取", "§f可以在 §b递增器 §f中获取"), null, null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("digital_component"), "§f可以在 §b数字构造器 §f中获取", "§f可以在 §b基础数字运算机 §f中获取", "§f可以在 §b递增器 §f中获取"), null, null, null, null
         };
         ItemStack[] symbol = {
                 null, symbol_generator, null, null,
-                new CustomItemStack(Material.BOOK, "§e§l符号", "§f可以在 §b符号生成器 §f中获取"), null, null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("symbol"), "§f可以在 §b符号生成器 §f中获取"), null, null, null, null
         };
         ItemStack[] emptyShell = {
                 null, null, null, null,
-                new CustomItemStack(Material.BOOK, "§e§l空", "§f在手持木镐挖方块时候随机掉落"), null, null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("emptyShell"), MomoTech.languageManager.getRecipeDescription("emptyShell_drop")), null, null, null, null
         };
         ItemStack[] bug = {
                 increment, null, ordinary_number_combinator, null,
@@ -67,11 +67,11 @@ public class ItemRegisterTask {
         };
         ItemStack[] bug2 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 日期", "§7在 §f所有计算机器 §7中计算结果等于 §f当前日期的百分之一(如202307.29) §时产生"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.date"), "§7在 §f所有计算机器 §7中计算结果等于 §f当前日期的百分之一(如202307.29) §时产生"), null, null, null
         };
         ItemStack[] bug5 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 系统", "§7在 §f所有计算机器 §7中随机出现", "§7§l其概率与当前在线人数和tps息息相关"), null, null, null
+                new CustomItemStack(Material.BOOK, "§e§lBUG - System", "§7在 §f所有计算机器 §7中随机出现", "§7§l其概率与当前在线人数和tps息息相关"), null, null, null
         };
         ItemStack[] none = {
                 empty_shell, empty_shell, empty_shell,
@@ -138,7 +138,7 @@ public class ItemRegisterTask {
         };
         ItemStack[] letter = {
                 null, letter_constructor, null,
-                null, new CustomItemStack(Material.BOOK, "&e&l符号", "&7在 &b符号集成器 &7中随机出现"), null,
+                null, new CustomItemStack(Material.BOOK, "&e&lSymbol", "&7在 &b符号集成器 &7中随机出现"), null,
                 null, null, null
         };
         ItemStack[] IDCard = {

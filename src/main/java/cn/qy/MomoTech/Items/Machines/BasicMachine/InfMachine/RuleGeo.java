@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Maths;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.geo.GEOResource;
@@ -98,8 +99,8 @@ public class RuleGeo extends AbstractElectricGUI implements RecipeDisplayItem {
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
-        it.add(new CustomItemStack(Material.NETHERITE_PICKAXE, "&f需要输入下届合金镐", "&7每 1tick 挖掘一次自然资源, 无视群系, 无视权重"));
-        it.add(new CustomItemStack(Material.BOOK, "&f任意注册过的地理资源"));
+        it.add(new CustomItemStack(Material.NETHERITE_PICKAXE, MomoTech.languageManager.getRecipeDescription("netherite_pickaxe_requirement"), MomoTech.languageManager.getRecipeDescription("rule_geo_1")));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("rule_geo_2")));
         return it;
     }
 }

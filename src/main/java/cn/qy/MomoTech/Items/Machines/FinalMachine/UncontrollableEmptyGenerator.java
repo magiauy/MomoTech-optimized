@@ -29,7 +29,7 @@ public class UncontrollableEmptyGenerator extends AbstractGUI implements RecipeD
 
     @Override
     public ItemStack getProgressBar() {
-        return new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
+        return super.getProgressBar();
     }
 
 

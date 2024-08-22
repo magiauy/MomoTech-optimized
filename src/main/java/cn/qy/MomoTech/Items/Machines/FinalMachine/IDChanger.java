@@ -18,7 +18,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class IDChanger extends AbstractGUI implements RecipeDisplayItem {
 
@@ -63,7 +62,7 @@ public class IDChanger extends AbstractGUI implements RecipeDisplayItem {
         if (inv.getItemInSlot(7) != null) return;
         if (!SlimefunUtils.isItemSimilar(inv.getItemInSlot(1), MomotechItem.ID_card, false, false)) return;
         String lore = Utils.getLore(inv.getItemInSlot(1).getItemMeta()).get(0).substring(5);
-        if (lore.equals("")) {
+        if (lore.isEmpty()) {
             inv.pushItem(new CustomItemStack(Material.PAPER, "&7不好意思你的输入不合法"), 1);
             return;
         }

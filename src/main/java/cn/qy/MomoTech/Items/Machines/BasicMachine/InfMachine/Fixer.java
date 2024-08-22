@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -69,7 +70,7 @@ public class Fixer extends AbstractGUI implements RecipeDisplayItem {
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
-        it.add(new CustomItemStack(Material.IRON_PICKAXE, "&f修复物品", "&7输入任意有耐久度的物品, 每 1tick 修复1点耐久度"));
+        it.add(new CustomItemStack(Material.IRON_PICKAXE, MomoTech.languageManager.getRecipeDescription("fixer_repair_item"), MomoTech.languageManager.getRecipeDescription("fixer_usage")));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         return it;
     }

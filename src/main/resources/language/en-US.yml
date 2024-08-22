@@ -1,0 +1,59 @@
+item:
+  rule_boots:
+    name: "&7Rule Boots"
+    lore:
+      - ""
+  emptyShell:
+    lore:
+      - "&fI don't understand why this is an important material!"
+      - "§f§lNULL"
+  bug:
+    date:
+      name: "§7§lB§k1§8U§f§l§k一§7G §e- §aDate"
+    system:
+      name: "§7§lB§k1§8U§f§l§k一§7G §e- §aSystem"
+    decimal:
+      name: "§7§lB§k1§8U§f§l§k——§7G §e- §aDecimal"
+    operational_formula:
+      name: "§7§lB§k1§8U§f§l§k——§7G §e- §aOperational Formula"
+    positive_overload:
+      name: "§7§lB§k1§8U§f§l§k——§7G §e- §aPositive Overload"
+    negative_overload:
+      name: "§7§lB§k1§8U§f§l§k——§7G §e- §aNegative Overload"
+  stone_generator:
+    name: "§eStone §fGenerator"
+showing_as_recipe_item:
+  digital_component: "§e§lDigital Component"
+  emptyShell: "§e§lNull"
+  bug:
+    date: "§e§lBUG - Date"
+    system: "§e§lBUG - System"
+    decimal: "§e§lBUG - Decimal"
+    operational_formula: "§e§lBUG - Operational Formula"
+    positive_overload: "§e§lBUG - Positive Overload"
+    negative_overload: "§e§lBUG - Negative Overload"
+  symbol: "&e&lSymbol"
+description:
+  fixer_repair_item: "&fRepair item"
+  fixer_usage: "&7Enter any durable item and restore 1 durability for every 1 tick"
+  pumpkin_carver_1: "&fAutomated pumpkin carving"
+  pumpkin_carver_2: "&7Carving all pumpkins in the input slot every 1 tick"
+  rule_geo_1: "&7Mine geo resources every 1 tick, ignoring biomes and weights"
+  rule_geo_2: "&fAny registered geo resource can be mined"
+  possible_productions: "§fPossible productions"
+  salt_generator: "&fRandomly generate 1-64 amounts of salt per tick"
+  netherite_pickaxe_requirement: "§fMust input netherite pickaxes"
+  shine_and_dark_constructor_1: "&7When the machine block Y is less than 0, there is a 1% probability of producing"
+  shine_and_dark_constructor_2: "&71% produces when the machine block Y is greater than 256"
+  rule_shine_and_dark_constructor_1: "&7When the machine block Y is less than 0, there is a 50% probability of producing"
+  rule_shine_and_dark_constructor_2: "&750% produces when the machine block Y is greater than 256"
+  symbol_obtain: "&fCan be obtained in the &bSymbol generator"
+  supported_saplings: "§fSupported saplings"
+  supported_plants: "§fSupported plants"
+  digital_constructor: "§f&Create digital components"
+  digital_constructor_method: "&7Input 0 to 10 integer digital components with equal probability after 'Null' input"
+  creative_generator: "§fGenerate 1 product for every 1 tick"
+  easy_generator: "§fGenerate the corresponding efficiency product of the machine for every 1 tick"
+  emptyShell_drop: "§fDrops randomly when breaking blocks"
+  rule_dust_generator_1: "§fMust input cobblestones"
+  rule_dust_generator_2: "§7Every 1 tick consumes one stack of cobblestones to generate one stack of products"

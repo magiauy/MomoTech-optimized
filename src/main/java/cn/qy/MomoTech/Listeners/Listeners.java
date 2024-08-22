@@ -4,7 +4,6 @@ import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.Maths;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.core.attributes.DamageableItem;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -16,9 +15,6 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.Damageable;
-import org.bukkit.inventory.meta.ItemMeta;
 
 public final class Listeners implements Listener {
 
@@ -27,9 +23,9 @@ public final class Listeners implements Listener {
         int i = Maths.GetRandom(100);
         Player p = e.getPlayer();
         if (p.getGameMode() == GameMode.CREATIVE) return ;
-        if (p.getInventory().getItemInMainHand().getType() != Material.WOODEN_PICKAXE) return ;
+        //if (p.getInventory().getItemInMainHand().getType() != Material.WOODEN_PICKAXE) return ;
         if (e.getBlock().getType() == Material.TORCH) return ;
-        if (i <= 3) {
+        if (i <= 3) { //4%
             World w = e.getBlock().getWorld();
             Location l = e.getBlock().getLocation();
             w.dropItem(l, MomotechItem.empty_shell.clone());

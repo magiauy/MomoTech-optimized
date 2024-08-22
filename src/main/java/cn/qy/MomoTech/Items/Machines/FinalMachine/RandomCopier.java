@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -36,8 +37,9 @@ public class RandomCopier extends AbstractGUI implements RecipeDisplayItem {
             public void onBlockBreak(@NotNull Block b) {
                 BlockMenu inv = BlockStorage.getInventory(b);
                 if (inv != null) {
+                    List<Integer> emptySlots = Arrays.stream(EMPTY()).boxed().toList();
                     for (int i = 0; i <= 53; ++i) {
-                        if (i == 51 || i == 53 || i == 36 || i == 37 || i == 38 || i == 39 || i == 40 || i == 41 || i == 42 || i == 43 || i == 44 || i == 45 || i == 47 || i == 48 || i == 49 || i == 50) {
+                        if (emptySlots.contains(i)) {
                             continue;
                         }
                         if (inv.getItemInSlot(i) != null) {

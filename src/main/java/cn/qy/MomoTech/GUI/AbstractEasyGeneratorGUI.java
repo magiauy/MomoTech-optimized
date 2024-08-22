@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.GUI;
 
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -21,7 +22,7 @@ public abstract class AbstractEasyGeneratorGUI extends AbstractGUI implements Re
     @Override
     public @NotNull List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
-        it.add(new CustomItemStack(Material.BOOK, "§f每 1tick 生成 效率 个对应产物"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("easy_generator")));
         return it;
     }
 

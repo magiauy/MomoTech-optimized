@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Maths;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -83,7 +84,7 @@ public class RuleMineralGenerator extends AbstractElectricGUI implements RecipeD
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(30);
         for (Material i : this.m) {
-            it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, "&f可能的产物"));
+            it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, MomoTech.languageManager.getRecipeDescription("possible_productions")));
             it.add(new ItemStack(i, 64));
         }
         return it;
