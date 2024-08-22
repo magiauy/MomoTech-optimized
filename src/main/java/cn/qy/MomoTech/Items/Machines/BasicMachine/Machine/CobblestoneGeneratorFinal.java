@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -63,7 +64,7 @@ public class CobblestoneGeneratorFinal extends AbstractGUI implements RecipeDisp
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
-        it.add(new CustomItemStack(Material.BOOK, "&f每 1tick 生成一次", "&7每次48组圆石"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("generate_once_every_1_tick"), MomoTech.languageManager.getRecipeDescription("final_cobblestone_generator_1")));
         it.add(new ItemStack(Material.COBBLESTONE));
         return it;
     }

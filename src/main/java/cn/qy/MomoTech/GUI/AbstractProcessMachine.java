@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.GUI;
 
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
@@ -159,7 +160,7 @@ public abstract class AbstractProcessMachine extends SlimefunItem implements Inv
         ItemStack it = blockMenu.getItemInSlot(getProcessBarSlots());
         String str = Objects.requireNonNull(it.getLore()).get(0);
         int now = Integer.parseInt(str.substring(str.indexOf('f') + 1, str.indexOf('/'))) + k;
-        blockMenu.toInventory().setItem(getProcessBarSlots(), new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "§a进度", "&f" + now + "/" + getMaxProcess(blockMenu)));
+        blockMenu.toInventory().setItem(getProcessBarSlots(), new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("progress"), "&f" + now + "/" + getMaxProcess(blockMenu)));
     }
 
     public boolean checkProcessEnd(BlockMenu blockMenu) {
@@ -176,12 +177,12 @@ public abstract class AbstractProcessMachine extends SlimefunItem implements Inv
     }
 
     public void initProcess(BlockMenu blockMenu) {
-        ItemStack it = new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "§a进度", "&f0/" + getDefaultMaxProcess());
+        ItemStack it = new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("progress"), "&f0/" + getDefaultMaxProcess());
         blockMenu.toInventory().setItem(getProcessBarSlots(), it);
     }
 
     public void setMaxProcess(int max, BlockMenu blockMenu) {
-        ItemStack it = new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "§a进度", "&f0/" + max);
+        ItemStack it = new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("progress"), "&f0/" + max);
         blockMenu.toInventory().setItem(getProcessBarSlots(), it);
     }
 

@@ -1,4 +1,10 @@
+generic:
+  progress: "§aProgress"
 item:
+  quantitative_plugin:
+    name: "&x§7§4§8§d§8§dQ&x§7§7§8§d§8§fu&x§7§a§8§d§9§2a&x§7§d§8§c§9§4n&x§8§0§8§c§9§7t&x§8§3§8§c§9§9i&x§8§6§8§c§9§ct&x§8§9§8§c§9§ea&x§8§c§8§c§a§1t&x§9§0§8§c§a§3i&x§9§3§8§c§a§6v&x§9§6§8§c§a§8e &x§9§9§8§c§a§bp&x§9§c§8§c§a§dl&x§9§f§8§c§b§0u&x§a§2§8§b§b§3g&x§a§5§8§b§b§5i&x§a§8§8§b§b§8n"
+    lore:
+      - "&6Just a material"
   rule_boots:
     name: "&7Rule Boots"
     lore:
@@ -7,6 +13,8 @@ item:
     lore:
       - "&fI don't understand why this is an important material!"
       - "§f§lNULL"
+  digital_component:
+    name: "&7Digital Component"
   bug:
     date:
       name: "§7§lB§k1§8U§f§l§k一§7G §e- §aDate"
@@ -34,6 +42,16 @@ showing_as_recipe_item:
     negative_overload: "§e§lBUG - Negative Overload"
   symbol: "&e&lSymbol"
 description:
+  emptyShellGenerator_I: "&fGenerate 1 stack of 'null' shells each time"
+  emptyShellGenerator_usage: "&fInput any items to generate 'null' shells"
+  original_material_alpha: "&fMake the original material α"
+  original_material_beta: "&fMake the original material β"
+  original_material_alpha_requirement: "&fRequirement: The number of stacked items on each row of the input slot decreases monotonically"
+  original_material_beta_requirement: "&fRequirement: The number of stacked items on each row of the input slot increases monotonically"
+  generate_once_every_1_tick: "&fGenerate once every 1 tick"
+  final_cobblestone_generator_2: "&7Generate 48 stacks of cobblestones each time"
+  final_ingot_generator_1: "&fAutomated ingot casting"
+  final_ingot_generator_2: "&7Every 1 tick, all mineral powder in the input slots will be smelted"
   fixer_repair_item: "&fRepair item"
   fixer_usage: "&7Enter any durable item and restore 1 durability for every 1 tick"
   pumpkin_carver_1: "&fAutomated pumpkin carving"

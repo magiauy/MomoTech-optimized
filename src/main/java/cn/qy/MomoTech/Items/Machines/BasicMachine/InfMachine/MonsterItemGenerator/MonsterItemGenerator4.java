@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine.MonsterItemGenerator;
 
 import cn.qy.MomoTech.GUI.MonsterItemGenerator;
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
@@ -31,7 +32,7 @@ public class MonsterItemGenerator4 extends MonsterItemGenerator implements Recip
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> item = new ArrayList<>(10);
-        item.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, "&f可能的产物"));
+        item.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, MomoTech.languageManager.getRecipeDescription("possible_productions")));
         item.add(new ItemStack(getItems(), 32));
         return item;
     }

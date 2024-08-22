@@ -29,7 +29,7 @@ public class LanguageManager {
 
     private void loadLanguages() {
         defaultConfiguration =
-                YamlConfiguration.loadConfiguration(new File(plugin.getDataFolder(), "language/zh-CN.yml"));
+                YamlConfiguration.loadConfiguration(new File(plugin.getDataFolder(), "language/en-US.yml"));
 
         File pluginFolder = plugin.getDataFolder();
 
@@ -71,6 +71,10 @@ public class LanguageManager {
         }
     }
 
+    public String getGeneric(String path) {
+        return ChatColor.translateAlternateColorCodes('&', getConfiguration().getString("generic." + path, ""));
+    }
+
     public String getShowingRecipeItemName(String path) {
         return ChatColor.translateAlternateColorCodes('&', getConfiguration().getString("showing_as_recipe_item." + path + ".name", ""));
     }
@@ -90,7 +94,7 @@ public class LanguageManager {
     }
 
     private Configuration getConfiguration() {
-        String language = plugin.getConfig().getString("language", "en-US");
+        String language = plugin.getConfig().getString("options.language", "en-US");
         return configurations.getOrDefault(language, defaultConfiguration);
     }
 

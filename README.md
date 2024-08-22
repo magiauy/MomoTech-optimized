@@ -1,5 +1,7 @@
 # MomoTech
 
+## Remember to change the language after installation! And restart to apply the changes.
+
 ## About
 This is Slimefun addon for minecraft servers.
 

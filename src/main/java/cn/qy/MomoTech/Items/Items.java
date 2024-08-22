@@ -47,7 +47,7 @@ public class Items {
         return sb.toString();
     }
 
-    public static final ItemStack QUANTITY_ITEM = new CustomItemStack(Material.PURPLE_DYE, c("量化插件", "748d8d", "858c9b", "978ca9", "a88bb8"), "&6一个材料而已");
+    public static final ItemStack QUANTITY_ITEM = new CustomItemStack(Material.PURPLE_DYE, MomoTech.languageManager.getItemName("quantitative_plugin"), MomoTech.languageManager.getItemLore("quantitative_plugin"));
     public static final ItemStack FROG_LIGHT_GENERATOR = new CustomItemStack(Material.OCHRE_FROGLIGHT, "&e蛙鸣灯生成器", "&7随机生成一种蛙鸣灯", "&7效率:4x");
     public static final ItemStack STONE_GENERATOR = new CustomItemStack(Material.STONE, "&eStone &fGenerator", "&7Automatically generates Granite/Andesite/Diorite/Cobblestone", "&7Efficiency: 8x");
     public static final ItemStack ORE_GENERATOR = new CustomItemStack(Material.DIAMOND_ORE, "&e原矿&f生成器", "&7自动化生产各种原矿", "&7效率:1x");
@@ -66,7 +66,7 @@ public class Items {
     public static final ItemStack CREATIVE__ = new CustomItemStack(Material.GLASS_PANE, c("纯净的始源", "ed89f0", "e98ef6", "da94f7", "ca9bf8", "bba2fa"), "&6终极,才刚开始");
     public static final ItemStack COMMAND_BLOCK_GETTER = new CustomItemStack(Material.COMMAND_BLOCK, c("仿制品", "aca9fb", "9cb0fc", "8db6fb") + " &7- " + c("命令方块", "7fc6ee", "7ccde1", "79d5d5", "77ddc9"));
     public static final ItemStack COBBLE_STONE_GENERATOR_II = new CustomItemStack(Material.SNOW_BLOCK, "&b&l压缩圆石生成器", "&7效率:64x");
-    public static final ItemStack MOMOTECH_DIGITAL = new CustomItemStack(SlimefunUtils.getCustomHead("80c4528e622bd318720d38e0e4599e69bf23308f89693920e0e4ecb55d1c0bac"), "§f数字组件", "§f0.0");
+    public static final ItemStack MOMOTECH_DIGITAL = new CustomItemStack(SlimefunUtils.getCustomHead("80c4528e622bd318720d38e0e4599e69bf23308f89693920e0e4ecb55d1c0bac"), MomoTech.languageManager.getItemName("digital_component"), "§f0.0");
     public static final ItemStack MOMOTECH_LETTER = new CustomItemStack(Material.SUGAR, c("符号", "74e5bd", "71edb0"), "&fa", "&7凭空制造物质的基础");
     public static final ItemStack MOMOTECH_ID_CARD = new CustomItemStack(Material.PAPER, c("§#6ef5a4I§#73f5a2D§#78f6a0卡"), "&fID:", "&7在&cID集成器&7添加符号集成Slimefun ID", "&7合法ID可以在 &f制造台 &7中直接制作对应ID的粘液物品");
     public static final ItemStack MOMOTECH_ID_PUTTER = new CustomItemStack(Material.BOOKSHELF, c("§#7ef69eI§#83f79cD§#88f79a集§#8df798成§#92f896器"), "&7在此给ID卡添加字符");

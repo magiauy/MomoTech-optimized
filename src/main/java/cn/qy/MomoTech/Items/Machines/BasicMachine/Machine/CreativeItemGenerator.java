@@ -2,6 +2,7 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -89,9 +90,9 @@ public class CreativeItemGenerator extends AbstractGUI implements RecipeDisplayI
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(8);
-        it.add(new CustomItemStack(Material.BOOK, "&f制作原始物质α", "&7要求:输入槽位每一行上的物品堆叠数量单调递减"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("original_material_alpha"), MomoTech.languageManager.getRecipeDescription("original_material_alpha_requirement")));
         it.add(MomotechItem.creative_item.clone());
-        it.add(new CustomItemStack(Material.BOOK, "&f制作原始物质β", "&7要求:输入槽位每一行上的物品堆叠数量单调递增"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("original_material_beta"), MomoTech.languageManager.getRecipeDescription("original_material_beta_requirement")));
         it.add(MomotechItem.creative_item_I.clone());
         return it;
     }

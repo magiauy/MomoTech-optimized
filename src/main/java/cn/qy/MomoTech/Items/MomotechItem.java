@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 
@@ -109,7 +110,7 @@ public class MomotechItem {
     }
 
     public static SlimefunItemStack digital(double i) {
-        return new SlimefunItemStack("MOMOTECH_DIGITAL", Items.MOMOTECH_DIGITAL, "§f数字组件", "§f" + i);
+        return new SlimefunItemStack("MOMOTECH_DIGITAL", Items.MOMOTECH_DIGITAL, MomoTech.languageManager.getItemName("digital_component"), "§f" + i);
     }
 
 }
