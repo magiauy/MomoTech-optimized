@@ -46,6 +46,8 @@ showing_as_recipe_item:
   symbol: "&e&lSymbol"
   symbol_2: "&6Symbol"
 description:
+  symbol_generator: "&fCreate operators"
+  symbol_generator_usage: "&7Randomly output an operator after inputting 'Null's, with varying probabilities for different operators"
   transporter: "&fInserting digital component into the machine to configure distance"
   cobblestone_store: "&fSimilar to chests, but providing 48 compartments of storage space"
   uncontrollable_empty_generator: "&fGenerate 48 'Uncontrollable Empty's each time"
