@@ -2,6 +2,7 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -83,7 +84,7 @@ public class NoneGenerator extends AbstractGUI implements RecipeDisplayItem {
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(8);
-        it.add(new CustomItemStack(Material.BOOK, "&f制作NONE", "&7要求:输入槽位上所有物品种类和堆叠数量都不同"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("none_generator"), MomoTech.languageManager.getRecipeDescription("none_generator_usage")));
         it.add(MomotechItem.none_.clone());
         return it;
     }

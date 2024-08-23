@@ -2,6 +2,7 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.Items;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Maths;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -70,7 +71,7 @@ public class RandomQuantumGenerator extends AbstractGUI implements RecipeDisplay
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> list = new ArrayList<>(10);
-        list.add(new CustomItemStack(Material.BOOK, "&f获取随机量子", "&7每tick在机器交互槽内随机出现, 并且清理交互槽内所有其他物品"));
+        list.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("random_quantum_generator"), MomoTech.languageManager.getRecipeDescription("random_quantum_generator_usage")));
         list.add(new SlimefunItemStack("MOMOTECH_RANDOM_QUANTUM", Items.MOMOTECH_RANDOM_QUANTUM).clone());
         return list;
     }

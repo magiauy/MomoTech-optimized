@@ -2,6 +2,7 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Maths;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -74,7 +75,7 @@ public class LetterConstructor extends AbstractGUI implements RecipeDisplayItem 
             return;
         String list = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM123456789_";//62个
         char ans = list.charAt(Maths.GetRandom(61));
-        ItemStack it = new CustomItemStack(Material.SUGAR, "&6符号", "&f" + ans, "&7凭空制造物质的基础");
+        ItemStack it = new CustomItemStack(Material.SUGAR, MomoTech.languageManager.getShowingRecipeItemName("symbol_2"), "&f" + ans, MomoTech.languageManager.getRecipeDescription("symbol_lore"));
         ItemStack sfit = new SlimefunItemStack("MOMOTECH_LETTER", it).clone();
         for (int j : getOutputSlots()) {
             if (inv.getItemInSlot(j) == null) {
@@ -91,7 +92,7 @@ public class LetterConstructor extends AbstractGUI implements RecipeDisplayItem 
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(12);
-        it.add(new CustomItemStack(Material.BOOK, "&f制作符号", "&7需要输入原始物质α和β并且在中间放入空"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("letter_constructor"), MomoTech.languageManager.getRecipeDescription("letter_constructor_usage")));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         it.add(MomotechItem.creative_item.clone());
         it.add(MomotechItem.letter.clone());

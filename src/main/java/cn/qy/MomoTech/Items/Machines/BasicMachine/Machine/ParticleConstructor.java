@@ -2,6 +2,7 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.GUI.AbstractProcessMachine;
 import cn.qy.MomoTech.Items.Items;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Maths;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -72,7 +73,7 @@ public class ParticleConstructor extends AbstractProcessMachine implements Energ
 
     @Override
     public void add(BlockMenuPreset b) {
-        b.addItem(3, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&f已储存 NULL J"), ChestMenuUtils.getEmptyClickHandler());
+        b.addItem(3, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("stored_default")), ChestMenuUtils.getEmptyClickHandler());
     }
 
     private boolean isPrime(int i) {
@@ -86,7 +87,8 @@ public class ParticleConstructor extends AbstractProcessMachine implements Energ
 
     @Override
     protected void findNextRecipe(BlockMenu inv) {
-        inv.toInventory().setItem(3, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&f已储存 " + this.getCharge(inv.getLocation()) + " J"));
+        inv.toInventory().setItem(3, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE,
+                MomoTech.languageManager.getGeneric("stored") + this.getCharge(inv.getLocation()) + " J"));
         if (checkProcessStart(inv)) {
             addProcess(inv);
         }

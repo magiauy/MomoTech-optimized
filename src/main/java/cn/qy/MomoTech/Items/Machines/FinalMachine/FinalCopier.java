@@ -2,6 +2,7 @@ package cn.qy.MomoTech.Items.Machines.FinalMachine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -71,7 +72,7 @@ public class FinalCopier extends AbstractGUI implements RecipeDisplayItem {
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
         it.add(MomotechItem.quantum1_);
-        it.add(new CustomItemStack(Material.BOOK, "&f输入纠缠量子复制中间交互槽内的任意物品"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("final_copier_usage")));
         return it;
     }
 }
