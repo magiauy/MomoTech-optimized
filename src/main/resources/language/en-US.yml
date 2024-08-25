@@ -144,7 +144,7 @@ item:
     name: "§x§d§6§f§c§7§cItem §x§f§3§f§e§7§1Maker"
     lore: 
       - "§7lol, it's already the end, good job"
-      - "§7This machine could change the ID card to everything in slimefun by the ID that ID card recorded"
+      - "§7This machine could turn the ID card into everything in slimefun by the ID that ID card recorded"
   uncontrollable_empty_generator:
     name: "§x§f§c§f§7§6§9Uncontrollable §x§f§d§c§9§4§eItem §x§f§e§8§3§2§6Generator"
     lore:
@@ -225,195 +225,259 @@ item:
   empty_shell_generator:
     name: "§x§f§8§c§7§f§eNull Generator"
     lore:
-      - "&7Turn 1 item in input slots into 1 'Null' per tick"
+      - "§7Turn 1 item in input slots into 1 'Null' per tick"
   empty_shell_generator_i:
-    name: "§x&f&d&a&c&f&fAdvanced Null Generator"
+    name: "§x§f§d§a§c§f§fAdvanced Null Generator"
     lore:
-      - "&7Generator 64 'Null' per tick"
+      - "§7Generator 64 'Null' per tick"
   creative_item:
-    name: "§x&f&f&7&6&8&bOriginal §x&f&f&7&5&5&6Material α"
+    name: "§x§f§f§7§6§8§bOriginal §x§f§f§7§5§5§6Material α"
     lore:
       - ""
   creative_item_i:
-    name: "§x&f&f&8&7&3&9Original §x&f&f&a&1&0&eMaterial β"
+    name: "§x§f§f§8§7§3§9Original §x§f§f§a§1§0§eMaterial β"
     lore:
       - ""
   creative_item_generator:
-    name: "§x&f&f&f&0&8&5Original Material Factory"
+    name: "§x§f§f§f§0§8§5Original Material Factory"
     lore:
       - ""
   uncontrollable_empty:
-    name: "§8§l§k123&f&lUncontrollable Item"
+    name: "§8§l§k123§f§lUncontrollable Item"
     lore:
-      - "&7Oh, it's out of control:<"
+      - "§7Oh, it's out of control:<"
   creativegenerator:
-    name: "§x&d&5&f&f&e&aInfinity Electric Generator"
+    name: "§x§d§5§f§f§e§aInfinity Electric Generator"
     lore:
       - "§8⇨ §e⚡ §799,999,999 J/t"
-      - "&7Lots of energy...."
+      - "§7Lots of energy...."
   none_generator:
-    name: "§x&c&7&f&a&d&bNone Factory"
+    name: "§x§c§7§f§a§d§bNone Factory"
     lore:
       - ""
   creative_item_ii:
-    name: "§x&f&f&b&6&1&6Original §x&f&f&d&8&5&8Material γ"
+    name: "§x§f§f§b§6§1§6Original §x§f§f§d§8§5§8Material γ"
     lore:
-      - "&7;)"
+      - "§7;)"
   quantity_constructor:
-    name: "§x&a&d&d&f&4&eQuantify Factory"
+    name: "§x§a§d§d§f§4§eQuantify Factory"
     lore:
-      - "&7Compress more and more item :D"
+      - "§7Compress more and more item :D"
   bug_crystal:
-    name: "§x&5&e&c&b&b&4&lBUG Crystal"
+    name: "§x§5§e§c§b§b§4§lBUG Crystal"
     lore:
-      - "&7It's full of... BUG ??.."
+      - "§7It's full of... BUG ??.."
   qy:
-    name: "&6&lQYhB05"
+    name: "§6§lQYhB05"
     lore:
-      - "&7Thanks for coding"
+      - "§7Thanks for coding"
   wbx:
-    name: "&e&lChenmose"
+    name: "§e§lChenmose"
     lore:
-      - "&7Thanks for some good ideas"
+      - "§7Thanks for some good ideas"
   sky:
-    name: "&b&lskybule"
+    name: "§b§lskybule"
     lore:
-      - "&7Thanks for some good ideas"
+      - "§7Thanks for some good ideas"
   plugin:
-    name: "&f&lMomoTech"
+    name: "§f§lMomoTech"
     lore:
-      - "&7This addon's name is 'MomoTech', and this project is on public, you can find it on github;)"
+      - "§7This addon's name is 'MomoTech', and this project is on public, you can find it on github;)"
   buggggg:
-    name: "&f&lBUGGGGGGGGGGGGGGGG"
+    name: "§f§lBUGGGGGGGGGGGGGGGG"
     lore:
-      - "&7Make a bug ;D"
+      - "§7Make a bug ;D"
   else_1:
-    name: "&7The machines in this addon don't need any energy if there's nothing about energy consume in item's lore"
+    name: "§7The machines in this addon don't need any energy if there's nothing about energy consume in item's lore"
     lore:
       - ""
   else_2:
-    name: "&7If you find that some machines don't work, it may work after you clean the output slots"
+    name: "§7If you find that some machines don't work, it may work after you clean the output slots"
     lore:
       - ""
   else_3:
-    name: "&7When you make BUG - Date, sometimes some formula couldn't work correctly, then you will get a new digit not a 'BUG - Date'"
+    name: "§7When you make BUG - Date, sometimes some formula couldn't work correctly, then you will get a new digit not a 'BUG - Date'"
     lore:
       - ""
   full:
-    name: "§x&3&5&c&6&8&4Saturation Amulet"
+    name: "§x§3§5§c§6§8§4Saturation Amulet"
     lore:
-      - "&7Provide you with saturation for a long time, when you use it"
+      - "§7Provide you with saturation for a long time, when you use it"
   damage_item:
-    name: "§x&2&9&c&7&3&aStrange Things"
+    name: "§x§2§9§c§7§3§aStrange Things"
     lore:
-      - "&7Kill any entities you attacked when you hold it in your main hand"
+      - "§7Kill any entities you attacked when you hold it in your main hand"
   stone_sword:
-    name: "&8&lStone Sword"
+    name: "§8§lStone Sword"
     lore:
-      - "&8Damage +999999999999.99"
+      - "§8Damage +999999999999.99"
   final_c_:
-    name: "&750-compressed Cobblestone &eGenerator"
+    name: "§750-compressed Cobblestone §eGenerator"
     lore:
-      - "&7Generator 50-compressed cobblestone"
+      - "§7Generator 50-compressed cobblestone"
   protect_item:
-    name: "§x&2&d&c&3&8&0Strange Armor"
+    name: "§x§2§d§c§3§8§0Strange Armor"
     lore:
-      - "&7Protect you from the damage from entities"
+      - "§7Protect you from the damage from entities"
   star_of_all:
-    name: "§x&5&8&a&0&8&8Core of Machine"
+    name: "§x§5§8§a§0§8§8Core of Machine"
     lore:
       - ""
   cobble_stone_store:
-    name: "&fStone Chest"
+    name: "§fStone Chest"
     lore:
       - ""
   cobblestone_generator_final:
-    name: ""
-    lore: ""
+    name: "§7Final Cobblestone Generator"
+    lore:
+      - ""
   quantum:
-    name: ""
-    lore: ""
+    name: "§eQuantum"
+    lore:
+      - ""
   quantum1:
-    name: ""
-    lore: ""
+    name: "§bEntangled §eQuantum"
+    lore:
+      - ""
   box_of_quantum:
-    name: ""
-    lore: ""
+    name: "§eQuantum §eBox"
+    lore:
+      - "§7You can use it to open the ender chest"
   silk_touch_pickaxe:
-    name: ""
-    lore: ""
+    name: "§bEntangled §eQuantum §aPickaxe"
+    lore:
+      - ""
   pickaxe:
-    name: ""
-    lore: ""
+    name: "§aQuantum §ePickaxe"
+    lore:
+      - ""
   pumpkin_carver:
-    name: ""
-    lore: ""
+    name: "§x§a§4§b§3§b§fPumpkin Carving Factory"
+    lore:
+      - "§7Carve all pumpkin in input slots in 1 tick"
   clear:
-    name: ""
-    lore: ""
+    name: "§6Quantum Clean"
+    lore:
+      - "§7Help you clean the debuff quantum brought"
   fixer:
-    name: ""
-    lore: ""
+    name: "§fTool Repairer"
+    lore:
+      - ""
   transporter:
-    name: ""
-    lore: ""
+    name: "§aTransporter"
+    lore:
+      - ""
   chest_generator:
-    name: ""
-    lore: ""
+    name: "§eChest §fGenerator"
+    lore:
+      - "§7Automatically generate chest"
+      - "§7Efficiency: 1x"
   open_box_item:
-    name: ""
-    lore: ""
+    name: "§eQuantum Box Destroyer"
+    lore:
+      - ""
   shine:
-    name: ""
-    lore: ""
+    name: "§eShine"
+    lore:
+      - ""
   dark:
-    name: ""
-    lore: ""
+    name: "§8Dark"
+    lore:
+      - ""
   shine_and_dark_constructor:
-    name: ""
-    lore: ""
+    name: "§x§5§5§f§f§f§fShine And Dark Collector"
+    lore:
+      - "§8⇨ §e⚡ §7500 J/t"
   shine_and_dark_generator:
-    name: ""
-    lore: ""
+    name: "§x§5§5§f§f§f§fShine And Dark Generator"
+    lore:
+      - "§8⇨ §e⚡ §7500 J/t"
+      - "§7Get energy from shine and dark"
   shine1:
-    name: ""
-    lore: ""
+    name: "§e§lShine Factor"
+    lore:
+      - ""
   dark1:
-    name: ""
-    lore: ""
+    name: "§8§lDark Factor"
+    lore:
+      - ""
   netherite_pickaxe_changer:
-    name: ""
-    lore: ""
+    name: "§7§lNetherite Pickaxe Factory"
+    lore:
+      - "§8⇨ §e⚡ §7100 J/t"
   diamond_pickaxe_generator:
-    name: ""
-    lore: ""
+    name: "§eChest §fGenerator"
+    lore:
+      - "§7Automatically generate diamond pickaxe"
+      - "§7Efficiency: 8x"
   constructor:
-    name: ""
-    lore: ""
+    name: "§x§e§3§f§5§a§2Core Compressor"
+    lore: 
+      - "§8⇨ §e⚡ §7900 J/t"
   diamond:
-    name: ""
-    lore: ""
+    name: "§6Diamond §bFactor"
+    lore:
+      - ""
   iron:
-    name: ""
-    lore: ""
+    name: "§6Iron §bFactor"
+    lore:
+      - ""
   gold:
-    name: ""
-    lore: ""
+    name: "§6Gold §bFactor"
+    lore:
+      - ""
   quartz:
-    name: ""
-    lore: ""
+    name: "§6Quartz §bFactor"
+    lore:
+      - ""
   emerald:
-    name: ""
-    lore: ""
+    name: "§6Emerald §bFactor"
+    lore:
+      - ""
   redstone:
-    name: ""
-    lore: ""
+    name: "§6Redstone §bFactor"
+    lore:
+      - ""
   lapis:
-    name: ""
-    lore: ""
+    name: "§6Lapis §bFactor"
+    lore:
+      - ""
   coal:
-    name: ""
-    lore: ""
+    name: "§6Coal §bFactor"
+    lore:
+      - ""
+  diamond1:
+    name: "§bCore §6Diamond"
+    lore:
+      - ""
+  iron1:
+    name: "§bCore §6Iron"
+    lore:
+      - ""
+  gold1:
+    name: "§bCore §6Gold"
+    lore:
+      - ""
+  quartz1:
+    name: "§bCore §6Quartz"
+    lore:
+      - ""
+  emerald1:
+    name: "§bCore §6Emerald"
+    lore:
+      - ""
+  redstone1:
+    name: "§bCore §6Redstone"
+    lore:
+      - ""
+  lapis1:
+    name: "§bCore §6Lapis"
+    lore:
+      - ""
+  coal1:
+    name: "§bCore §6Coal"
+    lore:
+      - ""
   cu:
     name: ""
     lore: ""
@@ -436,30 +500,6 @@ item:
     name: ""
     lore: ""
   ag:
-    name: ""
-    lore: ""
-  diamond1:
-    name: ""
-    lore: ""
-  iron1:
-    name: ""
-    lore: ""
-  gold1:
-    name: ""
-    lore: ""
-  quartz1:
-    name: ""
-    lore: ""
-  emerald1:
-    name: ""
-    lore: ""
-  redstone1:
-    name: ""
-    lore: ""
-  lapis1:
-    name: ""
-    lore: ""
-  coal1:
     name: ""
     lore: ""
   cu1:
