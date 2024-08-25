@@ -479,53 +479,69 @@ item:
     lore:
       - ""
   cu:
-    name: ""
-    lore: ""
-  pb:
-    name: ""
-    lore: ""
-  mg:
-    name: ""
-    lore: ""
-  au:
-    name: ""
-    lore: ""
-  al:
-    name: ""
-    lore: ""
-  sn:
-    name: ""
-    lore: ""
-  zn:
-    name: ""
-    lore: ""
-  ag:
-    name: ""
-    lore: ""
+    name: "§6Copper §bFactor"
+    lore: 
+      - ""
   cu1:
-    name: ""
-    lore: ""
+    name: "§bCore §6Copper"
+    lore: 
+      - ""
+  pb:
+    name: "§6Lead §bFactor"
+    lore: 
+      - ""
   pb1:
-    name: ""
-    lore: ""
+    name: "§bCore §6Lead"
+    lore: 
+      - ""
+  mg:
+    name: "§6Magnesium §bFactor"
+    lore: 
+      - ""
   mg1:
-    name: ""
-    lore: ""
+    name: "§bCore §6Magnesium"
+    lore: 
+      - ""
+  au:
+    name: "§6Gold §bFactor"
+    lore: 
+      - ""
   au1:
-    name: ""
-    lore: ""
+    name: "§bCore §6Gold"
+    lore: 
+      - ""
+  al:
+    name: "§6Aluminum §bFactor"
+    lore: 
+      - ""
   al1:
-    name: ""
-    lore: ""
+    name: "§bCore §6Aluminum"
+    lore: 
+      - ""
+  sn:
+    name: "§6Tin §bFactor"
+    lore: 
+      - ""
   sn1:
-    name: ""
-    lore: ""
+    name: "§bCore §6Tin"
+    lore: 
+      - ""
+  zn:
+    name: "§6Zinc §bFactor"
+    lore: 
+      - ""
   zn1:
-    name: ""
-    lore: ""
+    name: "§bCore §6Zinc"
+    lore: 
+      - ""
+  ag:
+    name: "§6Silver §bFactor"
+    lore: 
+      - ""
   ag1:
-    name: ""
-    lore: ""
+    name: "§bCore §6Silver"
+    lore: 
+      - ""
   real_magnet:
     name: ""
     lore: ""
