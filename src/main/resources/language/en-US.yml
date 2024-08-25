@@ -137,7 +137,7 @@ item:
     lore: 
       - ""
   final_star:
-    name: "§7§lFinal Star"
+    name: "§7§lSupreme Star"
     lore: 
       - "§7lol"
   id_changer:
@@ -146,7 +146,7 @@ item:
       - "§7lol, it's already the end, good job"
       - "§7This machine could change the ID card to everything in slimefun by the ID that ID card recorded"
   uncontrollable_empty_generator:
-    name: "§x§f§c§f§7§6§9Uncontrollable §x§f§d§c§9§4§eEmpty §x§f§e§8§3§2§6Generator"
+    name: "§x§f§c§f§7§6§9Uncontrollable §x§f§d§c§9§4§eItem §x§f§e§8§3§2§6Generator"
     lore:
       - "§7Efficiency: 48x"
   random_copier:
@@ -156,133 +156,177 @@ item:
   final_copier:
     name: "§x§f§f§e§0§d§3Final §x§e§f§e§f§e§fCopier"
     lore:
-      - "§7Dupe item legally"
+      - "§7Dupe item legally."
   exp:
-    name: ""
-    lore: ""
+    name: "§x§8§c§8§c§8§cExp,  §x§5§b§5§b§5§bMore §x§5§3§5§3§5§3Exp!"
+    lore:
+      - "§7Give you 20L exp when you use it ;D"
   final_item:
-    name: ""
-    lore: ""
+    name: "§x§b§2§d§3§d§3Final §x§9§f§e§3§c§cStar"
+    lore:
+      - "§7The end"
   sea_item_generator:
-    name: ""
-    lore: ""
+    name: "§ePrismarine §fGenerator"
+    lore:
+      - "§7Automatically generate things about prismarine"
+      - "§7Efficiency: 8x"
   bee_generator:
-    name: ""
-    lore: ""
+    name: "§eBee §fGenerator"
+    lore:
+      - "§7Automatically generate things about bee"
+      - "§7Efficiency: 1x"
   spider_eye_generator:
-    name: ""
-    lore: ""
+    name: "§eSpider Eye §fGenerator"
+    lore:
+      - "§7Automatically generate spider eye"
+      - "§7Efficiency: 2x"
   ore_collector:
-    name: ""
-    lore: ""
-  empty_shell:
-    name: ""
-    lore: ""
+    name: "§eCompress Ore§f Factory"
+    lore:
+      - "§7Generator 4 compress ore in this addon per tick"
   symbol_addition:
-    name: ""
-    lore: ""
+    name: "§aAddition +"
+    lore:
+      - "§f+"
   symbol_subtraction:
-    name: ""
-    lore: ""
+    name: "§aSubtraction -"
+    lore:
+      - "§f-"
   symbol_multiplication:
-    name: ""
-    lore: ""
+    name: "§aMultiplication x"
+    lore:
+      - "§f*"
   symbol_division:
-    name: ""
-    lore: ""
+    name: "Division ÷"
+    lore:
+      - "§f/"
   none:
-    name: ""
-    lore: ""
+    name: "§7§lNONE"
+    lore:
+      - ""
   digital_constructor:
-    name: ""
-    lore: ""
+    name: "§x§a§4§b§3§b§fDigit Constructor"
+    lore:
+      - "§7Turn 1 'Null' into digit randomly per tick"
+      - "§8⇨ §e⚡ §72,000 J/t"
   symbol_generator:
-    name: ""
-    lore: ""
+    name: "§x§a§4§b§3§b§fMathematical Symbol Constructor"
+    lore:
+      - "§7Turn 1 'Null' into mathematical symbol randomly per tick"
+      - "§8⇨ §e⚡ §72,000 J/t"
   increment:
-    name: ""
-    lore: ""
+    name: "§x§f§d§f§7§c§1Digit Addition Factory"
+    lore:
+      - "§7do addition and output the answer when you input two numbers"
   ordinary_number_combinator:
-    name: ""
-    lore: ""
+    name: "§x§f§d§f§7§c§1Basic Digit Factory"
+    lore:
+      - "§7Output the answer when you input a valid mathematical formula"
   empty_shell_generator:
-    name: ""
-    lore: ""
+    name: "§x§f§8§c§7§f§eNull Generator"
+    lore:
+      - "&7Turn 1 item in input slots into 1 'Null' per tick"
   empty_shell_generator_i:
-    name: ""
-    lore: ""
+    name: "§x&f&d&a&c&f&fAdvanced Null Generator"
+    lore:
+      - "&7Generator 64 'Null' per tick"
   creative_item:
-    name: ""
-    lore: ""
+    name: "§x&f&f&7&6&8&bOriginal §x&f&f&7&5&5&6Material α"
+    lore:
+      - ""
   creative_item_i:
-    name: ""
-    lore: ""
+    name: "§x&f&f&8&7&3&9Original §x&f&f&a&1&0&eMaterial β"
+    lore:
+      - ""
   creative_item_generator:
-    name: ""
-    lore: ""
+    name: "§x&f&f&f&0&8&5Original Material Factory"
+    lore:
+      - ""
   uncontrollable_empty:
-    name: ""
-    lore: ""
+    name: "§8§l§k123&f&lUncontrollable Item"
+    lore:
+      - "&7Oh, it's out of control:<"
   creativegenerator:
-    name: ""
-    lore: ""
+    name: "§x&d&5&f&f&e&aInfinity Electric Generator"
+    lore:
+      - "§8⇨ §e⚡ §799,999,999 J/t"
+      - "&7Lots of energy...."
   none_generator:
-    name: ""
-    lore: ""
+    name: "§x&c&7&f&a&d&bNone Factory"
+    lore:
+      - ""
   creative_item_ii:
-    name: ""
-    lore: ""
+    name: "§x&f&f&b&6&1&6Original §x&f&f&d&8&5&8Material γ"
+    lore:
+      - "&7;)"
   quantity_constructor:
-    name: ""
-    lore: ""
+    name: "§x&a&d&d&f&4&eQuantify Factory"
+    lore:
+      - "&7Compress more and more item :D"
   bug_crystal:
-    name: ""
-    lore: ""
+    name: "§x&5&e&c&b&b&4&lBUG Crystal"
+    lore:
+      - "&7It's full of... BUG ??.."
   qy:
-    name: ""
-    lore: ""
+    name: "&6&lQYhB05"
+    lore:
+      - "&7Thanks for coding"
   wbx:
-    name: ""
-    lore: ""
+    name: "&e&lChenmose"
+    lore:
+      - "&7Thanks for some good ideas"
   sky:
-    name: ""
-    lore: ""
+    name: "&b&lskybule"
+    lore:
+      - "&7Thanks for some good ideas"
   plugin:
-    name: ""
-    lore: ""
+    name: "&f&lMomoTech"
+    lore:
+      - "&7This addon's name is 'MomoTech', and this project is on public, you can find it on github;)"
   buggggg:
-    name: ""
-    lore: ""
+    name: "&f&lBUGGGGGGGGGGGGGGGG"
+    lore:
+      - "&7Make a bug ;D"
   else_1:
-    name: ""
-    lore: ""
+    name: "&7The machines in this addon don't need any energy if there's nothing about energy consume in item's lore"
+    lore:
+      - ""
   else_2:
-    name: ""
-    lore: ""
+    name: "&7If you find that some machines don't work, it may work after you clean the output slots"
+    lore:
+      - ""
   else_3:
-    name: ""
-    lore: ""
+    name: "&7When you make BUG - Date, sometimes some formula couldn't work correctly, then you will get a new digit not a 'BUG - Date'"
+    lore:
+      - ""
   full:
-    name: ""
-    lore: ""
+    name: "§x&3&5&c&6&8&4Saturation Amulet"
+    lore:
+      - "&7Provide you with saturation for a long time, when you use it"
   damage_item:
-    name: ""
-    lore: ""
+    name: "§x&2&9&c&7&3&aStrange Things"
+    lore:
+      - "&7Kill any entities you attacked when you hold it in your main hand"
   stone_sword:
-    name: ""
-    lore: ""
+    name: "&8&lStone Sword"
+    lore:
+      - "&8Damage +999999999999.99"
   final_c_:
-    name: ""
-    lore: ""
+    name: "&750-compressed Cobblestone &eGenerator"
+    lore:
+      - "&7Generator 50-compressed cobblestone"
   protect_item:
-    name: ""
-    lore: ""
+    name: "§x&2&d&c&3&8&0Strange Armor"
+    lore:
+      - "&7Protect you from the damage from entities"
   star_of_all:
-    name: ""
-    lore: ""
+    name: "§x&5&8&a&0&8&8Core of Machine"
+    lore:
+      - ""
   cobble_stone_store:
-    name: ""
-    lore: ""
+    name: "&fStone Chest"
+    lore:
+      - ""
   cobblestone_generator_final:
     name: ""
     lore: ""
@@ -680,8 +724,9 @@ item:
     name: ""
     lore: ""
   metal_star:
-    name: ""
-    lore: ""
+    name: "§eMetal Star"
+    lore:
+      - ""
 showing_as_recipe_item:
   id_card: "§eID Card"
   digital_component: "§e§lDigital Component"
@@ -700,7 +745,7 @@ description:
   symbol_generator_usage: "§7Randomly output an operator after inputting 'Null's, with varying probabilities for different operators"
   transporter: "§fInserting digital component into the machine to configure distance"
   cobblestone_store: "§fSimilar to chests, but providing 48 compartments of storage space"
-  uncontrollable_empty_generator: "§fGenerate 48 'Uncontrollable Empty's each time"
+  uncontrollable_empty_generator: "§fGenerate 48 'Uncontrollable Item's each time"
   random_quantum_generator: "§fGet random quantum"
   random_quantum_generator_usage: "§7Each tick randomly appears in the machine's interaction slots and all other items in the interaction slots will be cleared"
   final_copier_usage: "Input entangled quantum to replicate any object in the interaction slots in the middle"
