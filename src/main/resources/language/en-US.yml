@@ -415,370 +415,480 @@ item:
     lore: 
       - "§8⇨ §e⚡ §7900 J/t"
   diamond:
-    name: "§6Diamond §bFactor"
+    name: "§bMineral Factor §6Diamond"
     lore:
       - ""
   iron:
-    name: "§6Iron §bFactor"
+    name: "§bMineral Factor §6Iron"
     lore:
       - ""
   gold:
-    name: "§6Gold §bFactor"
+    name: "§bMineral Factor §6Gold"
     lore:
       - ""
   quartz:
-    name: "§6Quartz §bFactor"
+    name: "§bMineral Factor §6Quartz"
     lore:
       - ""
   emerald:
-    name: "§6Emerald §bFactor"
+    name: "§bMineral Factor §6Emerald"
     lore:
       - ""
   redstone:
-    name: "§6Redstone §bFactor"
+    name: "§bMineral Factor §6Redstone"
     lore:
       - ""
   lapis:
-    name: "§6Lapis §bFactor"
+    name: "§bMineral Factor §6Lapis"
     lore:
       - ""
   coal:
-    name: "§6Coal §bFactor"
+    name: "§bMineral Factor §6Coal"
     lore:
       - ""
   diamond1:
-    name: "§bCore §6Diamond"
+    name: "§bMineral Core §6Diamond"
     lore:
       - ""
   iron1:
-    name: "§bCore §6Iron"
+    name: "§bMineral Core §6Iron"
     lore:
       - ""
   gold1:
-    name: "§bCore §6Gold"
+    name: "§bMineral Core §6Gold"
     lore:
       - ""
   quartz1:
-    name: "§bCore §6Quartz"
+    name: "§bMineral Core §6Quartz"
     lore:
       - ""
   emerald1:
-    name: "§bCore §6Emerald"
+    name: "§bMineral Core §6Emerald"
     lore:
       - ""
   redstone1:
-    name: "§bCore §6Redstone"
+    name: "§bMineral Core §6Redstone"
     lore:
       - ""
   lapis1:
-    name: "§bCore §6Lapis"
+    name: "§bMineral Core §6Lapis"
     lore:
       - ""
   coal1:
-    name: "§bCore §6Coal"
+    name: "§Mineral bMineral Core §6Coal"
     lore:
       - ""
   cu:
-    name: "§6Copper §bFactor"
+    name: "§bMetal Factor §6Copper"
     lore: 
       - ""
   cu1:
-    name: "§bCore §6Copper"
+    name: "§bMetal Core §6Copper"
     lore: 
       - ""
   pb:
-    name: "§6Lead §bFactor"
+    name: "§bMetal Factor §6Lead"
     lore: 
       - ""
   pb1:
-    name: "§bCore §6Lead"
+    name: "§bMetal Core §6Lead"
     lore: 
       - ""
   mg:
-    name: "§6Magnesium §bFactor"
+    name: "§bMetal Factor §6Magnesium"
     lore: 
       - ""
   mg1:
-    name: "§bCore §6Magnesium"
+    name: "§bMetal Core §6Magnesium"
     lore: 
       - ""
   au:
-    name: "§6Gold §bFactor"
+    name: "§bMetal Factor §6Gold"
     lore: 
       - ""
   au1:
-    name: "§bCore §6Gold"
+    name: "§bMetal Core §6Gold"
     lore: 
       - ""
   al:
-    name: "§6Aluminum §bFactor"
+    name: "§bMetal Factor §6Aluminum"
     lore: 
       - ""
   al1:
-    name: "§bCore §6Aluminum"
+    name: "§bMetal Core §6Aluminum"
     lore: 
       - ""
   sn:
-    name: "§6Tin §bFactor"
+    name: "§bMetal Factor §6Tin"
     lore: 
       - ""
   sn1:
-    name: "§bCore §6Tin"
+    name: "§bMetal Core §6Tin"
     lore: 
       - ""
   zn:
-    name: "§6Zinc §bFactor"
+    name: "§bMetal Factor §6Zinc"
     lore: 
       - ""
   zn1:
-    name: "§bCore §6Zinc"
+    name: "§bMetal Core §6Zinc"
     lore: 
       - ""
   ag:
-    name: "§6Silver §bFactor"
+    name: "§bMetal Factor §6Silver"
     lore: 
       - ""
   ag1:
-    name: "§bCore §6Silver"
+    name: "§bMetal Core §6Silver"
     lore: 
       - ""
   real_magnet:
-    name: ""
-    lore: ""
+    name: "§fMagnet"
+    lore:
+     - ""
   electricity_magnet:
-    name: ""
-    lore: ""
+    name: "§eElectromagnet"
+    lore:
+      - ""
   iron_star:
-    name: ""
-    lore: ""
+    name: "§f§lIron Core"
+    lore:
+      - ""
   coil:
-    name: ""
-    lore: ""
+    name: "§cCoil"
+    lore:
+      - ""
   magnetize:
-    name: ""
-    lore: ""
+    name: "§bMagnetizer"
+    lore:
+      - "§8⇨ §e⚡ §7200 J/t"
   magnet_generator:
-    name: ""
-    lore: ""
+    name: "§6Electromagnet Factory"
+    lore:
+      - "§8⇨ §e⚡ §7500 J/t"
   infinity:
-    name: ""
-    lore: ""
+    name: "§cRule §eIngot"
+    lore:
+      - "§7It's full of power"
   fast_geo:
-    name: ""
-    lore: ""
+    name: "§x§c§0§a§f§e§6Advanced GEO Miner"
+    lore:
+      - "§7Efficiency: 1x"
+      - "§8⇨ §e⚡ §710,000 J/t"
   ordinary_generator:
-    name: ""
-    lore: ""
+    name: "§x§9§9§c§2§9§eEasy Electric Generator"
+    lore:
+      - "§8⇨ §e⚡ §7500 J/t"
   mineral_:
-    name: ""
-    lore: ""
+    name: "§eMineral Core"
+    lore:
+      - ""
   metal_:
-    name: ""
-    lore: ""
+    name: "§eMetal Core"
+    lore:
+      - ""
   flint_generator:
-    name: ""
-    lore: ""
+    name: "§eFlint §fGenerator"
+    lore:
+      - "§7Automatically generate glass"
+      - "§7Efficiency: 4x"
   rule_star:
-    name: ""
-    lore: ""
+    name: "§bRule §eStar"
+    lore:
+      - ""
   final_rule:
-    name: ""
-    lore: ""
+    name: "§3Concept §bItem"
+    lore:
+      - ""
   energy_ingot:
-    name: ""
-    lore: ""
+    name: "§x§c§8§d§2§9§aCharged Ingot"
+    lore:
+      - ""
   resource:
-    name: ""
-    lore: ""
+    name: "§a§lResource"
+    lore:
+      - "§7Thanks for propaganda"
   command_block1:
-    name: ""
-    lore: ""
+    name: "§6Original Command Block - §bCommon"
+    lore:
+      - ""
   command_block2:
-    name: ""
-    lore: ""
+    name: "§6Original Command Block - §bRepeating"
+    lore:
+      - ""
   command_block3:
-    name: ""
-    lore: ""
+    name: "§6Original Command Block - §bChain"
+    lore:
+      - ""
   rule_item:
-    name: ""
-    lore: ""
+    name: "§c§lRule Gear"
+    lore:
+      - ""
   effect_deleter:
-    name: ""
-    lore: ""
+    name: "§x§7§4§c§5§e§7Effect Cleaner"
+    lore:
+      - ""
   throw:
-    name: ""
-    lore: ""
+    name: "§x§6§e§d§b§d§eBag Cleaner"
+    lore:
+      - "§7Throw away all items in your bag "
   rule_shine_and_dark_constructor:
-    name: ""
-    lore: ""
+    name: "§x§5§5§f§f§f§fRule Shine And Dark Collector"
+    lore:
+      - "§8⇨ §e⚡ §75,000 J/t"
   entropy_reconstruct:
-    name: ""
-    lore: ""
+    name: "§x§2§3§c§d§4§dItem Reconstruct Factory"
+    lore:
+      - "§8⇨ §e⚡ §7500 J/t"
   rule_reconstruct:
-    name: ""
-    lore: ""
+    name: "§x§2§3§c§d§4§dRule Item Reconstruct Factory"
+    lore:
+      - "§8⇨ §e⚡ §7500 J/t"
   rule_machine_star:
-    name: ""
-    lore: ""
+    name: "§x§8§5§e§1§4§eRule Machine Core"
+    lore:
+      - ""
   shine_and_dark_ingot:
-    name: ""
-    lore: ""
+    name: "§x§b§9§d§2§c§eShine And Dark Ingot"
+    lore:
+      - ""
   rule_dust_generator:
-    name: ""
-    lore: ""
+    name: "§cRule Metal Dust Factory - Random"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_dust_generator1:
-    name: ""
-    lore: ""
+    name: "§cRule Metal Dust Factory - Al"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_dust_generator2:
-    name: ""
-    lore: ""
+    name: "§cRule Metal Dust Factory - Mg"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_dust_generator3:
-    name: ""
-    lore: ""
+    name: "§cRule Metal Dust Factory - Cu"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_dust_generator4:
-    name: ""
-    lore: ""
+    name: "§cRule Metal Dust Factory - Au"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_dust_generator5:
-    name: ""
-    lore: ""
+    name: "§cRule Metal Dust Factory - Ag"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_dust_generator6:
-    name: ""
-    lore: ""
+    name: "§cRule Metal Dust Factory - Pb"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_dust_generator7:
-    name: ""
-    lore: ""
+    name: "§cRule Metal Dust Factory - Sn"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_dust_generator8:
-    name: ""
-    lore: ""
+    name: "§cRule Metal Dust Factory - Zn"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_dust_generator9:
-    name: ""
-    lore: ""
+    name: "§cRule Metal Dust Factory - Fe"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_u_generator:
-    name: ""
-    lore: ""
+    name: "§cRule Uranium Generator"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §75,000 J/t"
   rule_geo:
-    name: ""
-    lore: ""
+    name: "§x§e§4§c§f§b§cRule GEO Miner"
+    lore:
+      - "§7Efficiency: 16x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_creative_generator:
-    name: ""
-    lore: ""
+    name: "§3Original Material Generator"
+    lore:
+      - "§7Efficiency: 1x"
+      - "§8⇨ §e⚡ §7100,000 J/t"
   rule_reactor:
-    name: ""
-    lore: ""
+    name: "§x§d§f§d§3§d§8Rule Reactor"
+    lore:
+      - "§7Efficiency: 8x"
+      - "§8⇨ §e⚡ §75,000 J/t"
   monster_item:
-    name: ""
-    lore: ""
+    name: "§cMonster Simulator §7- §bMain World"
+    lore:
+      - "§7效率:32x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   monster_item1:
-    name: ""
-    lore: ""
+    name: "§cMonster Simulator §7- §bGuardian"
+    lore:
+      - "§7效率:32x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   monster_item2:
-    name: ""
-    lore: ""
+    name: "§cMonster Simulator §7- §bPigman"
+    lore:
+      - "§7效率:32x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   monster_item3:
-    name: ""
-    lore: ""
+    name: "§cMonster Simulator §7- §bEnderman"
+    lore:
+      - "§7效率:32x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   monster_item4:
-    name: ""
-    lore: ""
+    name: "§cMonster Simulator §7- §bCreeper"
+    lore:
+      - "§7效率:32x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   monster_item5:
-    name: ""
-    lore: ""
+    name: "§cMonster Simulator §7- §bDrowned"
+    lore:
+      - "§7效率:32x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   monster_item6:
-    name: ""
-    lore: ""
+    name: "§cMonster Simulator §7- §bAnimal"
+    lore:
+      - "§7效率:32x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   monster_item7:
-    name: ""
-    lore: ""
+    name: "§cMonster Simulator §7- §bSlime"
+    lore:
+      - "§7效率:32x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   monster_item8:
-    name: ""
-    lore: ""
+    name: "§cMonster Simulator §7- §bBlaze"
+    lore:
+      - "§7效率:32x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   monster_item9:
-    name: ""
-    lore: ""
+    name: "§cMonster Simulator §7- §bMagma Cube"
+    lore:
+      - "§7效率:32x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   rule_constructor:
-    name: ""
-    lore: ""
+    name: "§x§e§3§f§5§a§2Rule Core Compressor"
+    lore:
+      - "§7Efficiency: 16x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   mineral_generator:
-    name: ""
-    lore: ""
+    name: "§x§f§3§f§7§e§eRule Miner"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   mineral_block_generator:
-    name: ""
-    lore: ""
+    name: "§x§e§a§f§e§e§6Rule Miner - Mineral Block"
+    lore:
+      - "§7Efficiency: 64x"
+      - "§8⇨ §e⚡ §715,000 J/t"
   plant:
-    name: ""
-    lore: ""
+    name: "§aAuto Farm"
+    lore:
+      - "§7Efficiency: 32x"
+      - "§8⇨ §e⚡ §710,000 J/t"
   wood:
-    name: ""
-    lore: ""
+    name: "§aAuto Tree Farm"
+    lore:
+      - "§7Efficiency: 32x"
+      - "§8⇨ §e⚡ §710,000 J/t"
   energy_quantum:
-    name: ""
-    lore: ""
+    name: "§cCharged §bQuantum"
+    lore:
+      - ""
   random_quantum:
-    name: ""
-    lore: ""
+    name: "§3Random §aQuantum"
+    lore:
+      - ""
   random_quantum_generator:
-    name: ""
-    lore: ""
+    name: "§x§e§4§e§2§c§dRandom Quantum Generator"
+    lore:
+      - ""
   energy_quantum_generator:
-    name: ""
-    lore: ""
+    name: "§x§d§7§f§c§f§2Quantum Charged Machine"
+    lore:
+      - "§8⇨ §e⚡ §7500,000 J/t"
   final_ingot_generator:
-    name: ""
-    lore: ""
+    name: "§bRule Ingot Cast Machine"
+    lore:
+      - "§7Efficiency: INFINITY"
   final_generator:
-    name: ""
-    lore: ""
+    name: "§eRule Electric Generator"
+    lore:
+      - "§8⇨ §e⚡ §71,000,000,000 J/t"
   final_capital:
-    name: ""
-    lore: ""
+    name: "§eRule Electric Capital"
+    lore:
+      "§7Can Stored §8⇨ §e⚡ §72,000,000,000 J/t"
   final_electric_eater:
-    name: ""
-    lore: ""
+    name: "§bElectric Eater"
+    lore:
+      - "§7Eat electric ;D"
   item_fixer:
-    name: ""
-    lore: ""
+    name: "§6Item Reset Machine"
+    lore:
+      - "§7Reset slimefun item stack"
   rule_pickaxe:
-    name: ""
-    lore: ""
+    name: "§6Rule Pickaxe"
+    lore:
+      - ""
   looter:
-    name: ""
-    lore: ""
+    name: "§7Looter Spawner"
+    lore:
+      - ""
   forever:
-    name: ""
-    lore: ""
+    name: "§bEternal Particle"
+    lore:
+      - "§7Forever..."
   forever_:
-    name: ""
-    lore: ""
+    name: "§bEternal Singularity"
+    lore:
+      - "§7Forever..."
   eternal_mining_machine:
-    name: ""
-    lore: ""
+    name: "§bEternal Particle Miner"
+    lore:
+      - "§7Slower abd slower..."
   digit_generator:
-    name: ""
-    lore: ""
+    name: "§fDigit Electric Generator"
+    lore:
+      - "§7Can Stored §8⇨ §e⚡ §716,777,216 J"
   id_display:
-    name: ""
-    lore: ""
+    name: " "
+    lore:
+      - ""
   proton:
-    name: ""
-    lore: ""
+    name: "§6Proton"
+    lore:
+      - ""
   zygote:
-    name: ""
-    lore: ""
+    name: "§6Zygote"
+    lore:
+      - ""
   particle_constructor:
-    name: ""
-    lore: ""
+    name: "§x§6§d§6§4§d§cParticle Collector"
+    lore:
+      - "§7可储存 §8⇨ §e⚡ §75000 J"
   proton_ingot:
-    name: ""
-    lore: ""
+    name: "§6Proton Ingot"
+    lore:
+      - ""
   zygote_ingot:
-    name: ""
-    lore: ""
+    name: "§6Zygote Ingot"
+    lore:
+      - ""
   salt_generator:
-    name: ""
-    lore: ""
+    name: "§7Salt Miner"
+    lore: 
+      - ""
   ingot_constructor:
-    name: ""
-    lore: ""
+    name: "§x§f§f§8§d§c§5Alloy Generator"
+    lore: 
+      - "§7Efficiency: 32x"
   metal_star:
     name: "§eMetal Star"
     lore:
