@@ -122,11 +122,11 @@ public class ParticleConstructor extends AbstractProcessMachine implements Energ
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> list = new ArrayList<>(10);
-        list.add(new CustomItemStack(Material.BOOK, "&f每次工作完会随机冷却1~50tick"));
+        list.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("particle_constructor")));
         list.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
-        list.add(new CustomItemStack(Material.BOOK, "&f当电力为质数的时候输出一个质子"));
+        list.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("particle_constructor_proton")));
         list.add(new SlimefunItemStack("MOMOTECH_PROTON", Items.MOMOTECH_PROTON));
-        list.add(new CustomItemStack(Material.BOOK, "&f当电力为合数的时候输出一个合子"));
+        list.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("particle_constructor_zygote")));
         list.add(new SlimefunItemStack("MOMOTECH_ZYGOTE", Items.MOMOTECH_ZYGOTE));
         return list;
     }

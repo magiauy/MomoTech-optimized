@@ -3,6 +3,7 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Maths;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -230,11 +231,11 @@ public class QuantityConstructor extends AbstractGUI implements RecipeDisplayIte
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(36);
-        it.add(new CustomItemStack(Material.BOOK, "&f制作原始物质γ", "&f要求:输入槽填满45x64个不可控空后有50%概率生成"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("quantity_constructor_y"), MomoTech.languageManager.getRecipeDescription("quantity_constructor_y_requirement")));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         it.add(uncontrollable_empty.clone());
         it.add(creative_item_II.clone());
-        it.add(new CustomItemStack(Material.BOOK, "&f制作BUG水晶", "&f要求:输入槽中同时存在且仅存在6种bug物质, 并且物品总数达到45x64后生成"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("quantity_constructor_bug_crystal"), MomoTech.languageManager.getRecipeDescription("quantity_constructor_bug_crystal_requirement")));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         it.add(bug.clone());
         it.add(bug_crystal.clone());

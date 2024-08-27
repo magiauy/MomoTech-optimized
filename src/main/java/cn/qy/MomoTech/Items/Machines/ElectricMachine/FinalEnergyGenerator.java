@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.ElectricMachine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetProvider;
@@ -65,7 +66,7 @@ public class FinalEnergyGenerator extends AbstractGUI implements EnergyNetProvid
     }
     @Override
     public void add(BlockMenuPreset blockMenuPreset) {
-        blockMenuPreset.addItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&f正在发电", "§8⇨ §e⚡ &7999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999^0 J/t"), ChestMenuUtils.getEmptyClickHandler());
+        blockMenuPreset.addItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("generating_energy"), "§8⇨ §e⚡ &7999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999^0 J/t"), ChestMenuUtils.getEmptyClickHandler());
     }
 
     @Override

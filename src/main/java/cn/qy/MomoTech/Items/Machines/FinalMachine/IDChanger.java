@@ -3,6 +3,7 @@ package cn.qy.MomoTech.Items.Machines.FinalMachine;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
@@ -72,7 +73,7 @@ public class IDChanger extends AbstractGUI implements RecipeDisplayItem {
                 if (!it.isDisabled()) {
                     inv.pushItem(it.getItem().clone(), getOutputSlots());
                 } else {
-                    inv.pushItem(new CustomItemStack(Material.PAPER, "&7这个物品已经被禁用了!"));
+                    inv.pushItem(new CustomItemStack(Material.PAPER, MomoTech.languageManager.getGeneric("item_banned")));
                 }
                 inv.consumeItem(1, 1);
             }

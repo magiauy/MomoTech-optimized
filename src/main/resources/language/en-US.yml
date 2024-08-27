@@ -2,6 +2,8 @@ generic:
   progress: "§aProgress"
   stored: "§fStored "
   stored_default: "§fStored NULL J"
+  generating_energy: "§fGenerating Energy"
+  item_banned: "§cThis item has been disabled! You can't get it!"
 item:
   quantitative_plugin:
     name: "§x§7§4§8§d§8§dQ§x§7§7§8§d§8§fu§x§7§a§8§d§9§2a§x§7§d§8§c§9§4n§x§8§0§8§c§9§7t§x§8§3§8§c§9§9i§x§8§6§8§c§9§ct§x§8§9§8§c§9§ea§x§8§c§8§c§a§1t§x§9§0§8§c§a§3i§x§9§3§8§c§a§6v§x§9§6§8§c§a§8e §x§9§9§8§c§a§bp§x§9§c§8§c§a§dl§x§9§f§8§c§b§0u§x§a§2§8§b§b§3g§x§a§5§8§b§b§5i§x§a§8§8§b§b§8n"
@@ -243,7 +245,7 @@ item:
     lore:
       - ""
   uncontrollable_empty:
-    name: "§8§l§k123§f§lUncontrollable Item"
+    name: "§8§l§k123§f§lUncontrollable Empty"
     lore:
       - "§7Oh, it's out of control:<"
   creativegenerator:
@@ -725,52 +727,52 @@ item:
   monster_item:
     name: "§cMonster Simulator §7- §bMain World"
     lore:
-      - "§7效率:32x"
+      - "§7Efficiency:32x"
       - "§8⇨ §e⚡ §715,000 J/t"
   monster_item1:
     name: "§cMonster Simulator §7- §bGuardian"
     lore:
-      - "§7效率:32x"
+      - "§7Efficiency:32x"
       - "§8⇨ §e⚡ §715,000 J/t"
   monster_item2:
     name: "§cMonster Simulator §7- §bPigman"
     lore:
-      - "§7效率:32x"
+      - "§7Efficiency:32x"
       - "§8⇨ §e⚡ §715,000 J/t"
   monster_item3:
     name: "§cMonster Simulator §7- §bEnderman"
     lore:
-      - "§7效率:32x"
+      - "§7Efficiency:32x"
       - "§8⇨ §e⚡ §715,000 J/t"
   monster_item4:
     name: "§cMonster Simulator §7- §bCreeper"
     lore:
-      - "§7效率:32x"
+      - "§7Efficiency:32x"
       - "§8⇨ §e⚡ §715,000 J/t"
   monster_item5:
     name: "§cMonster Simulator §7- §bDrowned"
     lore:
-      - "§7效率:32x"
+      - "§7Efficiency:32x"
       - "§8⇨ §e⚡ §715,000 J/t"
   monster_item6:
     name: "§cMonster Simulator §7- §bAnimal"
     lore:
-      - "§7效率:32x"
+      - "§7Efficiency:32x"
       - "§8⇨ §e⚡ §715,000 J/t"
   monster_item7:
     name: "§cMonster Simulator §7- §bSlime"
     lore:
-      - "§7效率:32x"
+      - "§7Efficiency:32x"
       - "§8⇨ §e⚡ §715,000 J/t"
   monster_item8:
     name: "§cMonster Simulator §7- §bBlaze"
     lore:
-      - "§7效率:32x"
+      - "§7Efficiency:32x"
       - "§8⇨ §e⚡ §715,000 J/t"
   monster_item9:
     name: "§cMonster Simulator §7- §bMagma Cube"
     lore:
-      - "§7效率:32x"
+      - "§7Efficiency:32x"
       - "§8⇨ §e⚡ §715,000 J/t"
   rule_constructor:
     name: "§x§e§3§f§5§a§2Rule Core Compressor"
@@ -856,7 +858,7 @@ item:
   digit_generator:
     name: "§fDigit Electric Generator"
     lore:
-      - "§7Can Stored §8⇨ §e⚡ §716,777,216 J"
+      - "§7Can store §8⇨ §e⚡ §716,777,216 J"
   id_display:
     name: " "
     lore:
@@ -872,7 +874,7 @@ item:
   particle_constructor:
     name: "§x§6§d§6§4§d§cParticle Collector"
     lore:
-      - "§7可储存 §8⇨ §e⚡ §75000 J"
+      - "§7Can store §8⇨ §e⚡ §75000 J"
   proton_ingot:
     name: "§6Proton Ingot"
     lore:
@@ -907,11 +909,20 @@ showing_as_recipe_item:
   symbol: "§e§lSymbol"
   symbol_2: "§6Symbol"
 description:
+  electric_eater: "§fEating energy..."
+  quantity_constructor_y: "§fMake original material γ"
+  quantity_constructor_y_requirement: "§fRequirement: There is a 50% probability of generating when the input slot is filled with 45x64 'Uncontrollable Empty's"
+  quantity_constructor_bug_crystal: "§fMake bug crystal"
+  quantity_constructor_bug_crystal_requirement: "§fRequirement: Only 6 types of bugged items exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
+  digital_generator: "§fInsert a number to increase the energy by [number] J, the capacitor can store 16777216 J of energy"
+  particle_constructor: "§fAfter each work, it will randomly cool down 1-50 ticks"
+  particle_constructor_proton: "§fWhen machine stored energy is a prime number, output a proton"
+  particle_constructor_zygote: "§fWhen machine stored energy is a composite number, output a zygote"
   symbol_generator: "§fCreate operators"
   symbol_generator_usage: "§7Randomly output an operator after inputting 'Null's, with varying probabilities for different operators"
   transporter: "§fInserting digital component into the machine to configure distance"
   cobblestone_store: "§fSimilar to chests, but providing 48 compartments of storage space"
-  uncontrollable_empty_generator: "§fGenerate 48 'Uncontrollable Item's each time"
+  uncontrollable_empty_generator: "§fGenerate 48 'Uncontrollable Empty's each time"
   random_quantum_generator: "§fGet random quantum"
   random_quantum_generator_usage: "§7Each tick randomly appears in the machine's interaction slots and all other items in the interaction slots will be cleared"
   final_copier_usage: "Input entangled quantum to replicate any object in the interaction slots in the middle"

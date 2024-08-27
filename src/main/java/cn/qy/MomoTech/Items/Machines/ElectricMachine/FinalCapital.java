@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.ElectricMachine;
 
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
@@ -54,12 +55,12 @@ public class FinalCapital extends AbstractElectricGUI implements EnergyNetCompon
 
     @Override
     public void add(BlockMenuPreset b) {
-        b.addItem(4, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&f已储存 NULL J"), ChestMenuUtils.getEmptyClickHandler());
+        b.addItem(4, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("stored_default")), ChestMenuUtils.getEmptyClickHandler());
     }
 
     @Override
     protected boolean findNextRecipe(BlockMenu inv) {
-        inv.toInventory().setItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&f已储存 " + this.getCharge(inv.getLocation()) + " J"));
+        inv.toInventory().setItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("stored") + this.getCharge(inv.getLocation()) + " J"));
         return false;
     }
 

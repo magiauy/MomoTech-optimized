@@ -2,6 +2,7 @@ package cn.qy.MomoTech.Items.Machines.ElectricMachine;
 
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
@@ -62,12 +63,12 @@ public class DigitalGenerator extends AbstractElectricGUI implements EnergyNetCo
 
     @Override
     public void add(BlockMenuPreset b) {
-        b.addItem(4, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&f已储存 NULL J"), ChestMenuUtils.getEmptyClickHandler());
+        b.addItem(4, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("stored_default")), ChestMenuUtils.getEmptyClickHandler());
     }
 
     @Override
     protected boolean findNextRecipe(BlockMenu inv) {
-        inv.toInventory().setItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&f已储存 " + this.getCharge(inv.getLocation()) + " J"));
+        inv.toInventory().setItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("stored") + this.getCharge(inv.getLocation()) + " J"));
         for (int i : getInputSlots()) {
             if (inv.getItemInSlot(i) != null) {
                 if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.digital(0), false, false)) {
@@ -103,7 +104,7 @@ public class DigitalGenerator extends AbstractElectricGUI implements EnergyNetCo
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> list = new ArrayList<>(10);
-        list.add(new CustomItemStack(Material.BOOK, "&f插入数字为电容增加 数字 J 电量, 电容可储存 16,777,216 J"));
+        list.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("digital_generator")));
         list.add(MomotechItem.digital(1.0).clone());
         return list;
     }

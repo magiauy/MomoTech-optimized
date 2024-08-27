@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.ElectricMachine;
 
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
@@ -64,6 +65,6 @@ public class ElectricEater extends AbstractElectricGUI {
 
     @Override
     public void add(BlockMenuPreset b) {
-        b.addItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&b正在吃电...", "&72,000,000,000 J/t"), ChestMenuUtils.getEmptyClickHandler());
+        b.addItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getRecipeDescription("electric_eater"), "&72,000,000,000 J/t"), ChestMenuUtils.getEmptyClickHandler());
     }
 }
