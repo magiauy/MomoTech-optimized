@@ -48,17 +48,17 @@ public class Items {
     }
 
     public static final ItemStack QUANTITY_ITEM = new CustomItemStack(Material.PURPLE_DYE, MomoTech.languageManager.getItemName("quantitative_plugin"), MomoTech.languageManager.getItemLore("quantitative_plugin"));
-    public static final ItemStack FROG_LIGHT_GENERATOR = new CustomItemStack(Material.OCHRE_FROGLIGHT, "&e蛙鸣灯生成器", "&7随机生成一种蛙鸣灯", "&7效率:4x");
-    public static final ItemStack STONE_GENERATOR = new CustomItemStack(Material.STONE, "&eStone &fGenerator", "&7Automatically generates Granite/Andesite/Diorite/Cobblestone", "&7Efficiency: 8x");
-    public static final ItemStack ORE_GENERATOR = new CustomItemStack(Material.DIAMOND_ORE, "&e原矿&f生成器", "&7自动化生产各种原矿", "&7效率:1x");
-    public static final ItemStack SAND_GENERATOR = new CustomItemStack(Material.SANDSTONE, "&e沙质&f生成器", "&7自动化红沙/沙子/砂砾/灵魂沙", "&7效率:8x");
-    public static final ItemStack STONE_GENERATOR_I = new CustomItemStack(Material.COBBLESTONE, "&e定向圆石&f生成器", "&7自动化生产圆石", "&7效率:8x");
-    public static final ItemStack GLASS_GENERATOR = new CustomItemStack(Material.GLASS, "&e定向玻璃&f生成器", "&7自动化生产玻璃", "&7效率:8x");
-    public static final ItemStack TEMPLATE_GENERATOR = new CustomItemStack(Material.MELON, "&e模板&f生成器", "&7随机生成高版本的模板", "&7效率:1x");
-    public static final ItemStack FISH_GENERATOR = new CustomItemStack(Material.SEA_LANTERN, "&e自动捕鱼器", "&7随机生成各种鱼", "&7效率1x");
-    public static final ItemStack DUST_GENERATOR = new CustomItemStack(Material.SAND, "&e矿粉&f生成器", "&7随机生产各种矿粉", "&7效率6x");
-    public static final ItemStack STONES_GENERATOR = new CustomItemStack(Material.SNOW_BLOCK, "&6石块&f生成器", "&7自动化生产石块", "&7效率8x");
-    public static final ItemStack ICE_GENERATOR = new CustomItemStack(Material.BLUE_ICE, "&e冰&f生成器", "&7自动化生产冰", "&7效率:1x");
+    public static final ItemStack FROG_LIGHT_GENERATOR = new CustomItemStack(Material.OCHRE_FROGLIGHT, MomoTech.languageManager.getItemName("frog_light_generator"), MomoTech.languageManager.getItemLore("frog_light_generator"));
+    public static final ItemStack STONE_GENERATOR = new CustomItemStack(Material.STONE, MomoTech.languageManager.getItemName("stone_generator"), MomoTech.languageManager.getItemLore("stone_generator"));
+    public static final ItemStack ORE_GENERATOR = new CustomItemStack(Material.DIAMOND_ORE, MomoTech.languageManager.getItemName("ore_generator"), MomoTech.languageManager.getItemLore("ore_generator"));
+    public static final ItemStack SAND_GENERATOR = new CustomItemStack(Material.SANDSTONE, MomoTech.languageManager.getItemName("sand_generator"), MomoTech.languageManager.getItemLore("sand_generator"));
+    public static final ItemStack STONE_GENERATOR_I = new CustomItemStack(Material.COBBLESTONE, MomoTech.languageManager.getItemName("stone_generator_i"), MomoTech.languageManager.getItemLore("stone_generator_i"));
+    public static final ItemStack GLASS_GENERATOR = new CustomItemStack(Material.GLASS, MomoTech.languageManager.getItemName("glass_generator"), MomoTech.languageManager.getItemLore("glass_generator"));
+    public static final ItemStack TEMPLATE_GENERATOR = new CustomItemStack(Material.MELON, MomoTech.languageManager.getItemName("template_generator"), MomoTech.languageManager.getItemLore("template_generator"));
+    public static final ItemStack FISH_GENERATOR = new CustomItemStack(Material.SEA_LANTERN, MomoTech.languageManager.getItemName("fish_generator"), MomoTech.languageManager.getItemLore("fish_generator"));
+    public static final ItemStack DUST_GENERATOR = new CustomItemStack(Material.SAND, MomoTech.languageManager.getItemName("dust_generator"), MomoTech.languageManager.getItemLore("dust_generator"));
+    public static final ItemStack STONES_GENERATOR = new CustomItemStack(Material.SNOW_BLOCK, MomoTech.languageManager.getItemName("stones_generator"), MomoTech.languageManager.getItemLore("stones_generator"));
+    public static final ItemStack ICE_GENERATOR = new CustomItemStack(Material.BLUE_ICE, MomoTech.languageManager.getItemName("ice_generator"), MomoTech.languageManager.getItemLore("ice_generator"));
     public static final ItemStack Generator = new CustomItemStack(Material.ORANGE_CONCRETE_POWDER, c("§#b98bc6发§#cb8ad4电§#dc8ae2机"), "§8⇨ §e⚡ §76,000 J/t");
     public static final ItemStack LINE_GENERATOR = new CustomItemStack(Material.GRAY_WOOL, "&e线&f生成器", "&7自动化生产线", "&7效率:3x");
     public static final ItemStack COMMAND_BLOCK_GENERATOR = new CustomItemStack(Material.POLISHED_BLACKSTONE, "&b&l命令方块生成器", "&7&l什么?命令方块???", "&7效率:1x");

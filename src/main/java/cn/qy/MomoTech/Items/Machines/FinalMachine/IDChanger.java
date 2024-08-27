@@ -64,7 +64,7 @@ public class IDChanger extends AbstractGUI implements RecipeDisplayItem {
         if (!SlimefunUtils.isItemSimilar(inv.getItemInSlot(1), MomotechItem.ID_card, false, false)) return;
         String lore = Utils.getLore(inv.getItemInSlot(1).getItemMeta()).get(0).substring(5);
         if (lore.isEmpty()) {
-            inv.pushItem(new CustomItemStack(Material.PAPER, "&7不好意思你的输入不合法"), 1);
+            inv.pushItem(new CustomItemStack(Material.PAPER, MomoTech.languageManager.getGeneric("input_invalid")), 1);
             return;
         }
         try {
@@ -78,7 +78,7 @@ public class IDChanger extends AbstractGUI implements RecipeDisplayItem {
                 inv.consumeItem(1, 1);
             }
         } catch (NullPointerException e) {
-            inv.pushItem(new CustomItemStack(Material.PAPER, "&7不好意思你的输入不合法"), 1);
+            inv.pushItem(new CustomItemStack(Material.PAPER, MomoTech.languageManager.getGeneric("input_invalid")), 1);
         }
     }
 
@@ -87,7 +87,7 @@ public class IDChanger extends AbstractGUI implements RecipeDisplayItem {
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
         it.add(new SlimefunItemStack("MOMOTECH_ID_CARD", Items.MOMOTECH_ID_CARD));
-        it.add(new CustomItemStack(Material.BOOK, "&f输入任意合法的ID卡以直接通过sfid制作物品"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getGeneric("id_changer")));
         return it;
     }
 }

@@ -1,6 +1,7 @@
 # MomoTech
 
-## Remember to change the language after installation! And restart to apply the changes.
+## Remember to change the language after installation! Then restart the server to apply language changes!
+## You'd better use the latest version because maybe there's some bugs in the old versions :D
 
 ## About
 This is Slimefun addon for minecraft servers.
@@ -21,4 +22,4 @@ The project now uses 1.20.1 API of minecraft, and RC-35 of Slimefun4
 
 and only have Chinese versions now, but maybe we'll have English versions later, also, welcome you to help me translate it!
 
-# You'd better use the latest version because maybe there's some bugs in the old versions :D
+

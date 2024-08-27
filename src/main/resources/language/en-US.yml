@@ -4,6 +4,7 @@ generic:
   stored_default: "§fStored NULL J"
   generating_energy: "§fGenerating Energy"
   item_banned: "§cThis item has been disabled! You can't get it!"
+  input_invalid: "§cInvalid input!"
 item:
   quantitative_plugin:
     name: "§x§7§4§8§d§8§dQ§x§7§7§8§d§8§fu§x§7§a§8§d§9§2a§x§7§d§8§c§9§4n§x§8§0§8§c§9§7t§x§8§3§8§c§9§9i§x§8§6§8§c§9§ct§x§8§9§8§c§9§ea§x§8§c§8§c§a§1t§x§9§0§8§c§a§3i§x§9§3§8§c§a§6v§x§9§6§8§c§a§8e §x§9§9§8§c§a§bp§x§9§c§8§c§a§dl§x§9§f§8§c§b§0u§x§a§2§8§b§b§3g§x§a§5§8§b§b§5i§x§a§8§8§b§b§8n"
@@ -36,22 +37,22 @@ item:
   stone_generator:
     name: "§eStone §fGenerator"
     lore:
-      - "§7Automatically generate Granite/andesite/diorite/cobblestone"
+      - "§7Automatically generate Granite/Andesite/Diorite/Cobblestone"
       - "§7Efficiency: 8x"
   frog_light_generator:
     name: "§eFroglight §fGenerator"
     lore:
-      - "§7Automatically generate various of froglights"
+      - "§7Automatically generate any type of froglights"
       - "§7Efficiency: 4x"
   ore_generator:
     name: "§eOre §fGenerator"
     lore:
-      - "§7Automatically generate various of ores"
+      - "§7Automatically generate any type of ores"
       - "§7Efficiency: 1x"
   sand_generator:
     name: "§eSand §fGenerator"
     lore:
-      - "§7Automatically generate sand/redsand/gravel/soulsand"
+      - "§7Automatically generate Sand/Red Sand/Gravel/Soul Sand"
       - "§7Efficiency: 8x"
   stone_generator_i:
     name: "§eCobblestone §fGenerator"
@@ -66,7 +67,7 @@ item:
   template_generator:
     name: "§eTemplate §fGenerator"
     lore:
-      - "§7Automatically generate various of templates"
+      - "§7Automatically generate any type of templates"
       - "§7Efficiency: 1x"
   fish_generator:
     name: "§eFishing Machine"
@@ -76,7 +77,7 @@ item:
   dust_generator:
     name: "§eDust §fGenerator"
     lore:
-      - "§7Automatically generate various of ores' dust"
+      - "§7Automatically generate any type of ores' dusts"
       - "§7Efficiency: 6x"
   stones_generator:
     name: "§eStone chunk §fGenerator"
@@ -909,11 +910,15 @@ showing_as_recipe_item:
   symbol: "§e§lSymbol"
   symbol_2: "§6Symbol"
 description:
+  random_copier_usage: "§fThere is a 10% probability of randomly copying an item from the interactive slot above when inputting the original material γ in the bottom left corner"
+  random_copier_requirement: "§7Requirement: The amount and types of items in the interactive slot are not equal"
+  id_changer: "§fEnter any valid ID card to directly create items through Slimefun Item ID"
   electric_eater: "§fEating energy..."
   quantity_constructor_y: "§fMake original material γ"
   quantity_constructor_y_requirement: "§fRequirement: There is a 50% probability of generating when the input slot is filled with 45x64 'Uncontrollable Empty's"
   quantity_constructor_bug_crystal: "§fMake bug crystal"
   quantity_constructor_bug_crystal_requirement: "§fRequirement: Only 6 types of bugged items exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
+  # 量化构造器其余部分需补充
   digital_generator: "§fInsert a number to increase the energy by [number] J, the capacitor can store 16777216 J of energy"
   particle_constructor: "§fAfter each work, it will randomly cool down 1-50 ticks"
   particle_constructor_proton: "§fWhen machine stored energy is a prime number, output a proton"
