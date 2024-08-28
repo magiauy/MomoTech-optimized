@@ -2,6 +2,7 @@
 
 ## Remember to change the language after installation! Then restart the server to apply language changes!
 ## You'd better use the latest version because maybe there's some bugs in the old versions :D
+## Join our discord server for support/updates/suggestions: https://discord.gg/M2yRf7VV3X
 
 ## About
 This is Slimefun addon for minecraft servers.
