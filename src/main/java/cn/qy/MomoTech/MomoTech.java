@@ -40,11 +40,15 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
         getLogger().info("|      Plugin:MomoTech     |");
         getLogger().info("|      Version:1.1.11      |");
         getLogger().info("----------------------------");
-        getLogger().info("> Discord: ");
+        getLogger().info("> Discord: https://discord.gg/M2yRf7VV3X");
         getLogger().info("> E-mail:3392295184@qq.com");
         getLogger().info("----------------------------");
         getLogger().info("Loading MomoTech...");
         instance = this;
+
+        saveDefaultConfig();
+        saveConfig();
+
         languageManager = new LanguageManager(this);
         getLogger().info("Staring Listener Registration...");
         getServer().getPluginManager().registerEvents(new Listeners(), this);

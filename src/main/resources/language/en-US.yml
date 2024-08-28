@@ -93,7 +93,7 @@ item:
     name: "§x§b§9§8§b§c§6Basic §x§d§c§8§a§e§2Generator"
     lore:
       - "§8⇨ §e⚡ §76,000 J/t"
-  line_generator:
+  string_generator:
     name: "§eString §fGenerator"
     lore:
       - "§7Automatically generate string"
@@ -101,7 +101,8 @@ item:
   command_block_generator:
     name: "§eCommand Block §fGenerator"
     lore:
-      - "§7Automatically generate various of command blocks"
+      - "§7§lWhat? Command Blocks???"
+      - "§7Automatically generate any type of command blocks"
       - "§7Efficiency: 1x"
   c_generator:
     name: "§eCarbon §fGenerator"
@@ -914,6 +915,7 @@ description:
   random_copier_requirement: "§7Requirement: The amount and types of items in the interactive slot are not equal"
   id_changer: "§fEnter any valid ID card to directly create items through Slimefun Item ID"
   electric_eater: "§fEating energy..."
+
   quantity_constructor_y: "§fMake original Material γ"
   quantity_constructor_y_requirement: "§fRequirement: There is a 50% probability of generating when the input slot is filled with 45x64 'Uncontrollable Empty's"
   quantity_constructor_bug_crystal: "§fMake Bug Crystal"
