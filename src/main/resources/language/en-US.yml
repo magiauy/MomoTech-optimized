@@ -144,19 +144,19 @@ item:
       - "§7You could add letters into card in ID Adder"
   id_putter:
     name: "§x§f§c§c§c§9§8ID §x§f§2§a§b§d§0Adder"
-    lore: 
+    lore:
       - ""
   letter_constructor:
     name: "§x§7§e§f§6§9§eLetter §x§8§d§f§7§9§8Constructor"
-    lore: 
+    lore:
       - ""
   final_star:
     name: "§7§lSupreme Star"
-    lore: 
+    lore:
       - "§7lol"
   id_changer:
     name: "§x§d§6§f§c§7§cItem §x§f§3§f§e§7§1Maker"
-    lore: 
+    lore:
       - "§7lol, it's already the end, good job"
       - "§7This machine could turn the ID card into everything in slimefun by the ID that ID card recorded"
   uncontrollable_empty_generator:
@@ -165,7 +165,7 @@ item:
       - "§7Efficiency: 48x"
   random_copier:
     name: "§x§f§f§5§5§0§cRandom §x§f§f§8§3§4§eCopier"
-    lore: 
+    lore:
       - "§7Dupe random item legally"
   final_copier:
     name: "§x§f§f§e§0§d§3Final §x§e§f§e§f§e§fCopier"
@@ -246,8 +246,12 @@ item:
       - "§7Generator 64 'Null's per tick"
   creative_item:
     name: "§x§f§f§7§6§8§bOriginal §x§f§f§7§5§5§6Material α"
+    lore:
+      - "&7The basic"
   creative_item_i:
     name: "§x§f§f§8§7§3§9Original §x§f§f§a§1§0§eMaterial β"
+    lore:
+      - "&7The basic"
   creative_item_generator:
     name: "§x§f§f§f§0§8§5Original Material Factory"
     lore:
@@ -388,11 +392,11 @@ item:
   shine:
     name: "§eShine"
     lore:
-      - ""
+      - "&7It's shining!"
   dark:
     name: "§8Dark"
     lore:
-      - ""
+      - "&7It's full of dark..."
   shine_and_dark_constructor:
     name: "§x§5§5§f§f§f§fShine And Dark Collector"
     lore:
@@ -421,7 +425,7 @@ item:
       - "§7Efficiency: 8x"
   constructor:
     name: "§x§e§3§f§5§a§2Core Compressor"
-    lore: 
+    lore:
       - "§8⇨ §e⚡ §7900 J/t"
   diamond:
     name: "§bMineral Factor §6Diamond"
@@ -489,84 +493,84 @@ item:
       - ""
   cu:
     name: "§bMetal Factor §6Copper"
-    lore: 
+    lore:
       - ""
   cu1:
     name: "§bMetal Core §6Copper"
-    lore: 
+    lore:
       - ""
   pb:
     name: "§bMetal Factor §6Lead"
-    lore: 
+    lore:
       - ""
   pb1:
     name: "§bMetal Core §6Lead"
-    lore: 
+    lore:
       - ""
   mg:
     name: "§bMetal Factor §6Magnesium"
-    lore: 
+    lore:
       - ""
   mg1:
     name: "§bMetal Core §6Magnesium"
-    lore: 
+    lore:
       - ""
   au:
     name: "§bMetal Factor §6Gold"
-    lore: 
+    lore:
       - ""
   au1:
     name: "§bMetal Core §6Gold"
-    lore: 
+    lore:
       - ""
   al:
     name: "§bMetal Factor §6Aluminum"
-    lore: 
+    lore:
       - ""
   al1:
     name: "§bMetal Core §6Aluminum"
-    lore: 
+    lore:
       - ""
   sn:
     name: "§bMetal Factor §6Tin"
-    lore: 
+    lore:
       - ""
   sn1:
     name: "§bMetal Core §6Tin"
-    lore: 
+    lore:
       - ""
   zn:
     name: "§bMetal Factor §6Zinc"
-    lore: 
+    lore:
       - ""
   zn1:
     name: "§bMetal Core §6Zinc"
-    lore: 
+    lore:
       - ""
   ag:
     name: "§bMetal Factor §6Silver"
-    lore: 
+    lore:
       - ""
   ag1:
     name: "§bMetal Core §6Silver"
-    lore: 
+    lore:
       - ""
   real_magnet:
     name: "§fMagnet"
     lore:
-     - ""
+      - "&7Oh, this is the more reasonable magnet!"
   electricity_magnet:
     name: "§eElectromagnet"
     lore:
-      - ""
+      - "&7The important component"
   iron_star:
     name: "§f§lIron Core"
     lore:
-      - ""
+      - "&7How heavy!"
   coil:
     name: "§cCoil"
     lore:
-      - ""
+      - "&7;D"
   magnetize:
     name: "§bMagnetizer"
     lore:
@@ -604,15 +608,15 @@ item:
   rule_star:
     name: "§bRule §eStar"
     lore:
-      - ""
+      - "&7Rule's power"
   final_rule:
     name: "§3Concept §bItem"
     lore:
-      - ""
+      - "&7Just a concept"
   energy_ingot:
     name: "§x§c§8§d§2§9§aCharged Ingot"
     lore:
-      - ""
+      - "&7It's full of energy"
   resource:
     name: "§a§lResource"
     lore:
@@ -620,23 +624,23 @@ item:
   command_block1:
     name: "§6Original Command Block - §bCommon"
     lore:
-      - ""
+      - "&7What?"
   command_block2:
     name: "§6Original Command Block - §bRepeating"
     lore:
-      - ""
+      - "&7What?"
   command_block3:
     name: "§6Original Command Block - §bChain"
     lore:
-      - ""
+      - "&7What?"
   rule_item:
     name: "§c§lRule Gear"
     lore:
-      - ""
+      - "&7Command's power!"
   effect_deleter:
     name: "§x§7§4§c§5§e§7Effect Cleaner"
     lore:
-      - ""
+      - "&7Cleaner!"
   throw:
     name: "§x§6§e§d§b§d§eBag Cleaner"
     lore:
@@ -656,11 +660,11 @@ item:
   rule_machine_star:
     name: "§x§8§5§e§1§4§eRule Machine Core"
     lore:
-      - ""
+      - "&7Really precious"
   shine_and_dark_ingot:
     name: "§x§b§9§d§2§c§eShine And Dark Ingot"
     lore:
-      - ""
+      - "&7So beautiful!"
   rule_dust_generator:
     name: "§cRule Metal Dust Factory - Random"
     lore:
@@ -809,15 +813,15 @@ item:
   energy_quantum:
     name: "§cCharged §bQuantum"
     lore:
-      - ""
+      - "&7Dangerous!"
   random_quantum:
     name: "§3Random §aQuantum"
     lore:
-      - ""
+      - "&7You'll die if you use it..."
   random_quantum_generator:
     name: "§x§e§4§e§2§c§dRandom Quantum Generator"
     lore:
-      - ""
+      - "&7Random~"
   energy_quantum_generator:
     name: "§x§d§7§f§c§f§2Quantum Charged Machine"
     lore:
@@ -845,11 +849,11 @@ item:
   rule_pickaxe:
     name: "§6Rule Pickaxe"
     lore:
-      - ""
+      - "&7Precious Item"
   looter:
     name: "§7Looter Spawner"
     lore:
-      - ""
+      - "&7You'll get a looter spawner when you use it"
   forever:
     name: "§bEternal Particle"
     lore:
@@ -867,17 +871,17 @@ item:
     lore:
       - "§7Can store §8⇨ §e⚡ §716,777,216 J"
   id_display:
-    name: " "
+    name: "&7&lID"
     lore:
-      - ""
+      - "&7Show item's id"
   proton:
     name: "§6Proton"
     lore:
-      - ""
+      - "&7Impossible materials"
   zygote:
     name: "§6Zygote"
     lore:
-      - ""
+      - "&7Impossible materials"
   particle_constructor:
     name: "§x§6§d§6§4§d§cParticle Collector"
     lore:
@@ -885,23 +889,30 @@ item:
   proton_ingot:
     name: "§6Proton Ingot"
     lore:
-      - ""
+      - "&7More"
   zygote_ingot:
     name: "§6Zygote Ingot"
     lore:
-      - ""
+      - "&7More"
   salt_generator:
     name: "§7Salt Miner"
-    lore: 
-      - ""
+    lore:
+      - "&7Lots of salt lol"
   ingot_constructor:
     name: "§x§f§f§8§d§c§5Alloy Generator"
-    lore: 
+    lore:
       - "§7Efficiency: 32x"
   metal_star:
     name: "§eMetal Star"
     lore:
-      - ""
+  final_energy_generator:
+    name: "&7&lSupreme Generator"
+    lore:
+      - "§8⇨ §e⚡ §7999,999,999,999,999,999,999,999,999,999,999,999,999,999,999^0 J/t"
+  special_things_constructor:
+    name: "&7&lSpecial Compressor"
+    lore:
+      - "§8⇨ §e⚡ §7200 J/t"
 showing_as_recipe_item:
   id_card: "§eID Card"
   digital_component: "§e§lDigital Component"
@@ -916,39 +927,11 @@ showing_as_recipe_item:
   symbol: "§e§lSymbol"
   symbol_2: "§6Symbol"
 description:
-  random_copier_usage: "§fThere is a 10% probability of randomly copying an item from the interactive slot above when inputting the original material γ in the bottom left corner"
-  random_copier_requirement: "§7Requirement: The amount and types of items in the interactive slot are not equal"
-  id_changer: "§fEnter any valid ID card to directly create items through Slimefun Item ID"
-  electric_eater: "§fEating energy..."
-
-  quantity_constructor_y: "§fMake original Material γ"
-  quantity_constructor_y_requirement: "§fRequirement: There is a 50% probability of generating when the input slot is filled with 45x64 'Uncontrollable Empty's"
-  quantity_constructor_bug_crystal: "§fMake Bug Crystal"
-  quantity_constructor_bug_crystal_requirement: "§fRequirement: Only 6 types of bugged items exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_pure_origin: "§fMake Pure Origin"
-  quantity_constructor_pure_origin_requirement: "§fRequirement: Only 'Original Material α' and 'Original Material β' exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_final_item: "§fMake Final Star"
-  quantity_constructor_final_item_requirement: "§fRequirement: Only 'Supreme Star's exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_concept_item: "§fMake Concept Item"
-  quantity_constructor_concept_item_requirement: "§fRequirement: Only 'Resource's exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_quantitative_plugin: "§fMake Quantitative Plugin"
-  quantity_constructor_quantitative_plugin_requirement: "§fRequirement: Items exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation, then there's a low probability of generating"
-  quantity_constructor_original_commandblock_chain: "§fMake Original Command Block - Chain"
-  quantity_constructor_original_commandblock_chain_requirement: "§fRequirement: Only 'command block chain's exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_original_commandblock_common: "§fMake Original Command Block - Common"
-  quantity_constructor_original_commandblock_common_requirement: "§fRequirement: Only command blocks exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_original_commandblock_repeating: "§fMake Original Command Block - repeating"
-  quantity_constructor_original_commandblock_repeating_requirement: "§fRequirement: Only 'command block repeating's exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  
-  digital_generator: "§fInsert a number to increase the energy by [number] J, the capacitor can store 16777216 J of energy"
-  particle_constructor: "§fAfter each work, it will randomly cool down 1-50 ticks"
-  particle_constructor_proton: "§fWhen machine stored energy is a prime number, output a proton"
-  particle_constructor_zygote: "§fWhen machine stored energy is a composite number, output a zygote"
   symbol_generator: "§fCreate operators"
   symbol_generator_usage: "§7Randomly output an operator after inputting 'Null's, with varying probabilities for different operators"
-  transporter: "§fInserting digital component to configure distance"
+  transporter: "§fInserting digital component into the machine to configure distance"
   cobblestone_store: "§fSimilar to chests, but providing 48 compartments of storage space"
-  uncontrollable_empty_generator: "§fGenerate 48 'Uncontrollable Empty's each time"
+  uncontrollable_empty_generator: "§fGenerate 48 'Uncontrollable Item's each time"
   random_quantum_generator: "§fGet random quantum"
   random_quantum_generator_usage: "§7Each tick randomly appears in the machine's interaction slots and all other items in the interaction slots will be cleared"
   final_copier_usage: "Input entangled quantum to replicate any object in the interaction slots in the middle"
