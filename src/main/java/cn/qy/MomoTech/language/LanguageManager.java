@@ -47,7 +47,7 @@ public class LanguageManager {
                 String name = entry.getName();
                 if (name.startsWith("language/") && !entry.isDirectory()) {
                     String realName = name.replaceAll("language/", "");
-                    try (InputStream stream = plugin.getClass().getClassLoader().getResourceAsStream(name)) {
+                    try (InputStream stream = plugin.getClass().getResourceAsStream(name)) {
                         File destinationFile = new File(pluginFolder, "language/" + realName);
 
                         if (!destinationFile.exists() && stream != null) {
@@ -85,6 +85,11 @@ public class LanguageManager {
 
     public String[] getItemLore(String path) {
         List<String> colored =  getConfiguration().getStringList("item." + path + ".lore");
+
+        if (colored.size() == 1 && colored.get(0).isBlank()) {
+            return new String[0];
+        }
+
         colored.replaceAll(s -> ChatColor.translateAlternateColorCodes('&', s));
         return colored.toArray(new String[0]);
     }

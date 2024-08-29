@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine.MonsterItemGenerator;
 
 import cn.qy.MomoTech.GUI.MonsterItemGenerator;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Maths;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;

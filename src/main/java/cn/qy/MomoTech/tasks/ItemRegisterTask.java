@@ -16,6 +16,7 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import org.bukkit.*;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -96,7 +97,7 @@ public class ItemRegisterTask {
         };
         ItemStack[] creative = {
                 null, creative_item_generator, null, null,
-                new CustomItemStack(Material.BOOK, "&e&l原始物质α/β", "&7在 &b原始物质制造器 &7中制作"), null, null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("original_material"), MomoTech.languageManager.getShowingRecipeItemName("original_material_2")), null, null, null, null
         };
         ItemStack[] creative1 = {
                 null, quantity_constructor, null, null,
@@ -611,26 +612,27 @@ public class ItemRegisterTask {
                 Random r = new Random();
                 p.setLevel(0);
                 w.dropItem(new Location(w, l.getX() + (r.nextInt() % 16), -64, l.getZ() + (r.nextInt() % 16)), quantum1_);
-                p.sendRawMessage("你触发了某些东西, 总之是些不太好的东西...");
+                p.sendRawMessage(MomoTech.languageManager.getGeneric("triggered_not_well"));
             }
             p.setHealth(0.0);
             p.setHealthScale(0.001);
             p.setFreezeTicks(100);
             p.setWalkSpeed(0.0F);
-            p.setMaxHealth(1.0);
+            p.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(1.0);
             p.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, 10, 1, true, false));
             w.spawnParticle(Particle.FALLING_LAVA, l, 10, 3, 3, 3);
         });
         SfUtils.RegisterItem("MOMOTECH_ENERGY_QUANTUM", Items.MOMOTECH_ENERGY_QUANTUM, Items.MOMOTECH_ITEM, rc2, energyQuantum);
         SfUtils.RegisterItem("MOMOTECH_RANDOM_QUANTUM", Items.MOMOTECH_RANDOM_QUANTUM, Items.MOMOTECH_ITEM, RecipeType.NULL, randomQuantum, (ItemUseHandler) playerRightClickEvent -> {
-            playerRightClickEvent.getPlayer().sendRawMessage("寄");
+            playerRightClickEvent.getPlayer().sendRawMessage(MomoTech.languageManager.getGeneric("died"));
             playerRightClickEvent.getPlayer().setHealth(0.0);
         });
         SfUtils.RegisterItem("MOMOTECH_CLEAR", Items.MOMOTECH_CLEAR, Items.MOMOTECH_TOOL, RecipeType.ENHANCED_CRAFTING_TABLE, clear, (ItemUseHandler) playerRightClickEvent -> {
-            playerRightClickEvent.getPlayer().setMaxHealth(20);
-            playerRightClickEvent.getPlayer().setWalkSpeed(0.2F);
-            playerRightClickEvent.getPlayer().setHealthScale(20.0);
-            playerRightClickEvent.getPlayer().getWorld().spawnParticle(Particle.FALLING_WATER, playerRightClickEvent.getPlayer().getLocation(), 30, 2, 2, 2);
+            Player p = playerRightClickEvent.getPlayer();
+            p.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(20.0);
+            p.setWalkSpeed(0.2F);
+            p.setHealthScale(20.0);
+            p.getWorld().spawnParticle(Particle.FALLING_WATER, playerRightClickEvent.getPlayer().getLocation(), 30, 2, 2, 2);
         });
         SfUtils.RegisterItem("MOMOTECH_THROW", Items.MOMOTECH_THROW, Items.MOMOTECH_TOOL, RecipeType.ANCIENT_ALTAR, throw_, (ItemUseHandler) playerRightClickEvent -> {
             ArrayList<ItemStack> it = new ArrayList<>(49);
@@ -649,19 +651,19 @@ public class ItemRegisterTask {
         });
         SfUtils.RegisterItem("MOMOTECH_EFFECT_DELETER", Items.MOMOTECH_EFFECT_DELETER, Items.MOMOTECH_TOOL, RecipeType.ANCIENT_ALTAR, effectDeleter, (ItemUseHandler) playerRightClickEvent -> {
             playerRightClickEvent.getPlayer().clearActivePotionEffects();
-            playerRightClickEvent.getPlayer().sendRawMessage("耶!");
+            playerRightClickEvent.getPlayer().sendRawMessage(MomoTech.languageManager.getGeneric("yay"));
         });
         SfUtils.RegisterItem("MOMOTECH_QUANTUM1", Items.MOMOTECH_QUANTUM1, Items.MOMOTECH_ITEM, RecipeType.NULL, quantum1, (ItemUseHandler) playerRightClickEvent -> {
             Player p = playerRightClickEvent.getPlayer();
             Location l = p.getLocation();
             World w = p.getWorld();
-            p.setMaxHealth(5.0);
+            p.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(5.0);
             p.setLevel(0);
             p.setFreezeTicks(100);
             p.setWalkSpeed(1.0F);
             w.spawnParticle(Particle.FALLING_HONEY, l, 30, 3, 3, 3);
             p.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 60, 1, true, false));
-            p.sendRawMessage("你触发了某些东西...");
+            p.sendRawMessage(MomoTech.languageManager.getGeneric("triggered"));
         });
         SfUtils.RegisterItem("MOMOTECH_FINAL_RULE", Items.MOMOTECH_FINAL_RULE, Items.MOMOTECH_ITEM, RecipeType.NULL, finalRule);
         SfUtils.RegisterItem("MOMOTECH_ENERGY_INGOT", Items.MOMOTECH_ENERGY_INGOT, Items.MOMOTECH_ITEM, RecipeType.ENHANCED_CRAFTING_TABLE, energyIngot);

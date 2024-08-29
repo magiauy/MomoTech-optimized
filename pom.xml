@@ -36,16 +36,6 @@
         <finalName>${project.name} v${project.version}</finalName>
         <defaultGoal>clean package</defaultGoal>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
-
-        <resources>
-            <resource>
-                <directory>${basedir}/src/main/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>*</include>
-                </includes>
-            </resource>
-        </resources>
     </build>
 
     <dependencies>

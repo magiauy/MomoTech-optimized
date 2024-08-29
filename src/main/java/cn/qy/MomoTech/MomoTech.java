@@ -47,6 +47,7 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
 
         saveDefaultConfig();
         saveConfig();
+        saveFiles();
 
         languageManager = new LanguageManager(this);
         getLogger().info("Staring Listener Registration...");
@@ -62,6 +63,10 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
         getLogger().info("Registering Machines...");
         MachineRegisterTask.run(getLogger());
         getLogger().info("Successful Machine Registration");
+    }
+
+    private void saveFiles() {
+        saveResource("language/en-US.yml", false);
     }
 
     @Override

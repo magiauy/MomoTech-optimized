@@ -148,13 +148,13 @@ public class Items {
     public static final ItemStack MOMOTECH_Sn = new CustomItemStack(Material.IRON_INGOT, MomoTech.languageManager.getItemName("sn"), MomoTech.languageManager.getItemLore("sn"));
     public static final ItemStack MOMOTECH_Zn = new CustomItemStack(Material.IRON_INGOT, MomoTech.languageManager.getItemName("zn"), MomoTech.languageManager.getItemLore("zn"));
     public static final ItemStack MOMOTECH_Ag = new CustomItemStack(Material.IRON_INGOT, MomoTech.languageManager.getItemName("ag"), MomoTech.languageManager.getItemLore("ag"));
-    public static final ItemStack MOMOTECH_DIAMOND1 = new CustomItemStack(Material.DIAMOND, MomoTech.languageManager.getItemName("diamond1"), MomoTech.languageManager.getItemLore("diamond1"));
-    public static final ItemStack MOMOTECH_IRON1 = new CustomItemStack(Material.IRON_INGOT, MomoTech.languageManager.getItemName("iron1"), MomoTech.languageManager.getItemLore("iron1"));
-    public static final ItemStack MOMOTECH_GOLD1 = new CustomItemStack(Material.GOLD_INGOT, MomoTech.languageManager.getItemName("gold1"), MomoTech.languageManager.getItemLore("gold1"));
-    public static final ItemStack MOMOTECH_QUARTZ1 = new CustomItemStack(Material.QUARTZ, MomoTech.languageManager.getItemName("quartz1"), MomoTech.languageManager.getItemLore("quartz1"));
-    public static final ItemStack MOMOTECH_EMERALD1 = new CustomItemStack(Material.EMERALD, MomoTech.languageManager.getItemName("emerald1"), MomoTech.languageManager.getItemLore("emerald1"));
-    public static final ItemStack MOMOTECH_REDSTONE1 = new CustomItemStack(Material.REDSTONE, MomoTech.languageManager.getItemName("redstone1"), MomoTech.languageManager.getItemLore("redstone1"));
-    public static final ItemStack MOMOTECH_LAPIS1 = new CustomItemStack(Material.LAPIS_LAZULI, MomoTech.languageManager.getItemName("lapis1"), MomoTech.languageManager.getItemLore("lapis1"));
+    public static final ItemStack MOMOTECH_DIAMOND1 = new CustomItemStack(Material.DIAMOND, MomoTech.languageManager.getItemName("diamond1"));
+    public static final ItemStack MOMOTECH_IRON1 = new CustomItemStack(Material.IRON_INGOT, MomoTech.languageManager.getItemName("iron1"));
+    public static final ItemStack MOMOTECH_GOLD1 = new CustomItemStack(Material.GOLD_INGOT, MomoTech.languageManager.getItemName("gold1"));
+    public static final ItemStack MOMOTECH_QUARTZ1 = new CustomItemStack(Material.QUARTZ, MomoTech.languageManager.getItemName("quartz1"));
+    public static final ItemStack MOMOTECH_EMERALD1 = new CustomItemStack(Material.EMERALD, MomoTech.languageManager.getItemName("emerald1"));
+    public static final ItemStack MOMOTECH_REDSTONE1 = new CustomItemStack(Material.REDSTONE, MomoTech.languageManager.getItemName("redstone1"));
+    public static final ItemStack MOMOTECH_LAPIS1 = new CustomItemStack(Material.LAPIS_LAZULI, MomoTech.languageManager.getItemName("lapis1"));
     public static final ItemStack MOMOTECH_COAL1 = new CustomItemStack(Material.COAL, MomoTech.languageManager.getItemName("coal1"), MomoTech.languageManager.getItemLore("coal1"));
     public static final ItemStack MOMOTECH_Cu1 = new CustomItemStack(Material.BRICK, MomoTech.languageManager.getItemName("cu1"), MomoTech.languageManager.getItemLore("cu1"));
     public static final ItemStack MOMOTECH_Pb1 = new CustomItemStack(Material.IRON_INGOT, MomoTech.languageManager.getItemName("pb1"), MomoTech.languageManager.getItemLore("pb1"));
@@ -173,7 +173,7 @@ public class Items {
     public static final ItemStack MOMOTECH_INFINITY = new CustomItemStack(Material.NETHERITE_SCRAP, MomoTech.languageManager.getItemName("infinity"), MomoTech.languageManager.getItemLore("infinity"));
     public static final ItemStack MOMOTECH_FAST_GEO = new CustomItemStack(Material.NETHERITE_BLOCK, MomoTech.languageManager.getItemName("fast_geo"), MomoTech.languageManager.getItemLore("fast_geo"));
     public static final ItemStack MOMOTECH_ORDINARY_GENERATOR = new CustomItemStack(Material.GLASS, MomoTech.languageManager.getItemName("ordinary_generator"), MomoTech.languageManager.getItemLore("ordinary_generator"));
-    public static final ItemStack MOMOTECH_MINERAL_ = new CustomItemStack(Material.NETHERITE_INGOT, MomoTech.languageManager.getItemName("mineral_"), MomoTech.languageManager.getItemLore("mineral_"));
+    public static final ItemStack MOMOTECH_MINERAL_ = new CustomItemStack(Material.NETHERITE_INGOT, MomoTech.languageManager.getItemName("mineral_"));
     public static final ItemStack MOMOTECH_METAL_ = new CustomItemStack(Material.IRON_INGOT, MomoTech.languageManager.getItemName("metal_"), MomoTech.languageManager.getItemLore("metal_"));
     public static final ItemStack FLINT_GENERATOR = new CustomItemStack(Material.DEEPSLATE_GOLD_ORE, MomoTech.languageManager.getItemName("flint_generator"), MomoTech.languageManager.getItemLore("flint_generator"));
     public static final ItemStack MOMOTECH_RULE_STAR = new CustomItemStack(Material.IRON_NUGGET, MomoTech.languageManager.getItemName("rule_star"), MomoTech.languageManager.getItemLore("rule_star"));
@@ -274,11 +274,11 @@ public class Items {
                 {"1-Compressed Lapis", "2-Compressed Lapis", "3-Compressed Lapis", "4-Compressed Lapis", "5-Compressed Lapis"}};
         for (int i = 0; i < 9; ++i) {
             for (int j = 0; j < 3; ++j) {
-                Mineral[i][j] = new CustomItemStack(Utils.it[i], "&f" + name[i][j], "§7挤压矿物产生的精华...");
+                Mineral[i][j] = new CustomItemStack(Utils.it[i], "&f" + name[i][j], "§7Essence produced by squeezing minerals...");
             }
         }
         for (int i = 0; i < 50; i++) {
-            Cobblestone[i] = new CustomItemStack(Material.COBBLESTONE, "&c> &f" + (i + 1) + "-Compressed Cobblestone", "&7Just a type of materials", "&7Just for fun;D");
+            Cobblestone[i] = new CustomItemStack(Material.COBBLESTONE, "&c> &f" + (i + 1) + "-Compressed Cobblestone", "&7Just a material", "&7Just for fun;D");
         }
         ItemStack[] GROUP = {new CustomItemStack(Material.PAPER, "&c&lAttention"),
                 new CustomItemStack(Material.SOUL_CAMPFIRE, c("§#efa3de&lBasic §#ec98ed&lMaterials §#f1a5c6&lGenerator")), new CustomItemStack(Material.IRON_INGOT, c("§#d9f995&lBasic §#b2e5af&lItems")),

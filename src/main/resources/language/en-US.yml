@@ -5,6 +5,10 @@ generic:
   generating_energy: "§fGenerating Energy"
   item_banned: "§cThis item has been disabled! You can't get it!"
   input_invalid: "§cInvalid input!"
+  triggered_not_well: "§fYou triggered something, in any case something not very good..."
+  died: "§cYou died!"
+  yay: "§aYay!"
+  triggered: "§fYou triggered something..."
 item:
   quantitative_plugin:
     name: "§x§7§4§8§d§8§dQ§x§7§7§8§d§8§fu§x§7§a§8§d§9§2a§x§7§d§8§c§9§4n§x§8§0§8§c§9§7t§x§8§3§8§c§9§9i§x§8§6§8§c§9§ct§x§8§9§8§c§9§ea§x§8§c§8§c§a§1t§x§9§0§8§c§a§3i§x§9§3§8§c§a§6v§x§9§6§8§c§a§8e §x§9§9§8§c§a§bp§x§9§c§8§c§a§dl§x§9§f§8§c§b§0u§x§a§2§8§b§b§3g§x§a§5§8§b§b§5i§x§a§8§8§b§b§8n"
@@ -926,6 +930,8 @@ showing_as_recipe_item:
     negative_overload: "§e§lBUG - Negative Overload"
   symbol: "§e§lSymbol"
   symbol_2: "§6Symbol"
+  original_material: "§e§lOriginal Material α/β"
+  original_material_2: "§7Make it in the §bOriginal Material Factory"
 description:
   random_copier_usage: "§fThere is a 10% probability of randomly copying an item from the interactive slot above when inputting the original material γ in the bottom left corner"
   random_copier_requirement: "§7Requirement: The amount and types of items in the interactive slot are not equal"
