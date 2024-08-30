@@ -52,19 +52,19 @@ public class ItemRegisterTask {
         };
         ItemStack[] bug = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 运算式", "§7在 §f所有计算机器 §7中利用不合法运算式获取"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.operational_formula"), "§7在 §f所有计算机器 §7中利用不合法运算式获取"), null, null, null
         };
         ItemStack[] bug1 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 小数", "§7在 §f所有计算机器 §7中当小数位数超过 §f4 §7时产生"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.decimal"), "§7在 §f所有计算机器 §7中当小数位数超过 §f4 §7时产生"), null, null, null
         };
         ItemStack[] bug3 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 正过载", "§7在 §f所有计算机器 §7中计算数值大于等于 §f16777216 §7时产生"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.positive_overload"), "§7在 §f所有计算机器 §7中计算数值大于等于 §f16777216 §7时产生"), null, null, null
         };
         ItemStack[] bug4 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 负过载", "§7在 §f所有计算机器 §7中计算数值小于等于 §f-16777216 §7时产生"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.negative_overload"), "§7在 §f所有计算机器 §7中计算数值小于等于 §f-16777216 §7时产生"), null, null, null
         };
         ItemStack[] bug2 = {
                 increment, null, ordinary_number_combinator, null,
@@ -72,7 +72,7 @@ public class ItemRegisterTask {
         };
         ItemStack[] bug5 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - System", "§7在 §f所有计算机器 §7中随机出现", "§7§l其概率与当前在线人数和tps息息相关"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.system"), "§7在 §f所有计算机器 §7中随机出现", "§7§l其概率与当前在线人数和tps息息相关"), null, null, null
         };
         ItemStack[] none = {
                 empty_shell, empty_shell, empty_shell,
@@ -101,11 +101,11 @@ public class ItemRegisterTask {
         };
         ItemStack[] creative1 = {
                 null, quantity_constructor, null, null,
-                new CustomItemStack(Material.BOOK, "&e&l原始物质γ", "&7在 &b量化构造器 &7中输入槽填满45x64个不可控空后有50%概率生成"), null, null, uncontrollable_empty, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getItemName("creative_item_ii"), "&7在 &b量化构造器 &7中输入槽填满45x64个不可控空后有50%概率生成"), null, null, uncontrollable_empty, null
         };
         ItemStack[] bugCrystal = {
                 MomotechItem.bug, quantity_constructor, MomotechItem.bug1,
-                MomotechItem.bug2, new CustomItemStack(Material.BOOK, "&e&lBUG结晶", "&7在 &b量化构造器 &7中输入槽中同时存在且仅存在6种bug物质, 并且物品总数达到45x64后生成"), MomotechItem.bug3,
+                MomotechItem.bug2, new CustomItemStack(Material.BOOK, MomoTech.languageManager.getItemName("bug_crystal"), "&7在 &b量化构造器 &7中输入槽中同时存在且仅存在6种bug物质, 并且物品总数达到45x64后生成"), MomotechItem.bug3,
                 MomotechItem.bug4, null, MomotechItem.bug5
         };
         ItemStack[] full = {
@@ -139,7 +139,7 @@ public class ItemRegisterTask {
         };
         ItemStack[] letter = {
                 null, letter_constructor, null,
-                null, new CustomItemStack(Material.BOOK, "&e&lSymbol", "&7在 &b符号集成器 &7中随机出现"), null,
+                null, new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("symbol"), "&7在 &b符号集成器 &7中随机出现"), null,
                 null, null, null
         };
         ItemStack[] IDCard = {
