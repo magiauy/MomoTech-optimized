@@ -8,7 +8,6 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import lombok.Getter;
 import me.matl114.matlib.core.UtilInitialization;
-import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -34,7 +33,6 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
     private static boolean disableCopierDupeStorage=false;
     @Getter
     private static Set<String> copierBlacklist = new HashSet<>();
-    private static boolean hasGuizhanLib = false;
     public static MomoTech getInstance() {
         return instance;
     }
@@ -63,7 +61,6 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
         getLogger().info("Loading MomoTech...");
         instance = this;
         config=new Config(this);
-        autoUpdate = config.getOrSetDefault("options.auto-update",true);
         saveDefaultConfig();
         saveConfig();
         saveFiles();
@@ -91,28 +88,6 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
         getLogger().info("Registering Machines...");
         MachineRegisterTask.run(getLogger());
         getLogger().info("Registered Machines successfully.");
-
-        if (getServer().getPluginManager().isPluginEnabled("GuizhanLibPlugin")) {
-            getLogger().info( "Detected GuizhanLibPlugin!");
-            if(autoUpdate){
-
-                try{
-                    if ( getDescription().getVersion().startsWith("Build")) {
-                        GuizhanUpdater.start(this, getFile(), "m1919810", "MomoTech-optimized", "main");
-                        getLogger().info("Auto-update is enabled!");
-                    }else{
-                        getLogger().info( "Not official version, disabled auto-update!");
-                    }
-                }catch (Throwable e){
-                    getLogger().log(Level.SEVERE, "Auto-update has encountered an unexpected error!");
-                    e.printStackTrace();
-                    getLogger().log(Level.SEVERE, "This error can be ignored");
-                }
-            }else{
-                getLogger().info( "Auto-update is disabled!");
-            }
-            return;
-        }
     }
 
     private void saveFiles() {

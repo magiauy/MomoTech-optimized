@@ -62,7 +62,7 @@ public class LanguageManager {
             throw new RuntimeException(e);
         }
 
-        File[] languageFiles = new File(pluginFolder, "language").listFiles();
+        File[] languageFiles = new File(pluginFolder, "lang").listFiles();
         if (languageFiles != null) {
             for (File languageFile : languageFiles) {
                 String language = languageFile.getName().replaceAll(".yml", "");

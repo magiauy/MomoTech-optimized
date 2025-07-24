@@ -100,12 +100,6 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>net.guizhanss</groupId>
-            <artifactId>GuizhanLibPlugin</artifactId>
-            <version>1.7.6</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>com.github.m1919810</groupId>
             <artifactId>matlib</artifactId>
             <version>1d350a2</version>

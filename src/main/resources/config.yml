@@ -1,5 +1,4 @@
 options:
-  auto-update: true
   language: en-US
   disable-copier-dupe-storage: false
   copier-blacklist:
