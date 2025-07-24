@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.utils.MachineUtils;
 import cn.qy.MomoTech.utils.Utils;
@@ -119,7 +120,7 @@ public class FinalIngotGenerator extends AbstractGUI implements RecipeDisplayIte
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(12);
-        it.add(new CustomItemStack(Material.BOOK, "&f自动化铸锭", "&7每 1tick 冶炼输入槽内所有的矿粉"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("finale_ingot_generator_1"), MomoTech.languageManager.getRecipeDescription("finale_ingot_generator_2")));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         return it;
     }

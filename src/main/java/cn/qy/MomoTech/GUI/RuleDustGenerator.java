@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.GUI;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -88,7 +89,7 @@ public class RuleDustGenerator extends AbstractElectricGUI implements  RecipeDis
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(18);
-        it.add(new CustomItemStack(Material.COBBLESTONE, "§f需要输入圆石", "§7每 1tick 消耗一组圆石生成一组产物"));
+        it.add(new CustomItemStack(Material.COBBLESTONE, MomoTech.languageManager.getRecipeDescription("rule_dust_generator_1"), MomoTech.languageManager.getRecipeDescription("rule_dust_generator_2")));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         return it;
     }

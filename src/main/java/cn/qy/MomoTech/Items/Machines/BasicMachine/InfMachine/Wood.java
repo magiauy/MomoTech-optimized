@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -121,7 +122,7 @@ public class Wood extends AbstractElectricGUI implements RecipeDisplayItem {
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(this.it.length * 2 + 1);
         for (Material t : this.it) {
-            it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, "&f支持的树苗"));
+            it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, MomoTech.languageManager.getRecipeDescription("supported_saplings")));
             it.add(new ItemStack(t));
         }
         return it;

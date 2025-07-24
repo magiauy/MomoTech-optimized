@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 
@@ -96,7 +97,6 @@ public class MomotechItem {
     public static final SlimefunItemStack infinity = new SlimefunItemStack("MOMOTECH_INFINITY", Items.MOMOTECH_INFINITY);
     public static final SlimefunItemStack mineral__ = new SlimefunItemStack("MOMOTECH_MINERAL_", Items.MOMOTECH_MINERAL_);
     public static final SlimefunItemStack metal__ = new SlimefunItemStack("MOMOTECH_METAL_", Items.MOMOTECH_METAL_);
-    public static final SlimefunItemStack MATL114=new SlimefunItemStack("MOMOTECH_MATL114", Items.MOMOTECH_MATL114);
     static {
         for (int i = 0; i < 9; ++i) {
             for (int j = 0; j < 3; ++j) {
@@ -109,7 +109,7 @@ public class MomotechItem {
     }
 
     public static SlimefunItemStack digital(double i) {
-        return new SlimefunItemStack("MOMOTECH_DIGITAL", Items.MOMOTECH_DIGITAL, "§f数字组件", "§f" + i);
+        return new SlimefunItemStack("MOMOTECH_DIGITAL", Items.MOMOTECH_DIGITAL, MomoTech.languageManager.getItemName("digital_component"), "§f" + i);
     }
 
 }

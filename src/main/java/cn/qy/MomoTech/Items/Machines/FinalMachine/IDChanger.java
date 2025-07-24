@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.FinalMachine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
@@ -71,7 +72,7 @@ public class IDChanger extends AbstractGUI implements RecipeDisplayItem {
             e.printStackTrace();
         }
         if (lore.equals("")) {
-            inv.pushItem(new CustomItemStack(Material.PAPER, "&7不好意思你的输入不合法"), 1);
+            inv.pushItem(new CustomItemStack(Material.PAPER, MomoTech.languageManager.getGeneric("input_invalid")), 1);
             return;
         }
         try {
@@ -80,12 +81,12 @@ public class IDChanger extends AbstractGUI implements RecipeDisplayItem {
                 if (!it.isDisabled()) {
                     inv.pushItem(it.getItem().clone(), getOutputSlots());
                 } else {
-                    inv.pushItem(new CustomItemStack(Material.PAPER, "&7这个物品已经被禁用了!"));
+                    inv.pushItem(new CustomItemStack(Material.PAPER, MomoTech.languageManager.getGeneric("item_banned")));
                 }
                 inv.consumeItem(1, 1);
             }
         } catch (NullPointerException e) {
-            inv.pushItem(new CustomItemStack(Material.PAPER, "&7不好意思你的输入不合法"), 1);
+            inv.pushItem(new CustomItemStack(Material.PAPER, MomoTech.languageManager.getGeneric("input_invalid")), 1);
         }
     }
 
@@ -94,7 +95,7 @@ public class IDChanger extends AbstractGUI implements RecipeDisplayItem {
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
         it.add(new SlimefunItemStack("MOMOTECH_ID_CARD", Items.MOMOTECH_ID_CARD));
-        it.add(new CustomItemStack(Material.BOOK, "&f输入任意合法的ID卡以直接通过sfid制作物品"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getGeneric("id_changer")));
         return it;
     }
 }

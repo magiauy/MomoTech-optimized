@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.Else;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
@@ -130,7 +131,7 @@ public class Transporter extends AbstractGUI implements RecipeDisplayItem {
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
-        it.add(new CustomItemStack(Material.BOOK, "&f在机器中插入数字组件配置距离", "&7distance = digit mod 320"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("transporter"), "&7Distance = digit mod 320"));
         it.add(MomotechItem.digital(1.0));
         return it;
     }

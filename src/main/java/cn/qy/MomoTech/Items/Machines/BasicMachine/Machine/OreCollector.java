@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.Items.RandomizedItemStack;
@@ -67,7 +68,7 @@ public class OreCollector extends AbstractGUI implements RecipeDisplayItem {
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(12);
-        it.add(new CustomItemStack(Material.BOOK, "&f自动生产叁重压缩矿物", "&7每 1tick 生成一次"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("ore_collector"), MomoTech.languageManager.getRecipeDescription("generate_once_every_1_tick_f")));
         it.add(new SlimefunItemStack(MomotechItem.mineral[0][2], 4));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         it.add(new SlimefunItemStack(MomotechItem.mineral[1][2], 4));

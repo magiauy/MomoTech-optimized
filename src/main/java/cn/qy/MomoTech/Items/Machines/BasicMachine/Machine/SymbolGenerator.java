@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
@@ -101,7 +102,7 @@ public class SymbolGenerator extends AbstractElectricGUI implements RecipeDispla
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(12);
-        it.add(new CustomItemStack(Material.BOOK, "&f制作运算符", "&7输入空后随机输出一种运算符, 不同运算符概率不等"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("symbol_generator"), MomoTech.languageManager.getRecipeDescription("symbol_generator_usage")));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         it.add(MomotechItem.empty_shell.clone());
         it.add(MomotechItem.symbol_addition.clone());

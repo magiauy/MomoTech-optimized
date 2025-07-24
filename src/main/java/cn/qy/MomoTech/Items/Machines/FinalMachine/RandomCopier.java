@@ -118,7 +118,7 @@ public class RandomCopier extends AbstractGUI implements RecipeDisplayItem {
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(8);
         it.add(MomotechItem.creative_item_II.clone());
-        it.add(new CustomItemStack(Material.BOOK, "&f左下角输入原始物质γ有10%概率随机复制上方交互槽中的一种物品", "&7要求:交互槽种物品数量种类均不相等"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("random_copier_usage"), MomoTech.languageManager.getRecipeDescription("random_copier_requirement")));
         return it;
     }
 }

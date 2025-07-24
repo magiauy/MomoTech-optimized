@@ -1,3 +1,4 @@
+//TODO Localization missing
 package cn.qy.MomoTech.tasks;
 
 import cn.qy.MomoTech.Items.Armor.ProtectArmor;
@@ -40,39 +41,39 @@ public class ItemRegisterTask {
         ItemStack[] energyQuantum = {quantum_, null, null, null, null, null, null, null, null};
         ItemStack[] digital__ = {
                 digital_constructor, increment, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§l数字组件", "§f可以在 §b数字构造器 §f中获取", "§f可以在 §b基础数字运算机 §f中获取", "§f可以在 §b递增器 §f中获取"), null, null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("digital_component"), "§f可以在 §b数字构造器 §f中获取", "§f可以在 §b基础数字运算机 §f中获取", "§f可以在 §b递增器 §f中获取"), null, null, null, null
         };
         ItemStack[] symbol = {
                 null, symbol_generator, null, null,
-                new CustomItemStack(Material.BOOK, "§e§l符号", "§f可以在 §b符号生成器 §f中获取"), null, null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("symbol"), "§f可以在 §b符号生成器 §f中获取"), null, null, null, null
         };
         ItemStack[] emptyShell = {
                 null, null, null, null,
-                new CustomItemStack(Material.BOOK, "§e§l空", "§f在手持木镐挖方块时候随机掉落"), null, null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("emptyShell"), "§f在手持木镐挖方块时候随机掉落"), null, null, null, null
         };
         ItemStack[] bug = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 运算式", "§7在 §f所有计算机器 §7中利用不合法运算式获取"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.operational_formula"), "§7在 §f所有计算机器 §7中利用不合法运算式获取"), null, null, null
         };
         ItemStack[] bug1 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 小数", "§7在 §f所有计算机器 §7中当小数位数超过 §f4 §7时产生"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.decimal"), "§7在 §f所有计算机器 §7中当小数位数超过 §f4 §7时产生"), null, null, null
         };
         ItemStack[] bug3 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 正过载", "§7在 §f所有计算机器 §7中计算数值大于等于 §f16777216 §7时产生"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.positive_overload"), "§7在 §f所有计算机器 §7中计算数值大于等于 §f16777216 §7时产生"), null, null, null
         };
         ItemStack[] bug4 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 负过载", "§7在 §f所有计算机器 §7中计算数值小于等于 §f-16777216 §7时产生"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.negative_overload"), "§7在 §f所有计算机器 §7中计算数值小于等于 §f-16777216 §7时产生"), null, null, null
         };
         ItemStack[] bug2 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 日期", "§7在 §f所有计算机器 §7中计算结果等于 §f当前日期的百分之一(如202307.29) §时产生"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.date"), "§7在 §f所有计算机器 §7中计算结果等于 §f当前日期的百分之一(如202307.29) §时产生"), null, null, null
         };
         ItemStack[] bug5 = {
                 increment, null, ordinary_number_combinator, null,
-                new CustomItemStack(Material.BOOK, "§e§lBUG - 系统", "§7在 §f所有计算机器 §7中随机出现", "§7§l其概率与当前在线人数和tps息息相关"), null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("bug.system"), "§7在 §f所有计算机器 §7中随机出现", "§7§l其概率与当前在线人数和tps息息相关"), null, null, null
         };
         ItemStack[] none = {
                 empty_shell, empty_shell, empty_shell,
@@ -97,15 +98,15 @@ public class ItemRegisterTask {
         };
         ItemStack[] creative = {
                 null, creative_item_generator, null, null,
-                new CustomItemStack(Material.BOOK, "&e&l原始物质α/β", "&7在 &b原始物质制造器 &7中制作"), null, null, null, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("original_material"), MomoTech.languageManager.getShowingRecipeItemName("original_material_2")), null, null, null, null
         };
         ItemStack[] creative1 = {
                 null, quantity_constructor, null, null,
-                new CustomItemStack(Material.BOOK, "&e&l原始物质γ", "&7在 &b量化构造器 &7中输入槽填满45x64个不可控空后有50%概率生成"), null, null, uncontrollable_empty, null
+                new CustomItemStack(Material.BOOK, MomoTech.languageManager.getItemName("creative_item_ii"), "&7在 &b量化构造器 &7中输入槽填满45x64个不可控空后有50%概率生成"), null, null, uncontrollable_empty, null
         };
         ItemStack[] bugCrystal = {
                 MomotechItem.bug, quantity_constructor, MomotechItem.bug1,
-                MomotechItem.bug2, new CustomItemStack(Material.BOOK, "&e&lBUG结晶", "&7在 &b量化构造器 &7中输入槽中同时存在且仅存在6种bug物质, 并且物品总数达到45x64后生成"), MomotechItem.bug3,
+                MomotechItem.bug2, new CustomItemStack(Material.BOOK, MomoTech.languageManager.getItemName("bug_crystal"), "&7在 &b量化构造器 &7中输入槽中同时存在且仅存在6种bug物质, 并且物品总数达到45x64后生成"), MomotechItem.bug3,
                 MomotechItem.bug4, null, MomotechItem.bug5
         };
         ItemStack[] full = {
@@ -139,7 +140,7 @@ public class ItemRegisterTask {
         };
         ItemStack[] letter = {
                 null, letter_constructor, null,
-                null, new CustomItemStack(Material.BOOK, "&e&l符号", "&7在 &b符号集成器 &7中随机出现"), null,
+                null, new CustomItemStack(Material.BOOK, MomoTech.languageManager.getShowingRecipeItemName("symbol"), "&7在 &b符号集成器 &7中随机出现"), null,
                 null, null, null
         };
         ItemStack[] IDCard = {
@@ -609,7 +610,7 @@ public class ItemRegisterTask {
                 Random r = new Random();
                 p.setLevel(0);
                 w.dropItem(new Location(w, l.getX() + (r.nextInt() % 16), -64, l.getZ() + (r.nextInt() % 16)), quantum1_);
-                p.sendRawMessage("你触发了某些东西, 总之是些不太好的东西...");
+                p.sendRawMessage(MomoTech.languageManager.getGeneric("triggered_not_well"));
             }
             p.setHealth(0.0);
             p.setHealthScale(0.001);
@@ -621,7 +622,7 @@ public class ItemRegisterTask {
         });
         SfUtils.RegisterItem("MOMOTECH_ENERGY_QUANTUM", Items.MOMOTECH_ENERGY_QUANTUM, Items.MOMOTECH_ITEM, rc2, energyQuantum);
         SfUtils.RegisterItem("MOMOTECH_RANDOM_QUANTUM", Items.MOMOTECH_RANDOM_QUANTUM, Items.MOMOTECH_ITEM, RecipeType.NULL, randomQuantum, (ItemUseHandler) playerRightClickEvent -> {
-            playerRightClickEvent.getPlayer().sendRawMessage("寄");
+            playerRightClickEvent.getPlayer().sendRawMessage(MomoTech.languageManager.getGeneric("died"));
             playerRightClickEvent.getPlayer().setHealth(0.0);
         });
         SfUtils.RegisterItem("MOMOTECH_CLEAR", Items.MOMOTECH_CLEAR, Items.MOMOTECH_TOOL, RecipeType.ENHANCED_CRAFTING_TABLE, clear, (ItemUseHandler) playerRightClickEvent -> {
@@ -647,7 +648,7 @@ public class ItemRegisterTask {
         });
         SfUtils.RegisterItem("MOMOTECH_EFFECT_DELETER", Items.MOMOTECH_EFFECT_DELETER, Items.MOMOTECH_TOOL, RecipeType.ANCIENT_ALTAR, effectDeleter, (ItemUseHandler) playerRightClickEvent -> {
             playerRightClickEvent.getPlayer().clearActivePotionEffects();
-            playerRightClickEvent.getPlayer().sendRawMessage("耶!");
+            playerRightClickEvent.getPlayer().sendRawMessage(MomoTech.languageManager.getGeneric("yay"));
         });
         SfUtils.RegisterItem("MOMOTECH_QUANTUM1", Items.MOMOTECH_QUANTUM1, Items.MOMOTECH_ITEM, RecipeType.NULL, quantum1, (ItemUseHandler) playerRightClickEvent -> {
             Player p = playerRightClickEvent.getPlayer();
@@ -659,7 +660,7 @@ public class ItemRegisterTask {
             p.setWalkSpeed(1.0F);
             w.spawnParticle(Particle.FALLING_HONEY, l, 30, 3, 3, 3);
             p.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 60, 1, true, false));
-            p.sendRawMessage("你触发了某些东西...");
+            p.sendRawMessage(MomoTech.languageManager.getGeneric("triggered"));
         });
         SfUtils.RegisterItem("MOMOTECH_FINAL_RULE", Items.MOMOTECH_FINAL_RULE, Items.MOMOTECH_ITEM, RecipeType.NULL, finalRule);
         SfUtils.RegisterItem("MOMOTECH_ENERGY_INGOT", Items.MOMOTECH_ENERGY_INGOT, Items.MOMOTECH_ITEM, RecipeType.ENHANCED_CRAFTING_TABLE, energyIngot);
@@ -773,7 +774,6 @@ public class ItemRegisterTask {
         SfUtils.RegisterItem("MOMOTECH_METAL_", Items.MOMOTECH_METAL_, Items.MOMOTECH_ITEM, RecipeType.ENHANCED_CRAFTING_TABLE, metal__);
         SfUtils.RegisterItem("MOMOTECH_ELECTRICITY_MAGNET", Items.MOMOTECH_ELECTRICITY_MAGNET, Items.MOMOTECH_ITEM, RecipeType.ENHANCED_CRAFTING_TABLE, electricityMagnet);
         SfUtils.RegisterItem("MOMOTECH_IRON_STAR", Items.MOMOTECH_IRON_STAR, Items.MOMOTECH_ITEM, RecipeType.ENHANCED_CRAFTING_TABLE, ironStar);
-        SfUtils.RegisterItem("MOMOTECH_MATL114", MATL114,Items.MOMOTECH__,RecipeType.NULL, new ItemStack[0]);
         for (int i = 0; i < 9; ++i) {
             for (int j = 0; j < 3; j++) {
                 SfUtils.RegisterItem("MOMOTECH_MINERAL_" + Utils.mineral__[i] + "_" + Utils.id[j], Items.Mineral[i][j], Items.MOMOTECH_MINERAL, RecipeType.ENHANCED_CRAFTING_TABLE, mineral_[i][j], (ItemUseHandler) PlayerRightClickEvent::cancel);

@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.Exceptions;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
@@ -113,19 +114,19 @@ public class Increment extends AbstractGUI implements RecipeDisplayItem {
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(16);
-        it.add(new CustomItemStack(Material.BOOK, "&f输入两个数字进行简单地加法运算"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("increment_usage")));
         it.add(MomotechItem.digital(0.0));
-        it.add(new CustomItemStack(Material.BOOK, "&f当输入的算式不合法的时候输出BUG - 运算式"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("increment_bug")));
         it.add(MomotechItem.bug.clone());
-        it.add(new CustomItemStack(Material.BOOK, "&f当计算结果小数位数超过4位的时候输出BUG - 小数"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("increment_bug_1")));
         it.add(MomotechItem.bug1.clone());
-        it.add(new CustomItemStack(Material.BOOK, "&f当计算结果等于今日日期组成的数字的百分之一(比如202407.29)时输出BUG - 日期"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("increment_bug_2")));
         it.add(MomotechItem.bug2.clone());
-        it.add(new CustomItemStack(Material.BOOK, "&f当计算结果超过16777216时输出BUG - 正过载"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("increment_bug_3")));
         it.add(MomotechItem.bug3.clone());
-        it.add(new CustomItemStack(Material.BOOK, "&f当计算结果小于-16777216时输出BUG - 负过载"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("increment_bug_4")));
         it.add(MomotechItem.bug4.clone());
-        it.add(new CustomItemStack(Material.BOOK, "&f随机出现BUG - 系统, 其概率和计算结果, 在线人数以及TPS息息相关"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("increment_bug_5")));
         it.add(MomotechItem.bug5.clone());
         return it;
     }

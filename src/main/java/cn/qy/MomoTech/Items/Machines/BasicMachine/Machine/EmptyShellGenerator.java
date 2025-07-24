@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.MachineUtils;
@@ -70,7 +71,7 @@ public class EmptyShellGenerator extends AbstractGUI implements RecipeDisplayIte
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
-        it.add(new CustomItemStack(Material.BOOK, "&f输入任意物品以制作空"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("emptyShellGenerator_usage")));
         it.add(new SlimefunItemStack(MomotechItem.empty_shell, 8));
         return it;
     }

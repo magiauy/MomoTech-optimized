@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.utils.MachineUtils;
 import cn.qy.MomoTech.utils.Utils;
@@ -78,7 +79,7 @@ public class PumpkinCarver extends AbstractGUI implements RecipeDisplayItem {
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(12);
-        it.add(new CustomItemStack(Material.BOOK, "&f自动化雕刻南瓜", "&7每 1tick 雕刻输入槽内所有的南瓜"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("pumpkin_carver_1"), MomoTech.languageManager.getRecipeDescription("pumpkin_carver_2")));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         it.add(new ItemStack(Material.PUMPKIN));
         it.add(new ItemStack(Material.CARVED_PUMPKIN));

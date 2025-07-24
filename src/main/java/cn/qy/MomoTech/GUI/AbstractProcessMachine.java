@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.GUI;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.SimpleOperation;
 import com.xzavier0722.mc.plugin.slimefun4.storage.controller.SlimefunBlockData;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
@@ -104,7 +105,7 @@ public abstract class AbstractProcessMachine extends SlimefunItem implements Inv
             i = var2[var4];
             preset.addItem(i, ChestMenuUtils.getOutputSlotTexture(), ChestMenuUtils.getEmptyClickHandler());
         }
-        preset.addItem(getProcessBarSlots(), new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&a进度", "&fNULL"), ChestMenuUtils.getEmptyClickHandler());
+        preset.addItem(getProcessBarSlots(), new CustomItemStack(Material.RED_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("progress"), "&fNULL"), ChestMenuUtils.getEmptyClickHandler());
         add(preset);
     }
 

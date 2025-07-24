@@ -1,6 +1,7 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
 import cn.qy.MomoTech.Items.RandomizedItemStack;
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractEasyGeneratorGUI;
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import cn.qy.MomoTech.utils.Maths;
@@ -86,7 +87,7 @@ public class RuleMineralBlockGenerator extends AbstractElectricGUI implements Re
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(30);
         for (Material i : this.m) {
-            it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, "&f可能的产物"));
+            it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, MomoTech.languageManager.getRecipeDescription("possible_productions")));
             it.add(new ItemStack(i, 16));
         }
         return it;

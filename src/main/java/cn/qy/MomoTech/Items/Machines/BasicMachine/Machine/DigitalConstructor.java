@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractEasyGeneratorGUI;
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import cn.qy.MomoTech.Items.Items;
@@ -93,7 +94,7 @@ public class DigitalConstructor extends AbstractElectricGUI implements RecipeDis
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(12);
-        it.add(new CustomItemStack(Material.BOOK, "&f制作数字组件", "&7输入空后等概率的输入0 ~ 10的整数数字组件"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("digital_constructor"), MomoTech.languageManager.getRecipeDescription("digital_constructor_method")));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         it.add(MomotechItem.empty_shell.clone());
         it.add(MomotechItem.digital(10));

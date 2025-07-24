@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractProcessMachine;
 import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.utils.Maths;
@@ -73,7 +74,7 @@ public class ParticleConstructor extends AbstractProcessMachine implements Energ
 
     @Override
     public void add(BlockMenuPreset b) {
-        b.addItem(3, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&f已储存 NULL J"), ChestMenuUtils.getEmptyClickHandler());
+        b.addItem(3, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("stored_default")), ChestMenuUtils.getEmptyClickHandler());
     }
 
     private boolean isPrime(int i) {
@@ -90,7 +91,7 @@ public class ParticleConstructor extends AbstractProcessMachine implements Energ
     protected void findNextRecipe(BlockMenu inv) {
         int charge=this.getCharge(inv.getLocation());
         if(inv.hasViewer()){
-            inv.replaceExistingItem(3, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "&f已储存 " + charge + " J"));
+            inv.replaceExistingItem(3, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("stored") + this.getCharge(inv.getLocation()) + " J"));
         }
         SimpleOperation operation=this.getMachineProcessor().getOperation(inv.getLocation());
         if(operation==null){
@@ -99,7 +100,7 @@ public class ParticleConstructor extends AbstractProcessMachine implements Energ
         }
         operation.addRealProgress(1);
         if(inv.hasViewer()){
-            inv.replaceExistingItem(this.getProcessBarSlots(),new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "§a进度", "&f"+operation.getProgress()+"/" + operation.getTotalTicks()));
+            inv.replaceExistingItem(this.getProcessBarSlots(),new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("progress"), "&f"+operation.getProgress()+"/" + operation.getTotalTicks()));
         }
 
         if(operation.isFinished()){
@@ -134,11 +135,11 @@ public class ParticleConstructor extends AbstractProcessMachine implements Energ
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> list = new ArrayList<>(10);
-        list.add(new CustomItemStack(Material.BOOK, "&f每次工作完会随机冷却1~50tick"));
+        list.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("particle_constructor")));
         list.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
-        list.add(new CustomItemStack(Material.BOOK, "&f当电力为质数的时候输出一个质子"));
+        list.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("particle_constructor_proton")));
         list.add(new SlimefunItemStack("MOMOTECH_PROTON", Items.MOMOTECH_PROTON));
-        list.add(new CustomItemStack(Material.BOOK, "&f当电力为合数的时候输出一个合子"));
+        list.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("particle_constructor_zygote")));
         list.add(new SlimefunItemStack("MOMOTECH_ZYGOTE", Items.MOMOTECH_ZYGOTE));
         return list;
     }

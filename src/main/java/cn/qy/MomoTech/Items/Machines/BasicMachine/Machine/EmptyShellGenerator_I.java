@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.Utils;
@@ -67,7 +68,7 @@ public class EmptyShellGenerator_I extends AbstractGUI implements RecipeDisplayI
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
-        it.add(new CustomItemStack(Material.BOOK, "&f每 1tick 生成一次", "&7每次64个空"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("generate_once_every_1_tick"), MomoTech.languageManager.getRecipeDescription("emptyShellGenerator_I")));
         it.add(new SlimefunItemStack(MomotechItem.empty_shell, 64));
         return it;
     }

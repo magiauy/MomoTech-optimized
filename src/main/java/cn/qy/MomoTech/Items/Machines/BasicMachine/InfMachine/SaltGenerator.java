@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.utils.Maths;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -66,7 +67,7 @@ public class SaltGenerator extends AbstractGUI  implements RecipeDisplayItem {
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(11);
-        it.add(new CustomItemStack(Material.BOOK, "&f每 tick 随机产出 1~64 数量的盐"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("salt_generator")));
         it.add(SlimefunItems.SALT.clone());
         return it;
     }

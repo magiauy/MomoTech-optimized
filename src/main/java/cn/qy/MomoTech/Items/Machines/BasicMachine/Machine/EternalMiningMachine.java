@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractProcessMachine;
 import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
@@ -75,7 +76,7 @@ public class EternalMiningMachine extends AbstractProcessMachine implements Reci
             }
             operation.addRealProgress(1);
             if(inv.hasViewer()){
-                inv.replaceExistingItem(this.getProcessBarSlots(),new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, "§a进度", "&f"+operation.getProgress()+"/" + operation.getTotalTicks()));
+                inv.replaceExistingItem(this.getProcessBarSlots(),new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("progress"), "&f"+operation.getProgress()+"/" + operation.getTotalTicks()));
             }
             if(operation.isFinished()){
                 this.getMachineProcessor().endOperation(inv.getLocation());
@@ -90,7 +91,7 @@ public class EternalMiningMachine extends AbstractProcessMachine implements Reci
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(18);
-        it.add(new CustomItemStack(Material.BOOK, "&f制作永恒粒子", "&7输入 空 使进度+1 并且进度完成后所需进度会增加"));
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("eternal_mining"), MomoTech.languageManager.getRecipeDescription("eternal_mining_usage")));
         it.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
         it.add(MomotechItem.empty_shell.clone());
         it.add(new SlimefunItemStack("MOMOTECH_FOREVER", Items.MOMOTECH_FOREVER));
