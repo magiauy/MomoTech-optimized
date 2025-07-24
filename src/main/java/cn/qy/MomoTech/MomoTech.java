@@ -63,7 +63,7 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
         config=new Config(this);
         saveDefaultConfig();
         saveConfig();
-        saveFiles();
+        // Removed saveFiles() call - LanguageManager will handle lang files
         disableCopierDupeStorage = config.getOrSetDefault("options.disable-copier-dupe-storage",false);
         List<String> blacklist = config.getOrSetDefault("options.copier-blacklist",new ArrayList<String>());
         if (blacklist!=null){
@@ -88,10 +88,6 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
         getLogger().info("Registering Machines...");
         MachineRegisterTask.run(getLogger());
         getLogger().info("Registered Machines successfully.");
-    }
-
-    private void saveFiles() {
-        saveResource("lang/en-US.yml", false);
     }
 
     @Override

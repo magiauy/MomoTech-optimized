@@ -28,12 +28,28 @@ public class LanguageManager {
     }
 
     private void loadLanguages() {
-        defaultConfiguration =
-                YamlConfiguration.loadConfiguration(new File(plugin.getDataFolder(), "lang/en-US.yml"));
+        // Ensure lang directory exists
+        File langDir = new File(plugin.getDataFolder(), "lang");
+        if (!langDir.exists()) {
+            langDir.mkdirs();
+        }
+
+        // Load default configuration
+        File defaultLangFile = new File(plugin.getDataFolder(), "lang/en-US.yml");
+        if (!defaultLangFile.exists()) {
+            plugin.saveResource("lang/en-US.yml", false);
+        }
+        defaultConfiguration = YamlConfiguration.loadConfiguration(defaultLangFile);
 
         File pluginFolder = plugin.getDataFolder();
 
-        URL fileURL = Objects.requireNonNull(plugin.getClass().getResource("lang/"));
+        // Check if lang resource directory exists
+        URL fileURL = plugin.getClass().getResource("lang/");
+        if (fileURL == null) {
+            plugin.getLogger().warning("Lang resource directory not found in JAR!");
+            return;
+        }
+        
         String jarPath = fileURL.toString().substring(0, fileURL.toString().indexOf("!/") + 2);
 
         try {
@@ -45,28 +61,39 @@ public class LanguageManager {
             while (jarEntries.hasMoreElements()) {
                 JarEntry entry = jarEntries.nextElement();
                 String name = entry.getName();
-                if (name.startsWith("lang/") && !entry.isDirectory()) {
-                    String realName = name.replaceAll("lang/", "");
+                if (name.startsWith("lang/") && name.endsWith(".yml") && !entry.isDirectory()) {
+                    String realName = name.replace("lang/", "");
                     try (InputStream stream = plugin.getClass().getResourceAsStream(name)) {
                         File destinationFile = new File(pluginFolder, "lang/" + realName);
 
                         if (!destinationFile.exists() && stream != null) {
                             plugin.saveResource("lang/" + realName, false);
+                            plugin.getLogger().info("Created language file: " + realName);
                         }
 
                         completeLangFile("lang/" + realName);
+                    } catch (Exception e) {
+                        plugin.getLogger().warning("Failed to process language file '" + realName + "': " + e.getMessage());
                     }
                 }
             }
+            jarFile.close();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            plugin.getLogger().severe("Failed to load language files from JAR: " + e.getMessage());
+            e.printStackTrace();
         }
 
-        File[] languageFiles = new File(pluginFolder, "lang").listFiles();
+        // Load all language files into memory
+        File[] languageFiles = langDir.listFiles((dir, name) -> name.endsWith(".yml"));
         if (languageFiles != null) {
             for (File languageFile : languageFiles) {
-                String language = languageFile.getName().replaceAll(".yml", "");
-                configurations.put(language, YamlConfiguration.loadConfiguration(languageFile));
+                String language = languageFile.getName().replace(".yml", "");
+                try {
+                    configurations.put(language, YamlConfiguration.loadConfiguration(languageFile));
+                    plugin.getLogger().info("Loaded language: " + language);
+                } catch (Exception e) {
+                    plugin.getLogger().warning("Failed to load language file '" + languageFile.getName() + "': " + e.getMessage());
+                }
             }
         }
     }
@@ -104,53 +131,58 @@ public class LanguageManager {
     }
 
     private void completeLangFile(String resourceFile) {
-        InputStream stream = plugin.getResource(resourceFile);
         File file = new File(plugin.getDataFolder(), resourceFile);
 
         if (!file.exists()) {
-            if (stream != null) {
-                plugin.saveResource(resourceFile, false);
+            try (InputStream stream = plugin.getResource(resourceFile)) {
+                if (stream != null) {
+                    plugin.saveResource(resourceFile, false);
+                    return;
+                }
+            } catch (Exception e) {
+                plugin.getLogger().warning("File completion of '" + resourceFile + "' is failed: " + e.getMessage());
                 return;
             }
             plugin.getLogger().warning("File completion of '" + resourceFile + "' is failed.");
             return;
         }
 
-        if (stream == null) {
-            plugin.getLogger().warning("File completion of '" + resourceFile + "' is failed.");
-            return;
-        }
+        try (InputStream resourceStream = plugin.getResource(resourceFile)) {
+            if (resourceStream == null) {
+                plugin.getLogger().warning("File completion of '" + resourceFile + "' is failed.");
+                return;
+            }
 
-        try {
-            Reader reader = new InputStreamReader(stream, StandardCharsets.UTF_8);
-            YamlConfiguration configuration = YamlConfiguration.loadConfiguration(reader);
-            YamlConfiguration configuration2 = YamlConfiguration.loadConfiguration(file);
+            try (Reader reader = new InputStreamReader(resourceStream, StandardCharsets.UTF_8)) {
+                YamlConfiguration configuration = YamlConfiguration.loadConfiguration(reader);
+                YamlConfiguration configuration2 = YamlConfiguration.loadConfiguration(file);
 
-            Set<String> keys = configuration.getKeys(true);
-            for (String key : keys) {
-                Object value = configuration.get(key);
-                if (value instanceof List<?>) {
-                    List<?> list2 = configuration2.getList(key);
-                    if (list2 == null) {
+                Set<String> keys = configuration.getKeys(true);
+                for (String key : keys) {
+                    Object value = configuration.get(key);
+                    if (value instanceof List<?>) {
+                        List<?> list2 = configuration2.getList(key);
+                        if (list2 == null) {
+                            configuration2.set(key, value);
+                            continue;
+                        }
+                    }
+                    if (!configuration2.contains(key)) {
                         configuration2.set(key, value);
-                        continue;
+                    }
+                    if (!configuration.getComments(key).equals(configuration2.getComments(key))) {
+                        configuration2.setComments(key, configuration.getComments(key));
                     }
                 }
-                if (!configuration2.contains(key)) {
-                    configuration2.set(key, value);
+                for (String key : configuration2.getKeys(true)) {
+                    if (configuration2.contains(key) && !configuration.contains(key)) {
+                        configuration2.set(key, null);
+                    }
                 }
-                if (!configuration.getComments(key).equals(configuration2.getComments(key))) {
-                    configuration2.setComments(key, configuration.getComments(key));
-                }
+                configuration2.save(file);
             }
-            for (String key : configuration2.getKeys(true)) {
-                if (configuration2.contains(key) & !configuration.contains(key)) {
-                    configuration2.set(key, null);
-                }
-            }
-            configuration2.save(file);
         } catch (Exception e) {
-            plugin.getLogger().warning("File completion of '" + resourceFile + "' is failed.");
+            plugin.getLogger().warning("File completion of '" + resourceFile + "' is failed: " + e.getMessage());
         }
     }
 }
