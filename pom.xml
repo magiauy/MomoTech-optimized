@@ -87,12 +87,12 @@
             <version>1.20.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.github.StarWishsama</groupId>
-            <artifactId>Slimefun4</artifactId>
-            <version>2024.3</version>
-            <scope>provided</scope>
-        </dependency>
+	<dependency>
+	    <groupId>com.github.SlimefunGuguProject</groupId>
+	    <artifactId>Slimefun4</artifactId>
+	    <version>2025.1</version>
+        <scope>provided</scope>
+	</dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
