@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.utils;
 
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.core.machines.MachineOperation;
 import io.github.thebusybiscuit.slimefun4.libraries.commons.lang.NotImplementedException;
 
@@ -16,7 +17,7 @@ public class SimpleOperation implements MachineOperation {
 
     @Override
     public void addProgress(int i) throws NotImplementedException {
-        throw new NotImplementedException("Do not accelerate!");
+        throw new NotImplementedException(MomoTech.languageManager.getInfo("do_not_accelerate"));
     }
 
     @Override

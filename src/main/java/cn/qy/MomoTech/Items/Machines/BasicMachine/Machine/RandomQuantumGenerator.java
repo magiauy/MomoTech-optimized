@@ -66,7 +66,6 @@ public class RandomQuantumGenerator extends AbstractGUI implements RecipeDisplay
     public int[] getOutputSlots() {
         return new int[]{};
     }
-    public ItemStack output=new SlimefunItemStack("MOMOTECH_RANDOM_QUANTUM", Items.MOMOTECH_RANDOM_QUANTUM);
     protected ConcurrentHashMap<Chunk,ConcurrentHashMap<Location,BlockMenu>> MACHINE_POSITION=new ConcurrentHashMap<>();
 
     @Override
@@ -130,7 +129,7 @@ public class RandomQuantumGenerator extends AbstractGUI implements RecipeDisplay
                 if (inv.getItemInSlot(i) != null) inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
             }
             int i = Maths.GetRandom(53);
-            inv.replaceExistingItem(i, output);
+            inv.replaceExistingItem(i, MomotechItem.randomQuantum.clone());
         }
     }
 
@@ -138,8 +137,8 @@ public class RandomQuantumGenerator extends AbstractGUI implements RecipeDisplay
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> list = new ArrayList<>(10);
-        list.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("random_quantum_generator"), MomoTech.languageManager.getRecipeDescription("random_quantum_generator_usage")));
-        list.add(output.clone());
+        list.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescriptionTitle("random_quantum_generator"), MomoTech.languageManager.getRecipeDescriptionLore("random_quantum_generator")));
+        list.add(MomotechItem.randomQuantum.clone());
         return list;
     }
 }

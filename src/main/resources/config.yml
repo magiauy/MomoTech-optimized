@@ -2,4 +2,4 @@ options:
   language: en-US
   disable-copier-dupe-storage: false
   copier-blacklist:
-    - MOMOTECH_EMPTY_SHELL
+    - MOMOTECH_NULL

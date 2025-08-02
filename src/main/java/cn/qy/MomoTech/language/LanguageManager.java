@@ -98,12 +98,12 @@ public class LanguageManager {
         }
     }
 
-    public String getGeneric(String path) {
-        return ChatColor.translateAlternateColorCodes('&', getConfiguration().getString("generic." + path, ""));
+    public String getInfo(String path) {
+        return ChatColor.translateAlternateColorCodes('&', getConfiguration().getString("info." + path, ""));
     }
 
-    public String getShowingRecipeItemName(String path) {
-        return ChatColor.translateAlternateColorCodes('&', getConfiguration().getString("showing_as_recipe_item." + path + ".name", ""));
+    public String getGeneric(String path) {
+        return ChatColor.translateAlternateColorCodes('&', getConfiguration().getString("generic." + path, ""));
     }
 
     public String getItemName(String path) {
@@ -121,8 +121,34 @@ public class LanguageManager {
         return colored.toArray(new String[0]);
     }
 
-    public String getRecipeDescription(String path) {
-        return ChatColor.translateAlternateColorCodes('&', getConfiguration().getString("description." + path, ""));
+    public String getGuideName(String path) {
+        return ChatColor.translateAlternateColorCodes('&', getConfiguration().getString("guide." + path + ".name", ""));
+    }
+
+    public String[] getGuideLore(String path) {
+        List<String> colored =  getConfiguration().getStringList("guide." + path + ".lore");
+
+        if (colored.size() == 1 && colored.get(0).isBlank()) {
+            return new String[0];
+        }
+
+        colored.replaceAll(s -> ChatColor.translateAlternateColorCodes('&', s));
+        return colored.toArray(new String[0]);
+    }
+
+    public String getRecipeDescriptionTitle(String path) {
+        return ChatColor.translateAlternateColorCodes('&', getConfiguration().getString("description." + path + ".title", ""));
+    }
+    
+    public String[] getRecipeDescriptionLore(String path) {
+        List<String> colored =  getConfiguration().getStringList("description." + path + ".lore");
+
+        if (colored.size() == 1 && colored.get(0).isBlank()) {
+            return new String[0];
+        }
+
+        colored.replaceAll(s -> ChatColor.translateAlternateColorCodes('&', s));
+        return colored.toArray(new String[0]);
     }
 
     private Configuration getConfiguration() {

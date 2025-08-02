@@ -1,6 +1,8 @@
 package cn.qy.MomoTech.GUI;
 
 import com.xzavier0722.mc.plugin.slimefun4.storage.controller.SlimefunBlockData;
+
+import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
@@ -135,18 +137,18 @@ public abstract class AbstractElectricGUI extends SlimefunItem implements Invent
     public void register(@Nonnull SlimefunAddon addon) {
         this.addon = addon;
         if (this.getCapacity() <= 0) {
-            this.warn("The capacity has not been configured correctly. The Item was disabled.");
-            this.warn("Make sure to call '" + this.getClass().getSimpleName() + "#setEnergyCapacity(...)' before registering!");
+            this.warn(MomoTech.languageManager.getInfo("capacity_not_configured_correctly.p1"));
+            this.warn(MomoTech.languageManager.getInfo("capacity_not_configured_correctly.p2") + this.getClass().getSimpleName() + MomoTech.languageManager.getInfo("capacity_not_configured_correctly.p3"));
         }
 
         if (this.getEnergyConsumption() <= 0) {
-            this.warn("The energy consumption has not been configured correctly. The Item was disabled.");
-            this.warn("Make sure to call '" + this.getClass().getSimpleName() + "#setEnergyConsumption(...)' before registering!");
+            this.warn(MomoTech.languageManager.getInfo("energy_consumption_not_configured_correctly.p1"));
+            this.warn(MomoTech.languageManager.getInfo("energy_consumption_not_configured_correctly.p2") + this.getClass().getSimpleName() + MomoTech.languageManager.getInfo("energy_consumption_not_configured_correctly.p3"));
         }
 
         if (this.getSpeed() <= 0) {
-            this.warn("The processing speed has not been configured correctly. The Item was disabled.");
-            this.warn("Make sure to call '" + this.getClass().getSimpleName() + "#setProcessingSpeed(...)' before registering!");
+            this.warn(MomoTech.languageManager.getInfo("processing_speed_not_configured_correctly.p1"));
+            this.warn(MomoTech.languageManager.getInfo("processing_speed_not_configured_correctly.p2") + this.getClass().getSimpleName() + MomoTech.languageManager.getInfo("processing_speed_not_configured_correctly.p3"));
         }
 
         this.registerDefaultRecipes();

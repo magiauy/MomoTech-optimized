@@ -1,21 +1,78 @@
+info:
+  items_registered_successfully: "Items registered successfully."
+  machines_registered_successfully: "Machines registered successfully"
+  capacity_not_configured_correctly: 
+    p1: "The capacity has not been configured correctly. The Item was disabled."
+    p2: "Make sure to call '"
+    p3: "#setEnergyCapacity(...)' before registering!"
+  energy_consumption_not_configured_correctly:
+    p1: "The energy consumption has not been configured correctly. The Item was disabled."
+    p2: "Make sure to call '"
+    p3: "#setEnergyConsumption(...)' before registering!"
+  processing_speed_not_configured_correctly:
+    p1: "The processing speed has not been configured correctly. The Item was disabled."
+    p2: "Make sure to call '"
+    p3: "#setProcessingSpeed(...)' before registering!"
+  disabled_item: "&f&lThis item has been disabled!"
+  do_not_accelerate: "Do not accelerate!"
+  momotech: "MomoTech"
+  momotech_enabled:
+    l1: "MomoTech has been enabled."
+    l2: "---------< MomoTech >-------"
+    l3: "|      Authors:QYhB05      |"
+    l4: "|      Plugin:MomoTech     |"
+    l5: "|      Version:1.1.11      |"
+    l6: "----------------------------"
+    l7: "> QQ Group:827684043"
+    l8: "> E-mail:3392295184@qq.com"
+    l9: "> Used API version: 1.20.1-R0.1-SNAPSHOT"
+    l10: "> Slimefun4 version supported: Chinese version"
+    l11: "> License:MIT"
+    l12: "----------------------------"
+    l13: "Loading MomoTech..."
+  registering_listener: "Registering Listener..."
+  registering_listener_succeed: "Registered Listener successfully."
+  initializing_items: "Initializing items..."
+  registering_items: "Registering Items..."
+  registering_items_succeed: "Registered Items successfully."
+  registering_machines: "Registering Machines..."
+  registering_machines_succeed: "Registered Machines successfully."
+  momotech_disabled: "MomoTech has been disabled."
 generic:
-  progress: "§aProgress"
-  stored: "§fStored "
-  stored_default: "§fStored NULL J"
-  generating_energy: "§fGenerating Energy"
-  item_banned: "§cThis item has been disabled! You can't get it!"
-  input_invalid: "§cInvalid input!"
-  triggered_not_well: "§fYou triggered something, in any case something not very good..."
-  died: "§cYou died!"
-  yay: "§aYay!"
-  triggered: "§fYou triggered something..."
+  group:
+    momotechnology: "&x&8&5&F&8&C&3M&x&7&4&F&9&A&Eo&x&6&3&F&9&9&9m&x&5&2&F&A&8&4o&x&4&1&F&A&7&0T&x&3&0&F&B&5&Be&x&1&F&F&B&4&6c&x&0&E&F&C&3&1h"
+    notice: "&c&lNotice"
+    thanks_and_special_materials: "&x&f&a&d&3&6&5&lThanks &7&l- &x&f&0&e&8&7&8&lSpecial &x&e&a&f&6&8&4&lMaterials"
+    materials: "&x&d&9&f&9&9&5&lMaterials"
+    compressed_resources: "&6&lCompressed Resources"
+    tools: "&x&8&c&d&1&c&9&lTools"
+    resource_generators: "&x&e&f&a&3&d&e&lResource &x&f&1&a&5&c&6&lGenerators"
+    electricity: "&x&6&5&b&d&e&4&lElectricity"
+    basic_machines: "&x&f&9&b&9&8&c&lBasic &f&e&c&6&6&6&lMachines"
+    infinity_machines: "&x&f&f&8&7&7&3&lInfinity &x&f&f&a&0&5&8&lMachines"
+    endgame_machines: "&x&b&2&e&e&a&a&l&k… &x&c&2&e&9&a&3&lEndgame &x&e&3&d&f&9&4&lMachines &x&f&e&d&4&8&a&l&k…"
+  progress: "&aProgress"
+  null: "&fNULL"
+  stored: "&fStored "
+  stored_default: "&fStored NULL J"
+  generating_energy: "&fGenerating Energy"
+  item_banned: "&cThis item has been disabled! You can't get it!"
+  input_invalid: "&cInvalid input!"
+  triggered_not_well: "&fYou triggered something... and it's probably not good."
+  died: "&cYou died!"
+  yay: "&aYay!"
+  triggered: "&fYou triggered something..."
+  energy_devourer: "&fEating energy..."
+  energy_devourer_consumption: "&72,000,000,000 J/t"
+  teleporter_not_configured_correctly: "&cThe Teleporter is not configured correctly, please input a valid digit."
+  id_display: "&f&lID: "
 item:
-  quantitative_plugin:
-    name: "§x§7§4§8§d§8§dQ§x§7§7§8§d§8§fu§x§7§a§8§d§9§2a§x§7§d§8§c§9§4n§x§8§0§8§c§9§7t§x§8§3§8§c§9§9i§x§8§6§8§c§9§ct§x§8§9§8§c§9§ea§x§8§c§8§c§a§1t§x§9§0§8§c§a§3i§x§9§3§8§c§a§6v§x§9§6§8§c§a§8e §x§9§9§8§c§a§bp§x§9§c§8§c§a§dl§x§9§f§8§c§b§0u§x§a§2§8§b§b§3g§x§a§5§8§b§b§5i§x§a§8§8§b§b§8n"
+  quantum_singularity:
+    name: "&x&B&5&7&4&D&9Q&x&B&6&7&8&D&8u&x&B&7&7&D&D&7a&x&B&8&8&1&D&6n&x&B&8&8&6&D&4t&x&B&9&8&A&D&3u&x&B&A&8&F&D&2m &x&B&C&9&8&D&0S&x&B&D&9&C&C&Fi&x&B&D&A&0&C&Dn&x&B&E&A&5&C&Cg&x&B&F&A&9&C&Bu&x&C&0&A&E&C&Al&x&C&1&B&2&C&9a&x&C&2&B&7&C&8r&x&C&2&B&B&C&6i&x&C&3&C&0&C&5t&x&C&4&C&4&C&4y"
     lore:
-      - "§6Just a material"
-  rule_boots:
-    name: "§7Rule Boots"
+      - "&6Just a material"
+  infinity_boots:
+    name: "&7Infinity Boots"
     lore:
       - "&bRadiation protection"
       - "&bBee protection"
@@ -28,997 +85,1299 @@ item:
       - "&bHaste II"
       - "&bJump Boost I"
       - "&bSoulbound"
-  emptyShell:
-    name: "§7§lNULL"
+  null:
+    name: "&7&lNULL"
     lore:
-      - "§fI don't understand why this is an important material!"
-      - "§f§lNULL"
-  digital_component:
-    name: "§7Digital Component"
+      - "&fI don't understand why this is an important material!"
+      - "&f&lNULL"
+  digit:
+    name: "&7Digit"
+    lore:
+      - "&f0.0"
   bug:
     date:
-      name: "§7§lB§k1§8U§f§l§k一§7G §e- §aDate"
+      name: "&7&lB&k1&8U&f&l&k-&7G &e- &aDate"
+      lore:
     system:
-      name: "§7§lB§k1§8U§f§l§k一§7G §e- §aSystem"
+      name: "&7&lB&k1&8U&f&l&k-&7G &e- &aSystem"
+      lore:
     decimal:
-      name: "§7§lB§k1§8U§f§l§k——§7G §e- §aDecimal"
-    operational_formula:
-      name: "§7§lB§k1§8U§f§l§k——§7G §e- §aOperational Formula"
-    positive_overload:
-      name: "§7§lB§k1§8U§f§l§k——§7G §e- §aPositive Overload"
-    negative_overload:
-      name: "§7§lB§k1§8U§f§l§k——§7G §e- §aNegative Overload"
+      name: "&7&lB&k1&8U&f&l&k-&7G &e- &aDecimal"
+      lore:
+    formula:
+      name: "&7&lB&k1&8U&f&l&k-&7G &e- &aFormula"
+      lore:
+    positive_overflow:
+      name: "&7&lB&k1&8U&f&l&k-&7G &e- &aPositive Overflow"
+      lore:
+    negative_overflow:
+      name: "&7&lB&k1&8U&f&l&k-&7G &e- &aNegative Overflow"
+      lore:
   stone_generator:
-    name: "§eStone §fGenerator"
+    name: "&eStone &fGenerator"
     lore:
-      - "§7Automatically generate Granite/Andesite/Diorite/Cobblestone"
-      - "§7Efficiency: 8x"
-  frog_light_generator:
-    name: "§eFroglight §fGenerator"
+      - "&7Automatically generates Granite/Andesite/Diorite/Cobblestone"
+      - "&7Speed: 8x"
+  froglight_generator:
+    name: "&eFroglight &fGenerator"
     lore:
-      - "§7Automatically generate any type of froglights"
-      - "§7Efficiency: 4x"
+      - "&7Automatically generates any types of froglights"
+      - "&7Speed: 4x"
   ore_generator:
-    name: "§eOre §fGenerator"
+    name: "&eOre &fGenerator"
     lore:
-      - "§7Automatically generate any type of ores"
-      - "§7Efficiency: 1x"
+      - "&7Automatically generates any types of ores"
+      - "&7Speed: 1x"
   sand_generator:
-    name: "§eSand §fGenerator"
+    name: "&eSand &fGenerator"
     lore:
-      - "§7Automatically generate Sand/Red Sand/Gravel/Soul Sand"
-      - "§7Efficiency: 8x"
-  stone_generator_i:
-    name: "§eCobblestone §fGenerator"
+      - "&7Automatically generates Sand/Red Sand/Gravel/Soul Sand"
+      - "&7Speed: 8x"
+  cobblestone_generator:
+    name: "&eCobblestone &fGenerator"
     lore:
-      - "§7Automatically generate cobblestone"
-      - "§7Efficiency: 8x"
+      - "&7Automatically generates cobblestone"
+      - "&7Speed: 8x"
   glass_generator:
-    name: "§eGlass §fGenerator"
+    name: "&eGlass &fGenerator"
     lore:
-      - "§7Automatically generate glass"
-      - "§7Efficiency: 8x"
+      - "&7Automatically generates glass"
+      - "&7Speed: 8x"
   template_generator:
-    name: "§eTemplate §fGenerator"
+    name: "&eTemplate &fGenerator"
     lore:
-      - "§7Automatically generate any type of templates"
-      - "§7Efficiency: 1x"
+      - "&7Automatically generates any types of templates"
+      - "&7Speed: 1x"
   fish_generator:
-    name: "§eFishing Machine"
+    name: "&eFish Generator"
     lore:
-      - "§7Help you fishing automatically"
-      - "§7Efficiency: 1x"
+      - "&7Automatically generates any types of fishes"
+      - "&7Speed: 1x"
   dust_generator:
-    name: "§eDust §fGenerator"
+    name: "&eDust &fGenerator"
     lore:
-      - "§7Automatically generate any type of ores' dusts"
-      - "§7Efficiency: 6x"
-  stones_generator:
-    name: "§eStone chunk §fGenerator"
+      - "&7Automatically generates any types of slimefun dusts"
+      - "&7Speed: 6x"
+  stone_chunk_generator:
+    name: "&eStone chunk &fGenerator"
     lore:
-      - "§7Automatically generate stone chunk"
-      - "§7Efficiency: 8x"
+      - "&7Automatically generates stone chunk"
+      - "&7Speed: 8x"
   ice_generator:
-    name: "§eIce §fGenerator"
+    name: "&eIce &fGenerator"
     lore:
-      - "§7Automatically generate ice"
-      - "§7Efficiency: 1x"
-  generator:
-    name: "§x§b§9§8§b§c§6Basic §x§d§c§8§a§e§2Generator"
+      - "&7Automatically generates ice"
+      - "&7Speed: 1x"
+  basic_generator:
+    name: "&x&b&9&8&b&c&6Basic &x&d&c&8&a&e&2Generator"
     lore:
-      - "§8⇨ §e⚡ §76,000 J/t"
+      - "&7600,000 J Buffer"
+      - "&8⇨ &e⚡ &76,000 J/t"
   string_generator:
-    name: "§eString §fGenerator"
+    name: "&eString &fGenerator"
     lore:
-      - "§7Automatically generate string"
-      - "§7Efficiency: 3x"
+      - "&7Automatically generates string"
+      - "&7Speed: 3x"
   command_block_generator:
-    name: "§eCommand Block §fGenerator"
+    name: "&eCommand Block &fGenerator"
     lore:
-      - "§7§lWhat? Command Blocks???"
-      - "§7Automatically generate any type of command blocks"
-      - "§7Efficiency: 1x"
-  c_generator:
-    name: "§eCarbon §fGenerator"
+      - "&7&lWhat? Command Blocks???"
+      - "&7Automatically generates any types of command blocks"
+      - "&7Speed: 1x"
+  carbon_generator:
+    name: "&eCarbon &fGenerator"
     lore:
-      - "§7Automatically generate carbon"
-      - "§7Efficiency: 1x"
-  creative__:
-    name: "§x§e§d§8§9§f§0Pure §x§b§b§a§2§f§aOrigin"
+      - "&7Automatically generates carbon"
+      - "&7Speed: 1x"
+  pure_primal_matter:
+    name: "&x&e&d&8&9&f&0Pure &x&b&b&a&2&f&aPrimal Matter"
     lore:
-      - "§7Final? No, only the beginning"
-  command_block_getter:
-    name: "§x§a§c§a§9§f§bFake §x§7§f§c§6§e§eCommand §x§7§7§d§d§c§9Block"
+      - "&7Final? No, only the beginning"
+  fake_command_block:
+    name: "&x&a&c&a&9&f&bFake &x&7&f&c&6&e&eCommand &x&7&7&d&d&c&9Block"
     lore:
-      - "§7Oh no...It's only a replica"
-  cobble_stone_generator_ii:
-    name: "§eCobblestone §fGenerator §7Advanced"
+      - "&7Oh no...It's only a replica"
+  advanced_cobblestone_generator:
+    name: "&eAdvanced &7Cobblestone &fGenerator"
     lore:
-      - "§7More and More!"
-      - "§7Efficiency: 64x"
-  letter:
-    name: "§fLetter"
+      - "&7Automatically generates cobblestone"
+      - "&7Speed: 64x"
+  character:
+    name: "&fCharacter"
     lore:
-      - "§fa"
-      - "§7The basic"
+      - "&fa"
+      - "&7The basis for creating matter from nothing"
   id_card:
-    name: "§x§6§e§f§5§a§4I§x§7§3§f§5§a§2D§x§7§8§f§6§a§0 Card"
+    name: "&x&6&e&f&5&a&4ID Card"
     lore:
-      - "§fID:"
-      - "§7You could add letters into card in ID Adder"
-  id_putter:
-    name: "§x§f§c§c§c§9§8ID §x§f§2§a§b§d§0Adder"
+      - "&fID: "
+      - "&7You can add Characters into ID Card through ID Writer."
+      - "&7Valid Slimefun Item ID can be used to construct item"
+      - "&7through Item Constructor."
+  id_writer:
+    name: "&x&f&c&c&c&9&8ID &x&f&2&a&b&d&0Writer"
     lore:
-      - ""
-  letter_constructor:
-    name: "§x§7§e§f§6§9§eLetter §x§8§d§f§7§9§8Constructor"
+      - "&7Used to add Characters to ID Card"
+  character_constructor:
+    name: "&x&7&e&f&6&9&eCharacter &x&8&d&f&7&9&8Constructor"
     lore:
-      - ""
-  final_star:
-    name: "§7§lSupreme Star"
+      - "&7Used to construct Characters"
+  supreme_core:
+    name: "&6Supreme Core"
     lore:
-      - "§7lol"
-  id_changer:
-    name: "§x§d§6§f§c§7§cItem §x§f§3§f§e§7§1Maker"
+      - "&7Singularity of everything!"
+  item_constructor:
+    name: "&x&d&6&f&c&7&cItem &x&f&3&f&e&7&1Constructor"
     lore:
-      - "§7lol, it's already the end, good job"
-      - "§7This machine could turn the ID card into everything in slimefun by the ID that ID card recorded"
-  uncontrollable_empty_generator:
-    name: "§x§f§c§f§7§6§9Uncontrollable §x§f§d§c§9§4§eItem §x§f§e§8§3§2§6Generator"
+      - "&7This machine can construct any Slimefun item"
+      - "&7using its Slimefun ID written on an ID Card."
+      - "&cCase-sensitive!"
+      - "&4Endgame Machine!"
+  uncontrollable_void_generator:
+    name: "&x&f&c&f&7&6&9Uncontrollable &x&f&d&c&9&4&eVoid &x&f&e&8&3&2&6Generator"
     lore:
-      - "§7Efficiency: 48x"
+      - "&7Automatically generates Uncontrollable Void"
+      - "&7Speed: 48x"
+      - "&4Endgame Machine!"
   random_copier:
-    name: "§x§f§f§5§5§0§cRandom §x§f§f§8§3§4§eCopier"
+    name: "&x&f&f&5&5&0&cRandom &x&f&f&8&3&4&eCopier"
     lore:
-      - "§7Dupe random item legally"
+      - "&7Copier with gacha system"
+      - "&4Endgame Machine!"
   final_copier:
-    name: "§x§f§f§e§0§d§3Final §x§e§f§e§f§e§fCopier"
+    name: "&x&f&f&e&0&d&3Final &x&e&f&e&f&e&fCopier"
     lore:
-      - "§7Dupe item legally"
+      - "&7Duplicates any item by using Entangled Quantum"
+      - "&4Endgame Machine!"
   exp:
-    name: "§x§8§c§8§c§8§cExp,  §x§5§b§5§b§5§bMore §x§5§3§5§3§5§3Exp!"
+    name: "&x&8&c&8&c&8&cExp, &x&5&b&5&b&5&bMore &x&5&3&5&3&5&3Exp!"
     lore:
-      - "§7Give you 20 exp levels when you use it ;D"
-  final_item:
-    name: "§x§b§2§d§3§d§3Final §x§9§f§e§3§c§cStar"
+      - "&7Gives you 20 exp levels when you use it"
+  final_core:
+    name: "&x&b&2&d&3&d&3Final &x&9&f&e&3&c&cCore"
     lore:
-      - "§7The end"
-  sea_item_generator:
-    name: "§ePrismarine §fGenerator"
+      - "&4Endgame Item!"
+  prismarine_generator:
+    name: "&ePrismarine &fGenerator"
     lore:
-      - "§7Automatically generate things about prismarine"
-      - "§7Efficiency: 8x"
+      - "&7Automatically generates prismarine-based items"
+      - "&7Speed: 8x"
   bee_generator:
-    name: "§eBee §fGenerator"
+    name: "&eBee &fGenerator"
     lore:
-      - "§7Automatically generate things about bee"
-      - "§7Efficiency: 1x"
+      - "&7Automatically generates bee-related items"
+      - "&7Speed: 1x"
   spider_eye_generator:
-    name: "§eSpider Eye §fGenerator"
+    name: "&eSpider Eye &fGenerator"
     lore:
-      - "§7Automatically generate spider eye"
-      - "§7Efficiency: 2x"
-  ore_collector:
-    name: "§eCompress Ore§f Factory"
+      - "&7Automatically generates spider eye"
+      - "&7Speed: 2x"
+  compressed_mineral_quarry:
+    name: "&eCompressed Mineral&f Quarry"
     lore:
-      - "§7Generator 4 compressed ore(this addon's) per tick"
+      - "&7Automatically generates 3-fold Compressed Minerals"
   symbol_addition:
-    name: "§aSymbol Addition"
+    name: "&aSymbol Addition"
     lore:
-      - "§f+"
+      - "&f+"
   symbol_subtraction:
-    name: "§aSymbol Subtraction"
+    name: "&aSymbol Subtraction"
     lore:
-      - "§f-"
+      - "&f-"
   symbol_multiplication:
-    name: "§aSymbol Multiplication"
+    name: "&aSymbol Multiplication"
     lore:
-      - "§f*"
+      - "&f*"
   symbol_division:
-    name: "Symbol Division"
+    name: "&aSymbol Division"
     lore:
-      - "§f/"
+      - "&f/"
   none:
-    name: "§7§lNONE"
+    name: "&7&lNONE"
     lore:
-      - "§7A void of nothingness"
-  digital_constructor:
-    name: "§x§a§4§b§3§b§fDigit Constructor"
+      - "&7Completely empty"
+  digit_constructor:
+    name: "&x&a&4&b&3&b&fDigit Constructor"
     lore:
-      - "§7Turn 1 'Null' into digit randomly per tick"
-      - "§8⇨ §e⚡ §72,000 J/t"
-  symbol_generator:
-    name: "§x§a§4§b§3§b§fMathematical Symbol Constructor"
+      - "&7Automatically converts Null into Digit"
+      - "&8⇨ &e⚡ &72,000 J/t"
+  symbol_constructor:
+    name: "&x&a&4&b&3&b&fSymbol Constructor"
     lore:
-      - "§7Turn 1 'Null' into mathematical symbol randomly per tick"
-      - "§8⇨ §e⚡ §72,000 J/t"
-  increment:
-    name: "§x§f§d§f§7§c§1Digit Addition Factory"
+      - "&7Automatically converts Null into Symbol"
+      - "&8⇨ &e⚡ &72,000 J/t"
+  incrementer:
+    name: "&x&f&d&f&7&c&1Incrementer"
     lore:
-      - "§7do addition and output the answer when you input two numbers"
-  ordinary_number_combinator:
-    name: "§x§f§d§f§7§c§1Basic Digit Factory"
+      - "&7Used to calculate the sum of 2 Digits"
+  calculator:
+    name: "&x&f&d&f&7&c&1Calculator"
     lore:
-      - "§7Output the answer when you input a valid mathematical formula"
-  empty_shell_generator:
-    name: "§x§f§8§c§7§f§eNull Generator"
+      - "&7Used to process and solve mathematical expressions"
+  null_generator:
+    name: "&x&f&8&c&7&f&eNull Generator"
     lore:
-      - "§7Turn 1 item in input slots into 8 'Null's per tick"
-  empty_shell_generator_i:
-    name: "§x§f§d§a§c§f§fAdvanced Null Generator"
+      - "&7Automatically converts any item into Null"
+  advanced_null_generator:
+    name: "&x&f&d&a&c&f&fAdvanced Null Generator"
     lore:
-      - "§7Generator 64 'Null's per tick"
-  creative_item:
-    name: "§x§f§f§7§6§8§bOriginal §x§f§f§7§5§5§6Material α"
+      - "&7Automatically generates Null"
+  primal_matter_a:
+    name: "&x&f&f&7&6&8&bPrimal &x&f&f&7&5&5&6Matter α"
     lore:
-      - "&7The basic"
-  creative_item_i:
-    name: "§x§f§f§8§7§3§9Original §x§f§f§a§1§0§eMaterial β"
+      - "&7Looks important... but it's just a basic material."
+  primal_matter_b:
+    name: "&x&f&f&8&7&3&9Primal &x&f&f&a&1&0&eMatter β"
     lore:
-      - "&7The basic"
-  creative_item_generator:
-    name: "§x§f§f§f§0§8§5Original Material Factory"
+      - "&7Looks important... but it's just a basic material."
+  primal_matter_constructor:
+    name: "&x&f&f&f&0&8&5Primal Matter Constructor"
     lore:
-      - "§7Make Original Materials from here"
-  uncontrollable_empty:
-    name: "§8§l§k123§f§lUncontrollable Empty"
+      - "&7Used to construct Primal Matters"
+      - "&4Warning: Unsuccessful construction will void the ingredients"
+  uncontrollable_void:
+    name: "&8&l&k123&f&lUncontrollable Void&8&l&k123"
     lore:
-      - "§7Oh, it's out of control:<"
-  creativegenerator:
-    name: "§x§d§5§f§f§e§aInfinity Electric Generator"
+      - "&7An important material!"
+  infinity_generator:
+    name: "&x&d&5&f&f&e&aInfinity Generator"
     lore:
-      - "§8⇨ §e⚡ §799,999,999 J/t"
-      - "§7Lots of energy...."
-  none_generator:
-    name: "§x§c§7§f§a§d§bNone Factory"
+      - "&7999,999,999 J Buffer"
+      - "&8⇨ &e⚡ &799,999,999 J/t"
+      - "&7Lots of energy...."
+  none_constructor:
+    name: "&x&c&7&f&a&d&bNone Constructor"
     lore:
-      - "§7The main sources obtained NONE in the early stage"
-  creative_item_ii:
-    name: "§x§f§f§b§6§1§6Original §x§f§f§d§8§5§8Material γ"
+      - "&7Used to construct None"
+      - "&4Warning: Unsuccessful construction will void the ingredients"
+  primal_matter_y:
+    name: "&x&f&f&b&6&1&6Primal &x&f&f&d&8&5&8Matter γ"
     lore:
-      - "§7further more!"
-      - "§7;)"
-  quantity_constructor:
-    name: "§x§a§d§d§f§4§eQuantify Factory"
+      - "&7One step further..."
+  quantum_constructor:
+    name: "&x&a&d&d&f&4&eQuantum Constructor"
     lore:
-      - "§7Compress more and more item :D"
+      - "&7Used to construct high-tier components!"
+      - "&4Warning: Unsuccessful construction will void the ingredients"
   bug_crystal:
-    name: "§x§5§e§c§b§b§4§lBUG Crystal"
+    name: "&x&5&e&c&b&b&4&lBUG Crystal"
     lore:
-      - "§7It's full of... BUG ??.."
-  qy:
-    name: "§6§lQYhB05"
+      - "&7It's full of... BUG ??.."
+  qyhb05:
+    name: "&6&lQYhB05"
     lore:
-      - "§7Thanks for coding"
-  wbx:
-    name: "§e§lChenmose"
+      - "&7Thanks for coding"
+  chenmose:
+    name: "&e&lChenmose"
     lore:
-      - "§7Thanks for some good ideas"
-  sky:
-    name: "§b§lskybule"
+      - "&7Thanks for some good ideas"
+  skybule:
+    name: "&b&lskybule"
     lore:
-      - "§7Thanks for some good ideas"
+      - "&7Thanks for some good ideas"
   plugin:
-    name: "§f§lMomoTech"
+    name: "&f&lMomoTech"
     lore:
-      - "§7This addon's name is 'MomoTech', and this project is on public, you can find it on github;)"
+      - "&7This addon's name is 'MomoTech' and this is a public project, you can find it on Github"
   buggggg:
-    name: "§f§lBUGGGGGGGGGGGGGGGG"
+    name: "&f&lBUGGGGGGGGGGGGGGGG"
     lore:
-      - "§7Make a bug ;D"
-      - "§7Welcome to join discord server for support/updates/suggestions: https://discord.gg/M2yRf7VV3X"
-  else_1:
-    name: "§7The machines in this addon don't need any energy if there's nothing about energy consume in item's lore"
-  else_2:
-    name: "§7If you find that some machines don't work, it may work after you clean the output slots"
-  else_3:
-    name: "§7When you make BUG - Date, sometimes some formula couldn't work correctly, then you will get a new digit not a 'BUG - Date'"
-  full:
-    name: "§x§3§5§c§6§8§4Saturation Amulet"
+      - "&7Make a bug ;D"
+      - "&7Welcome to join discord server for support/updates/suggestions: https://discord.gg/M2yRf7VV3X"
+  notice_1:
+    name: "&f&lEnergy Consumption" 
     lore:
-      - "§7Provide you with saturation effect for a long time when you use it"
-  damage_item:
-    name: "§x§2§9§c§7§3§aStrange Things"
+      - "&7If there's nothing about energy consumption in the machine's lore,"
+      - "&7then it doesn't need energy."
+  notice_2:
+    name: "&f&lMachines not working"
     lore:
-      - "§7Kill any entities you attacked when you hold it in your main hand"
-  stone_sword:
-    name: "§8§lStone Sword"
+      - "&7If you find that some machines don't work,"
+      - "&7it may work after you clear the output slots."
+  notice_3:
+    name: "&f&lBUG - Date"
     lore:
-      - "§7The Sword in the Stone"
-      - "§8Damage +999999999999.99"
-  final_c_:
-    name: "§750-compressed Cobblestone §eGenerator"
+      - "&7When you make BUG - Date, sometimes some formula couldn't work correctly,"
+      - "&7then you will get a new digit not a BUG - Date"
+  saturation_charm:
+    name: "&x&3&5&c&6&8&4Saturation Charm"
     lore:
-      - "§7Generator 50-compressed cobblestone"
-  protect_item:
-    name: "§x§2§d§c§3§8§0Strange Armor"
+      - "&7Give you saturation effect when you use it"
+  weird_thing:
+    name: "&x&2&9&c&7&3&aWeird Thing"
     lore:
-      - "§7Protect you from the damage from entities"
-  star_of_all:
-    name: "§x§5§8§a§0§8§8Integrated Machine Core"
+      - "&6Evaporate your enemy in a single blow!"
+  instakill_sword:
+    name: "&4Insta-kill Sword"
     lore:
-      - "§7The core of almost all integrated machines"
-  cobble_stone_store:
-    name: "§fStone Chest"
+      - "&6Legendary blade..."
+      - "&8Damage +999999999999.99"
+  50fold_compressed_cobblestone_generator:
+    name: "&750-fold Compressed Cobblestone &eGenerator"
     lore:
-      - "§7Now cobblestone can make a storage. Yay!"
-  cobblestone_generator_final:
-    name: "§7Final Cobblestone Generator"
+      - "&7Generates 50-fold Compressed Cobblestone"
+      - "&7Speed: 8x"
+  weird_armor:
+    name: "&x&2&d&c&3&8&0Weird Armor"
     lore:
-      - "§aGenerate 48 stacks of cobblestones per tick! That's how high-yielding it is!"
+      - "&7Immune to entity attacks while worn!"
+      - "&7Not immune to fire, fall damage, etc"
+  integrated_machine_core:
+    name: "&x&5&8&a&0&8&8Integrated Machine Core"
+    lore:
+      - "&7The core of almost all machines in this addon"
+  stone_storage:
+    name: "&fStone Storage"
+    lore:
+      - "&7Now cobblestone can make a storage. Yay!"
+  infinity_cobblestone_generator:
+    name: "&7Infinity Cobblestone Generator"
+    lore:
+      - "&7Automatically generates cobblestone!"
+      - "&7Speed: 3072x"
   quantum:
-    name: "§eQuantum"
+    name: "&eQuantum"
     lore:
-      - "§7Something strange happened when you right click it"
-  quantum1:
-    name: "§bEntangled §eQuantum"
+      - "&7Right-clicking might cause... bad things to happen"
+  entangled_quantum:
+    name: "&bEntangled &eQuantum"
     lore:
-      - "§7Something strange happened when you right click it"
-      - "§7Used for some machines"
-  box_of_quantum:
-    name: "§eQuantum §eBox"
+      - "&7Right-clicking might cause... bad things to happen"
+      - "&7Used in high-tier machines"
+  quantum_box:
+    name: "&eQuantum &eBox"
     lore:
-      - "§7Stable quantum"
-      - "§7You can use it to open the ender chest"
-  silk_touch_pickaxe:
-    name: "§bEntangled §eQuantum §aPickaxe"
+      - "&7Stablized quantum energy"
+      - "&7Right click to open ender chest!"
+  entangled_quantum_pickaxe:
+    name: "&bEntangled &eQuantum &aPickaxe"
     lore:
-      - "§fSpecial Tool"
-  pickaxe:
-    name: "§aQuantum §ePickaxe"
+      - "&fSpecial Tool"
+  quantum_pickaxe:
+    name: "&aQuantum &ePickaxe"
     lore:
-      - "§fSpecial Tool"
-      - "§7Right click to let you go faster"
-  pumpkin_carver:
-    name: "§x§a§4§b§3§b§fPumpkin Carving Factory"
+      - "&fSpecial Tool"
+      - "&7Right click to get speed boost!"
+  pumpkin_carving_machine:
+    name: "&x&a&4&b&3&b&fPumpkin Carving Machine"
     lore:
-      - "§7Carve all pumpkin in input slots in 1 tick"
-  clear:
-    name: "§6Quantum Clean"
+      - "&7Automatically carve pumpkins"
+  quantum_debuff_remover:
+    name: "&6Quantum Debuff Remover"
     lore:
-      - "§7Help you clean the debuff quantum brought"
-  fixer:
-    name: "§fTool Repairer"
-  transporter:
-    name: "§aTeleporter"
+      - "&7Help you get rid of the debuff that quantum brought"
+  equipment_repairing_machine:
+    name: "&fEquipment Repairing Machine"
     lore:
-      - "§7Teleport you to any place you want"
+      - "&7Slowly repairs any equipment placed in the input slot"
+  teleporter:
+    name: "&aTeleporter"
+    lore:
+      - "&7Insert a Digit to configure the teleport distance"
+      - "&eRight click &7to teleport"
+      - "&eShift + Right click &7to open GUI"
   chest_generator:
-    name: "§eChest §fGenerator"
+    name: "&eChest &fGenerator"
     lore:
-      - "§7Automatically generate chest"
-      - "§7Efficiency: 1x"
-  open_box_item:
-    name: "§eQuantum Box Destroyer"
+      - "&7Automatically generates chest"
+      - "&7Speed: 1x"
+  quantum_box_opener:
+    name: "&eQuantum Box Opener"
     lore:
-      - "§7Open the quantum box"
-      - "§4But only entangled quantum can be saved"
-  shine:
-    name: "§eShine"
+      - "&7Used to open Quantum Box"
+      - "&4Only Entangled Quantum will be preserved!"
+  light:
+    name: "&eLight"
     lore:
       - "&7It's shining!"
   dark:
-    name: "§8Dark"
+    name: "&8Dark"
     lore:
       - "&7It's full of dark..."
-  shine_and_dark_constructor:
-    name: "§x§5§5§f§f§f§fShine And Dark Collector"
+  light_and_dark_collector:
+    name: "&x&5&5&f&f&f&fLight And Dark Collector"
     lore:
-      - "§8⇨ §e⚡ §7500 J/t"
-  shine_and_dark_generator:
-    name: "§x§5§5§f§f§f§fShine And Dark Generator"
+      - "&8⇨ &e⚡ &7500 J/t"
+  light_and_dark_generator:
+    name: "&x&5&5&f&f&f&fLight And Dark Generator"
     lore:
-      - "§8⇨ §e⚡ §7500 J/t"
-      - "§7Get energy from shine and dark"
-  shine1:
-    name: "§e§lShine Factor"
-    lore:
-      - ""
-  dark1:
-    name: "§8§lDark Factor"
+      - "&8⇨ &e⚡ &720,000 J/t"
+      - "&7Get energy from light and dark"
+  light_essence:
+    name: "&e&lLight Essence"
     lore:
       - ""
-  netherite_pickaxe_changer:
-    name: "§7§lNetherite Pickaxe Factory"
+  dark_essence:
+    name: "&8&lDark Essence"
     lore:
-      - "§8⇨ §e⚡ §7100 J/t"
+      - ""
+  netherite_pickaxe_factory:
+    name: "&7&lNetherite Pickaxe Factory"
+    lore:
+      - "&7Used to convert diamond pickaxe to netherite pickaxe"
+      - "&8⇨ &e⚡ &7100 J/t"
   diamond_pickaxe_generator:
-    name: "§eChest §fGenerator"
+    name: "&bDiamond Pickaxe &fGenerator"
     lore:
-      - "§7Automatically generate diamond pickaxe"
-      - "§7Efficiency: 8x"
-  constructor:
-    name: "§x§e§3§f§5§a§2Core Compressor"
+      - "&7Automatically generates diamond pickaxe"
+      - "&7Speed: 8x"
+  resource_condenser:
+    name: "&x&e&3&f&5&a&2Resource Condenser"
     lore:
-      - "§8⇨ §e⚡ §7900 J/t"
-  diamond:
-    name: "§bMineral Factor §6Diamond"
-    lore:
-      - ""
-  iron:
-    name: "§bMineral Factor §6Iron"
+      - "&8⇨ &e⚡ &7900 J/t"
+  mineral_essence_diamond:
+    name: "&bMineral Essence &e- &bDiamond"
     lore:
       - ""
-  gold:
-    name: "§bMineral Factor §6Gold"
+  mineral_essence_iron:
+    name: "&bMineral Essence &e- &7Iron"
     lore:
       - ""
-  quartz:
-    name: "§bMineral Factor §6Quartz"
+  mineral_essence_gold:
+    name: "&bMineral Essence &e- &eGold"
     lore:
       - ""
-  emerald:
-    name: "§bMineral Factor §6Emerald"
+  mineral_essence_quartz:
+    name: "&bMineral Essence &e- &fQuartz"
     lore:
       - ""
-  redstone:
-    name: "§bMineral Factor §6Redstone"
+  mineral_essence_emerald:
+    name: "&bMineral Essence &e- &aEmerald"
     lore:
       - ""
-  lapis:
-    name: "§bMineral Factor §6Lapis"
+  mineral_essence_redstone:
+    name: "&bMineral Essence &e- &4Redstone"
     lore:
       - ""
-  coal:
-    name: "§bMineral Factor §6Coal"
+  mineral_essence_lapis:
+    name: "&bMineral Essence &e- &9Lapis"
     lore:
       - ""
-  diamond1:
-    name: "§bMineral Core §6Diamond"
+  mineral_essence_coal:
+    name: "&bMineral Essence &e- &8Coal"
     lore:
       - ""
-  iron1:
-    name: "§bMineral Core §6Iron"
+  mineral_singularity_diamond:
+    name: "&bMineral Singularity &e- &bDiamond"
     lore:
       - ""
-  gold1:
-    name: "§bMineral Core §6Gold"
+  mineral_singularity_iron:
+    name: "&bMineral Singularity &e- &7Iron"
     lore:
       - ""
-  quartz1:
-    name: "§bMineral Core §6Quartz"
+  mineral_singularity_gold:
+    name: "&bMineral Singularity &e- &eGold"
     lore:
       - ""
-  emerald1:
-    name: "§bMineral Core §6Emerald"
+  mineral_singularity_quartz:
+    name: "&bMineral Singularity &e- &fQuartz"
     lore:
       - ""
-  redstone1:
-    name: "§bMineral Core §6Redstone"
+  mineral_singularity_emerald:
+    name: "&bMineral Singularity &e- &aEmerald"
     lore:
       - ""
-  lapis1:
-    name: "§bMineral Core §6Lapis"
+  mineral_singularity_redstone:
+    name: "&bMineral Singularity &e- &4Redstone"
     lore:
       - ""
-  coal1:
-    name: "§Mineral bMineral Core §6Coal"
+  mineral_singularity_lapis:
+    name: "&bMineral Singularity &e- &9Lapis"
     lore:
       - ""
-  cu:
-    name: "§bMetal Factor §6Copper"
+  mineral_singularity_coal:
+    name: "&bMineral Singularity &e- &8Coal"
     lore:
       - ""
-  cu1:
-    name: "§bMetal Core §6Copper"
+  metal_essence_copper:
+    name: "&7Metal Essence &e- &6Copper"
     lore:
       - ""
-  pb:
-    name: "§bMetal Factor §6Lead"
+  metal_essence_lead:
+    name: "&7Metal Essence &e- &8Lead"
     lore:
       - ""
-  pb1:
-    name: "§bMetal Core §6Lead"
+  metal_essence_magnesium:
+    name: "&7Metal Essence &e- &fMagnesium"
     lore:
       - ""
-  mg:
-    name: "§bMetal Factor §6Magnesium"
+  metal_essence_gold:
+    name: "&7Metal Essence &e- &eGold"
     lore:
       - ""
-  mg1:
-    name: "§bMetal Core §6Magnesium"
+  metal_essence_aluminum:
+    name: "&7Metal Essence &e- &fAluminum"
     lore:
       - ""
-  au:
-    name: "§bMetal Factor §6Gold"
+  metal_essence_tin:
+    name: "&7Metal Essence &e- &fTin"
     lore:
       - ""
-  au1:
-    name: "§bMetal Core §6Gold"
+  metal_essence_zinc:
+    name: "&7Metal Essence &e- &fZinc"
     lore:
       - ""
-  al:
-    name: "§bMetal Factor §6Aluminum"
+  metal_essence_silver:
+    name: "&7Metal Essence &e- &fSilver"
     lore:
       - ""
-  al1:
-    name: "§bMetal Core §6Aluminum"
+  metal_singularity_copper:
+    name: "&7Metal Singularity &e- &6Copper"
     lore:
       - ""
-  sn:
-    name: "§bMetal Factor §6Tin"
+  metal_singularity_lead:
+    name: "&7Metal Singularity &e- &8Lead"
     lore:
       - ""
-  sn1:
-    name: "§bMetal Core §6Tin"
+  metal_singularity_magnesium:
+    name: "&7Metal Singularity &e- &fMagnesium"
     lore:
       - ""
-  zn:
-    name: "§bMetal Factor §6Zinc"
+  metal_singularity_gold:
+    name: "&7Metal Singularity &e- &6Gold"
     lore:
       - ""
-  zn1:
-    name: "§bMetal Core §6Zinc"
+  metal_singularity_aluminum:
+    name: "&7Metal Singularity &e- &fAluminum"
     lore:
       - ""
-  ag:
-    name: "§bMetal Factor §6Silver"
+  metal_singularity_tin:
+    name: "&7Metal Singularity &e- &fTin"
     lore:
       - ""
-  ag1:
-    name: "§bMetal Core §6Silver"
+  metal_singularity_zinc:
+    name: "&7Metal Singularity &e- &fZinc"
     lore:
       - ""
-  real_magnet:
-    name: "§fMagnet"
+  metal_singularity_silver:
+    name: "&7Metal Singularity &e- &fSilver"
     lore:
-      - "&7Oh, this is the more reasonable magnet!"
-  electricity_magnet:
-    name: "§eElectromagnet"
+      - ""
+  magnet:
+    name: "&fMagnet"
     lore:
-      - "&7The important component"
-  iron_star:
-    name: "§f§lIron Core"
+      - "&7Ah, this one actually make senses!"
+  electromagnet:
+    name: "&eElectromagnet"
+    lore:
+      - "&7An important component!"
+  iron_core:
+    name: "&f&lIron Core"
     lore:
       - "&7How heavy!"
-  coil:
-    name: "§cCoil"
+  wire_coil:
+    name: "&6Wire Coil"
     lore:
-      - "&7;D"
-  magnetize:
-    name: "§bMagnetizer"
+  magnetizer:
+    name: "&bMagnetizer"
     lore:
-      - "§8⇨ §e⚡ §7200 J/t"
-  magnet_generator:
-    name: "§6Electromagnet Factory"
+      - "&8⇨ &e⚡ &7200 J/t"
+  electromagnet_factory:
+    name: "&6Electromagnet Factory"
     lore:
-      - "§8⇨ §e⚡ §7500 J/t"
-  infinity:
-    name: "§cRule §eIngot"
+      - "&8⇨ &e⚡ &7500 J/t"
+  infinity_ingot:
+    name: "&bInfinity &eIngot"
     lore:
-      - "§7It's full of power"
-  fast_geo:
-    name: "§x§c§0§a§f§e§6Advanced GEO Miner"
+      - "&7Infinity's power!"
+  highspeed_geo_miner:
+    name: "&x&c&0&a&f&e&6High-speed GEO Miner"
     lore:
-      - "§7Efficiency: 1x"
-      - "§8⇨ §e⚡ §710,000 J/t"
-  ordinary_generator:
-    name: "§x§9§9§c§2§9§eEasy Electric Generator"
+      - "&7Speed: 1x"
+      - "&8⇨ &e⚡ &710,000 J/t"
+  starter_generator:
+    name: "&x&9&9&c&2&9&eStarter Generator"
     lore:
-      - "§8⇨ §e⚡ §7500 J/t"
-  mineral_:
-    name: "§eMineral Core"
+      - "&750,000 J Buffer"
+      - "&8⇨ &e⚡ &7500 J/t"
+  mineral_singularity:
+    name: "&bMineral Singularity"
     lore:
       - ""
-  metal_:
-    name: "§eMetal Core"
+  metal_singularity:
+    name: "&7Metal Singularity"
     lore:
       - ""
   flint_generator:
-    name: "§eFlint §fGenerator"
+    name: "&eFlint &fGenerator"
     lore:
-      - "§7Automatically generate glass"
-      - "§7Efficiency: 4x"
-  rule_star:
-    name: "§bRule §eStar"
+      - "&7Automatically generates flint"
+      - "&7Speed: 4x"
+  infinity_singularity:
+    name: "&bInfinity &eSingularity"
     lore:
-      - "&7Rule's power"
-  final_rule:
-    name: "§3Concept §bItem"
+      - "&7Infinity's power"
+  concept:
+    name: "&3Concept"
     lore:
       - "&7Just a concept"
-  energy_ingot:
-    name: "§x§c§8§d§2§9§aCharged Ingot"
+  charged_ingot:
+    name: "&x&c&8&d&2&9&aCharged Ingot"
     lore:
       - "&7It's full of energy"
   resource:
-    name: "§a§lResource"
+    name: "&a&lResource"
     lore:
-      - "§7Thanks for propaganda"
-  command_block1:
-    name: "§6Original Command Block - §bCommon"
+      - "&7&7Strongly supported this addon and promoted it extensively"
+  primal_command_block_impulse:
+    name: "&6Primal Command Block - &bImpulse"
     lore:
-      - "&7What?"
-  command_block2:
-    name: "§6Original Command Block - §bRepeating"
+  primal_command_block_repeating:
+    name: "&6Primal Command Block - &bRepeating"
     lore:
-      - "&7What?"
-  command_block3:
-    name: "§6Original Command Block - §bChain"
+  primal_command_block_chain:
+    name: "&6Primal Command Block - &bChain"
     lore:
-      - "&7What?"
-  rule_item:
-    name: "§c§lRule Gear"
+  infinity_gear:
+    name: "&c&lInfinity Gear"
     lore:
-      - "&7Command's power!"
-  effect_deleter:
-    name: "§x§7§4§c§5§e§7Effect Cleaner"
+      - "&7Infinity's power!"
+  effect_remover:
+    name: "&x&7&4&c&5&e&7Effect Remover"
     lore:
-      - "&7Cleaner!"
-  throw:
-    name: "§x§6§e§d§b§d§eBag Cleaner"
+      - "&7Remove all active effects!"
+  inventory_thrower:
+    name: "&x&6&e&d&b&d&eInventory thrower"
     lore:
-      - "§7Throw away all items in your bag "
-  rule_shine_and_dark_constructor:
-    name: "§x§5§5§f§f§f§fRule Shine And Dark Collector"
+      - "&7Throw away all items in your inventory"
+  infinity_light_and_dark_collector:
+    name: "&x&5&5&f&f&f&fInfinity Light And Dark Collector"
     lore:
-      - "§8⇨ §e⚡ §75,000 J/t"
-  entropy_reconstruct:
-    name: "§x§2§3§c§d§4§dItem Reconstruct Factory"
+      - "&8⇨ &e⚡ &75,000 J/t"
+  entropy_reconstructor:
+    name: "&x&2&3&c&d&4&dEntropy Reconstructor"
     lore:
-      - "§8⇨ §e⚡ §7500 J/t"
-  rule_reconstruct:
-    name: "§x§2§3§c§d§4§dRule Item Reconstruct Factory"
+      - "&8⇨ &e⚡ &7500 J/t"
+  infinity_entropy_reconstructor:
+    name: "&x&2&3&c&d&4&dInfinity Entropy Reconstructor"
     lore:
-      - "§8⇨ §e⚡ §7500 J/t"
-  rule_machine_star:
-    name: "§x§8§5§e§1§4§eRule Machine Core"
+      - "&8⇨ &e⚡ &75,000 J/t"
+  infinity_machine_core:
+    name: "&x&8&5&e&1&4&eInfinity Machine Core"
     lore:
-      - "&7Really precious"
-  shine_and_dark_ingot:
-    name: "§x§b§9§d§2§c§eShine And Dark Ingot"
+      - "&7Very precious"
+  light_and_dark_ingot:
+    name: "&x&b&9&d&2&c&eLight And Dark Ingot"
     lore:
-      - "&7So beautiful!"
-  rule_dust_generator:
-    name: "§cRule Metal Dust Factory - Random"
+  infinity_dust_extractor:
+    name: "&cInfinity Dust Extractor"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_dust_generator1:
-    name: "§cRule Metal Dust Factory - Al"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_dust_extractor_aluminum:
+    name: "&cInfinity Dust Extractor - Aluminum"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_dust_generator2:
-    name: "§cRule Metal Dust Factory - Mg"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_dust_extractor_magnesium:
+    name: "&cInfinity Dust Extractor - Magnesium"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_dust_generator3:
-    name: "§cRule Metal Dust Factory - Cu"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_dust_extractor_copper:
+    name: "&cInfinity Dust Extractor - Copper"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_dust_generator4:
-    name: "§cRule Metal Dust Factory - Au"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_dust_extractor_gold:
+    name: "&cInfinity Dust Extractor - Gold"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_dust_generator5:
-    name: "§cRule Metal Dust Factory - Ag"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_dust_extractor_silver:
+    name: "&cInfinity Dust Extractor - Silver"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_dust_generator6:
-    name: "§cRule Metal Dust Factory - Pb"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_dust_extractor_lead:
+    name: "&cInfinity Dust Extractor - Lead"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_dust_generator7:
-    name: "§cRule Metal Dust Factory - Sn"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_dust_extractor_tin:
+    name: "&cInfinity Dust Extractor - Tin"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_dust_generator8:
-    name: "§cRule Metal Dust Factory - Zn"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_dust_extractor_zinc:
+    name: "&cInfinity Dust Extractor - Zinc"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_dust_generator9:
-    name: "§cRule Metal Dust Factory - Fe"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_dust_extractor_iron:
+    name: "&cInfinity Dust Extractor - Iron"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_u_generator:
-    name: "§cRule Uranium Generator"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_uranium_extractor:
+    name: "&cInfinity Uranium Extractor"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §75,000 J/t"
-  rule_geo:
-    name: "§x§e§4§c§f§b§cRule GEO Miner"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &75,000 J/t"
+  infinity_geo_miner:
+    name: "&x&e&4&c&f&b&cInfinity GEO Miner"
     lore:
-      - "§7Efficiency: 16x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_creative_generator:
-    name: "§3Original Material Generator"
+      - "&7Speed: 16x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  primal_matter_generator:
+    name: "&3Primal Matter Generator"
     lore:
-      - "§7Efficiency: 1x"
-      - "§8⇨ §e⚡ §7100,000 J/t"
-  rule_reactor:
-    name: "§x§d§f§d§3§d§8Rule Reactor"
+      - "&7Speed: 1x"
+      - "&8⇨ &e⚡ &7100,000 J/t"
+  infinity_nuclear_reactor:
+    name: "&x&d&f&d&3&d&8Infinity Nuclear Reactor"
     lore:
-      - "§7Efficiency: 8x"
-      - "§8⇨ §e⚡ §75,000 J/t"
-  monster_item:
-    name: "§cMonster Simulator §7- §bMain World"
+      - "&7Speed: 8x"
+      - "&8⇨ &e⚡ &75,000 J/t"
+  virtual_spawner_overworld_mobs:
+    name: "&cVirtual Spawner &7- &bOverworld Mobs"
     lore:
-      - "§7Efficiency:32x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  monster_item1:
-    name: "§cMonster Simulator §7- §bGuardian"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  virtual_spawner_aquatic_animals:
+    name: "&cVirtual Spawner &7- &bAquatic Animals"
     lore:
-      - "§7Efficiency:32x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  monster_item2:
-    name: "§cMonster Simulator §7- §bPigman"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  virtual_spawner_zombified_piglin:
+    name: "&cVirtual Spawner &7- &bZombified Piglin"
     lore:
-      - "§7Efficiency:32x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  monster_item3:
-    name: "§cMonster Simulator §7- §bEnderman"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  virtual_spawner_enderman:
+    name: "&cVirtual Spawner &7- &bEnderman"
     lore:
-      - "§7Efficiency:32x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  monster_item4:
-    name: "§cMonster Simulator §7- §bCreeper"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  virtual_spawner_creeper:
+    name: "&cVirtual Spawner &7- &bCreeper"
     lore:
-      - "§7Efficiency:32x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  monster_item5:
-    name: "§cMonster Simulator §7- §bDrowned"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  virtual_spawner_drowned:
+    name: "&cVirtual Spawner &7- &bDrowned"
     lore:
-      - "§7Efficiency:32x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  monster_item6:
-    name: "§cMonster Simulator §7- §bAnimal"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  virtual_spawner_animals:
+    name: "&cVirtual Spawner &7- &bAnimals"
     lore:
-      - "§7Efficiency:32x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  monster_item7:
-    name: "§cMonster Simulator §7- §bSlime"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  virtual_spawner_slime:
+    name: "&cVirtual Spawner &7- &bSlime"
     lore:
-      - "§7Efficiency:32x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  monster_item8:
-    name: "§cMonster Simulator §7- §bBlaze"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  virtual_spawner_blaze:
+    name: "&cVirtual Spawner &7- &bBlaze"
     lore:
-      - "§7Efficiency:32x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  monster_item9:
-    name: "§cMonster Simulator §7- §bMagma Cube"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  virtual_spawner_magma_cube:
+    name: "&cVirtual Spawner &7- &bMagma Cube"
     lore:
-      - "§7Efficiency:32x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  rule_constructor:
-    name: "§x§e§3§f§5§a§2Rule Core Compressor"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_resource_condenser:
+    name: "&x&e&3&f&5&a&2Infinity Resource Condenser"
     lore:
-      - "§7Efficiency: 16x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  mineral_generator:
-    name: "§x§f§3§f§7§e§eRule Miner"
+      - "&7Speed: 16x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_miner:
+    name: "&x&f&3&f&7&e&eInfinity Miner"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  mineral_block_generator:
-    name: "§x§e§a§f§e§e§6Rule Miner - Mineral Block"
+      - "&7Speed: 64x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_miner_mineral_block:
+    name: "&x&e&a&f&e&e&6Infinity Miner - Mineral Block"
     lore:
-      - "§7Efficiency: 64x"
-      - "§8⇨ §e⚡ §715,000 J/t"
-  plant:
-    name: "§aAuto Farm"
+      - "&7Speed: 16x"
+      - "&8⇨ &e⚡ &715,000 J/t"
+  infinity_crop_growth_chamber:
+    name: "&aInfinity Crop Growth Chamber"
     lore:
-      - "§7Efficiency: 32x"
-      - "§8⇨ §e⚡ §710,000 J/t"
-  wood:
-    name: "§aAuto Tree Farm"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &710,000 J/t"
+  infinity_tree_growth_chamber:
+    name: "&aInfinity Tree Growth Chamber"
     lore:
-      - "§7Efficiency: 32x"
-      - "§8⇨ §e⚡ §710,000 J/t"
-  energy_quantum:
-    name: "§cCharged §bQuantum"
+      - "&7Speed: 32x"
+      - "&8⇨ &e⚡ &710,000 J/t"
+  charged_quantum:
+    name: "&cCharged &bQuantum"
     lore:
       - "&7Dangerous!"
   random_quantum:
-    name: "§3Random §aQuantum"
+    name: "&3Random &aQuantum"
     lore:
       - "&7You'll die if you use it..."
   random_quantum_generator:
-    name: "§x§e§4§e§2§c§dRandom Quantum Generator"
+    name: "&x&e&4&e&2&c&dRandom Quantum Generator"
     lore:
       - "&7Random~"
-  energy_quantum_generator:
-    name: "§x§d§7§f§c§f§2Quantum Charged Machine"
+      - "&4Warning: Any input item will be voided"
+  quantum_charging_machine:
+    name: "&x&d&7&f&c&f&2Quantum Charging Machine"
     lore:
-      - "§8⇨ §e⚡ §7500,000 J/t"
-  final_ingot_generator:
-    name: "§bRule Ingot Cast Machine"
+      - "&8⇨ &e⚡ &7500,000 J/t"
+  infinity_ingot_former:
+    name: "&bInfinity Ingot Former"
     lore:
-      - "§7Efficiency: INFINITY"
-  final_generator:
-    name: "§eRule Electric Generator"
+      - "&7Automatically smelts dust into ingots"
+      - "&7Speed: Infinity"
+  endgame_generator:
+    name: "&eEndgame Generator"
     lore:
-      - "§8⇨ §e⚡ §71,000,000,000 J/t"
-  final_capital:
-    name: "§eRule Electric Capital"
+      - "&72,000,000,000 J Buffer"
+      - "&8⇨ &e⚡ &7&e1,000,000,000 &7J/t"
+  endgame_capacitor:
+    name: "&eEndgame Capacitor"
     lore:
-      "§7Can Stored §8⇨ §e⚡ §72,000,000,000 J/t"
-  final_electric_eater:
-    name: "§bElectric Eater"
+      - "&8⇨ &e⚡ &e2,000,000,000 &7J Capacity"
+  energy_devourer:
+    name: "&bEnergy Devourer"
     lore:
-      - "§7Eat electric ;D"
-  item_fixer:
-    name: "§6Item Reset Machine"
+      - "&7Eat electric :D"
+      - "&8⇨ &e⚡ &72,000,000,000 J/t"
+  item_resetter:
+    name: "&6Item Resetter"
     lore:
-      - "§7Reset slimefun item stack"
-  rule_pickaxe:
-    name: "§6Rule Pickaxe"
+      - "&7Reset Slimefun ItemStack"
+  infinity_pickaxe:
+    name: "&6Infinity Pickaxe"
     lore:
       - "&7Precious Item"
-  looter:
-    name: "§7Looter Spawner"
+  sealed_evoker:
+    name: "&7Sealed Evoker"
     lore:
-      - "&7You'll get a looter spawner when you use it"
-  forever:
-    name: "§bEternal Particle"
+      - "&7You'll get an evoker spawn egg when you use it"
+  eternal_particle:
+    name: "&bEternal Particle"
     lore:
-      - "§7Forever..."
-  forever_:
-    name: "§bEternal Singularity"
+      - "&7Forever..."
+  eternal_singularity:
+    name: "&bEternal Singularity"
     lore:
-      - "§7Forever..."
-  eternal_mining_machine:
-    name: "§bEternal Particle Miner"
+      - "&7Forever..."
+  eternal_particle_constructor:
+    name: "&bEternal Particle Constructor"
     lore:
-      - "§7Slower abd slower..."
-  digit_generator:
-    name: "§fDigit Electric Generator"
+      - "&7Slow and slower..."
+  digital_capacitor:
+    name: "&fDigital Capacitor"
     lore:
-      - "§7Can store §8⇨ §e⚡ §716,777,216 J"
+      - "&8⇨ &e⚡ &716,777,216 J Capacity"
   id_display:
     name: "&7&lID"
     lore:
       - "&7Show item's id"
   proton:
-    name: "§6Proton"
+    name: "&6Proton"
     lore:
-      - "&7Impossible materials"
   zygote:
-    name: "§6Zygote"
+    name: "&6Zygote"
     lore:
-      - "&7Impossible materials"
-  particle_constructor:
-    name: "§x§6§d§6§4§d§cParticle Collector"
+  particle_collector:
+    name: "&x&6&d&6&4&d&cParticle Collector"
     lore:
-      - "§7Can store §8⇨ §e⚡ §75000 J"
+      - "&8⇨ &e⚡ &75000 J Capacity"
   proton_ingot:
-    name: "§6Proton Ingot"
+    name: "&6Proton Ingot"
     lore:
-      - "&7More"
   zygote_ingot:
-    name: "§6Zygote Ingot"
+    name: "&6Zygote Ingot"
     lore:
-      - "&7More"
-  salt_generator:
-    name: "§7Salt Miner"
+  salt_quarry:
+    name: "&fSalt Quarry"
+    lore: "&7Automatically generates salt"
+  alloy_fabricator:
+    name: "&x&f&f&8&d&c&5Alloy Fabricator"
     lore:
-      - "&7Lots of salt lol"
-  ingot_constructor:
-    name: "§x§f§f§8§d§c§5Alloy Generator"
+      - "&7Automatically produces alloys using Metal Essence"
+  metal_essence:
+    name: "&7Metal Essence"
     lore:
-      - "§7Efficiency: 32x"
-  metal_star:
-    name: "§eMetal Star"
+  cosmic_supreme_blabla_generator:
+    name: "&x&F&F&F&A&4&9C&x&F&E&F&5&4&Co&x&F&E&F&0&4&Fs&x&F&D&E&C&5&2m&x&F&C&E&7&5&5i&x&F&C&E&2&5&8c &x&F&A&D&9&5&ES&x&F&A&D&4&6&1u&x&F&9&C&F&6&4p&x&F&9&C&A&6&7r&x&F&8&C&5&6&Ae&x&F&7&C&1&6&Dm&x&F&7&B&C&7&0e &x&F&5&B&2&7&6I&x&F&5&A&E&7&9n&x&F&4&A&9&7&Cv&x&F&3&A&4&7&Fi&x&F&3&9&F&8&2n&x&F&2&9&B&8&5c&x&F&1&9&6&8&7i&x&F&1&9&1&8&Ab&x&F&0&8&C&8&Dl&x&E&F&8&7&9&0e &x&E&E&7&E&9&6M&x&E&D&7&9&9&9y&x&E&D&7&4&9&Cs&x&E&C&7&0&9&Ft&x&E&C&6&B&A&2i&x&E&B&6&6&A&5c&x&E&A&6&1&A&8a&x&E&A&5&C&A&Bl &x&E&8&5&3&B&1E&x&E&8&4&E&B&4p&x&E&7&4&9&B&7i&x&E&6&4&5&B&Ac &x&E&5&3&B&C&0E&x&E&4&3&C&C&1t&x&E&3&3&D&C&2e&x&E&2&3&E&C&2r&x&E&1&3&F&C&3n&x&E&0&4&0&C&4a&x&D&F&4&1&C&5l &x&D&E&4&3&C&6I&x&D&D&4&4&C&7n&x&D&C&4&6&C&8f&x&D&B&4&7&C&8i&x&D&A&4&8&C&9n&x&D&9&4&9&C&Ai&x&D&8&4&A&C&Bt&x&D&7&4&B&C&Be &x&D&5&4&D&C&DP&x&D&4&4&E&C&Eo&x&D&4&4&F&C&Fw&x&D&3&5&0&C&Fe&x&D&2&5&1&D&0r &x&D&0&5&3&D&2G&x&C&F&5&4&D&2e&x&C&E&5&5&D&3n&x&C&D&5&6&D&4e&x&C&C&5&7&D&5r&x&C&B&5&8&D&5a&x&C&A&5&A&D&6t&x&C&9&5&B&D&7o&x&C&8&5&C&D&8r &x&C&7&5&E&D&9ζ &x&C&5&6&0&D&BT&x&C&4&6&1&D&By&x&C&3&6&2&D&Cp&x&C&2&6&3&D&De"
     lore:
-  final_energy_generator:
-    name: "&7&lSupreme Generator"
+      - "&8⇨ &e⚡ &7999,999,999,999,999,999,999,999,999,999,999,999,999,999,999^0 J/t"
+  highpressure_compressor:
+    name: "&7&lHigh-pressure Compressor"
     lore:
-      - "§8⇨ §e⚡ §7999,999,999,999,999,999,999,999,999,999,999,999,999,999,999^0 J/t"
-  special_things_constructor:
-    name: "&7&lSpecial Compressor"
+      - "&8⇨ &e⚡ &7200 J/t"
+  compressed_cobblestone:
+    name: "-fold Compressed Cobblestone"
     lore:
-      - "§8⇨ §e⚡ §7200 J/t"
-showing_as_recipe_item:
-  id_card: "§eID Card"
-  digital_component: "§e§lDigital Component"
-  emptyShell: "§e§lNull"
-  bug:
-    date: "§e§lBUG - Date"
-    system: "§e§lBUG - System"
-    decimal: "§e§lBUG - Decimal"
-    operational_formula: "§e§lBUG - Operational Formula"
-    positive_overload: "§e§lBUG - Positive Overload"
-    negative_overload: "§e§lBUG - Negative Overload"
-  symbol: "§e§lSymbol"
-  symbol_2: "§6Symbol"
-  original_material: "§e§lOriginal Material α/β"
-  original_material_2: "§7Make it in the §bOriginal Material Factory"
+      - "&7Just a material."
+      - "&7Actually not all of them are used."
+  compressed_minerals:
+    minerals:
+      netherite:
+        name: "Netherite"
+      diamond:
+        name: "Diamond"
+      emerald:
+        name: "Emerald"
+      gold:
+        name: "Gold"
+      iron:
+        name: "Iron"
+      quartz:
+        name: "Quartz"
+      redstone:
+        name: "Redstone"
+      lapis:
+        name: "Lapis"
+      coalEssence:
+        name: "Coal"
+    fold:
+      1-fold:
+        name: "1-fold Compressed "
+      2-fold:
+        name: "2-fold Compressed "
+      3-fold:
+        name: "3-fold Compressed "
+      4-fold:
+        name: "4-fold Compressed "
+      5-fold:
+        name: "5-fold Compressed "
+    lore:
+      - "&7Essence extracted by compressing minerals..."
 description:
-  random_copier_usage: "§fThere is a 10% probability of randomly copying an item from the interactive slot above when inputting the original material γ in the bottom left corner"
-  random_copier_requirement: "§7Requirement: The amount and types of items in the interactive slot are not equal"
-  id_changer: "§fEnter any valid ID card to directly create items through Slimefun Item ID"
-  electric_eater: "§fEating energy..."
-  quantity_constructor_y: "§fMake original Material γ"
-  quantity_constructor_y_requirement: "§fRequirement: There is a 50% probability of generating when the input slot is filled with 45x64 'Uncontrollable Empty's"
-  quantity_constructor_bug_crystal: "§fMake Bug Crystal"
-  quantity_constructor_bug_crystal_requirement: "§fRequirement: Only 6 types of bugged items exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_pure_origin: "§fMake Pure Origin"
-  quantity_constructor_pure_origin_requirement: "§fRequirement: Only 'Original Material α' and 'Original Material β' exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_final_item: "§fMake Final Star"
-  quantity_constructor_final_item_requirement: "§fRequirement: Only 'Supreme Star's exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_concept_item: "§fMake Concept Item"
-  quantity_constructor_concept_item_requirement: "§fRequirement: Only 'Resource's exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_quantitative_plugin: "§fMake Quantitative Plugin"
-  quantity_constructor_quantitative_plugin_requirement: "§fRequirement: Items exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation, then there's a low probability of generating"
-  quantity_constructor_original_commandblock_chain: "§fMake Original Command Block - Chain"
-  quantity_constructor_original_commandblock_chain_requirement: "§fRequirement: Only 'command block chain's exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_original_commandblock_common: "§fMake Original Command Block - Common"
-  quantity_constructor_original_commandblock_common_requirement: "§fRequirement: Only command blocks exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  quantity_constructor_original_commandblock_repeating: "§fMake Original Command Block - repeating"
-  quantity_constructor_original_commandblock_repeating_requirement: "§fRequirement: Only 'command block repeating's exist simultaneously in the input slot, and the total number of items reaches 45x64 before generation"
-  digital_generator: "§fInsert a number to increase the energy by [number] J, the capacitor can store 16777216 J of energy"
-  particle_constructor: "§fAfter each work, it will randomly cool down 1-50 ticks"
-  particle_constructor_proton: "§fWhen machine stored energy is a prime number, output a proton"
-  particle_constructor_zygote: "§fWhen machine stored energy is a composite number, output a zygote"
-  symbol_generator: "§fCreate operators"
-  symbol_generator_usage: "§7Randomly output an operator after inputting 'Null's, with varying probabilities for different operators"
-  transporter: "§fInserting digital component into the machine to configure distance"
-  cobblestone_store: "§fSimilar to chests, but providing 48 compartments of storage space"
-  uncontrollable_empty_generator: "§fGenerate 48 'Uncontrollable Item's each time"
-  random_quantum_generator: "§fGet random quantum"
-  random_quantum_generator_usage: "§7Each tick randomly appears in the machine's interaction slots and all other items in the interaction slots will be cleared"
-  final_copier_usage: "Input entangled quantum to replicate any object in the interaction slots in the middle"
-  ore_collector: "§fProduces triple compressed minerals automatically"
-  ordinary_number_combinator: "§fPerform simple arithmetic operations using input expressions"
-  none_generator: "§fMake NONE"
-  none_generator_usage: "§7Requirement: All types and stacking amounts of items on the input slot are different"
-  symbol_lore: "§7The basis for creating matter out of thin air"
-  letter_constructor: "§fCreate symbols"
-  letter_constructor_usage: "§7Need to input the original material α and β and place a 'Null' in the middle"
-  increment_usage: "§fInput two numbers for simple addition operation"
-  increment_bug: "§fWhen the input formula is invalid, output BUG - Operational Formula"
-  increment_bug_1: "§fWhen the number of decimal places in the calculation result exceeds 4, output BUG - Decimal"
-  increment_bug_2: "§fWhen the calculation result is equal to one percent of the number composed of today's date (such as 202407.29), output BUG - Date"
-  increment_bug_3: "§fWhen the calculation result exceeds 16777216, output BUG - Positive Overload"
-  increment_bug_4: "§fWhen the calculation result is less than -16777216, output BUG - Negative Overload"
-  increment_bug_5: "§fRandomly appearing 'BUG - System', its probability and calculation results are closely related to the number of online players and server TPS"
-  idputter: "§fAdd symbols to the ID card"
-  idputter_usage_1: "§7Please ensure that the number of the ID card is 1"
-  idputter_usage_2: "§7Insert ID card on the left and symbol on the right"
-  id_card_lore_1: "§7Add symbol integration Slimefun ID in the §cID integrator"
-  id_card_lore_2: "§7Legitimate IDs can be directly used to produce mucus items corresponding to the ID in the §fmanufacturing station"
-  eternal_mining: "§fCreating Eternal Particles"
-  eternal_mining_usage: "§7Input 'Null' to increase progress by 1, and the required progress will increase after the progress is completed"
-  emptyShellGenerator_I: "§fGenerate 1 stack of 'null' shells each time"
-  emptyShellGenerator_usage: "§fInput any items to generate 'null' shells"
-  original_material_alpha: "§fMake the original material α"
-  original_material_beta: "§fMake the original material β"
-  original_material_alpha_requirement: "§fRequirement: The number of stacked items on each row of the input slot decreases monotonically"
-  original_material_beta_requirement: "§fRequirement: The number of stacked items on each row of the input slot increases monotonically"
-  generate_once_every_1_tick: "§fGenerate once every 1 tick"
-  generate_once_every_1_tick_f: "§fGenerate once every 1 tick"
-  final_cobblestone_generator_2: "§7Generate 48 stacks of cobblestones each time"
-  final_ingot_generator_1: "§fAutomated ingot casting"
-  final_ingot_generator_2: "§7Every 1 tick, all mineral powder in the input slots will be smelted"
-  fixer_repair_item: "§fRepair item"
-  fixer_usage: "§7Enter any durable item and restore 1 durability for every 1 tick"
-  pumpkin_carver_1: "§fAutomated pumpkin carving"
-  pumpkin_carver_2: "§7Carving all pumpkins in the input slot every 1 tick"
-  rule_geo_1: "§7Mine geo resources every 1 tick, ignoring biomes and weights"
-  rule_geo_2: "§fAny registered geo resource can be mined"
-  possible_productions: "§fPossible productions"
-  salt_generator: "§fRandomly generate 1-64 amounts of salt per tick"
-  netherite_pickaxe_requirement: "§fMust input netherite pickaxes"
-  shine_and_dark_constructor_1: "§7When the machine block Y is less than 0, there is a 1% probability of producing"
-  shine_and_dark_constructor_2: "§71% produces when the machine block Y is greater than 256"
-  rule_shine_and_dark_constructor_1: "§7When the machine block Y is less than 0, there is a 50% probability of producing"
-  rule_shine_and_dark_constructor_2: "§750% produces when the machine block Y is greater than 256"
-  symbol_obtain: "§fCan be obtained in the §bSymbol generator"
-  supported_saplings: "§fSupported saplings"
-  supported_plants: "§fSupported plants"
-  digital_constructor: "§f§Create digital components"
-  digital_constructor_method: "§7Input 0 to 10 integer digital components with equal probability after 'Null' input"
-  creative_generator: "§fGenerate 1 product for every 1 tick"
-  easy_generator: "§fGenerate the corresponding efficiency product of the machine for every 1 tick"
-  emptyShell_drop: "§fDrops randomly when breaking blocks"
-  rule_dust_generator_1: "§fMust input cobblestones"
-  rule_dust_generator_2: "§7Every 1 tick consumes one stack of cobblestones to generate one stack of products"
+  random_copier: 
+    title: "&f10% chance to duplicate a random item from the upper slots" 
+    lore:
+      - "&fwhen Primal Matter γ is placed in the bottom-left slot."
+      - "&7Requirement: Items in the upper slots must differ in both type and quantity"
+  final_copier:
+    title: "&fInsert Entangled Quantum into the slot in the left"
+    lore:
+      - "&fto copy any item in the template slot in the middle"
+  item_constructor:
+    title: "&fInsert an ID card with a valid Slimefun Item ID"
+    lore:
+      - "&fto construct the corresponding item."
+  quantum_constructor:
+    primal_matter_y:
+      title: "&fConstruct Primal Matter γ"
+      lore:
+        - "&7Requirement: The input slots are filled with 45 stacks of Uncontrollable Void"
+        - "&7Success chance: 50%"
+    bug_crystal:
+      title: "&fConstruct Bug Crystal"
+      lore:
+        - "&7Requirement: Only 6 types of bug are present in the input slots,"
+        - "&7and the total item count reaches 45x64"
+    pure_primal_matter:
+      title: "&fConstruct Pure Primal Matter"
+      lore:
+        - "&7Requirement: Only Primal Matter α and Primal Matter β are present"
+        - "&7in the input slots, and the total item count reaches 45x64"
+    final_core:
+      title: "&fConstruct Final Core"
+      lore:
+        - "&7Requirement: The input slots are filled with 45 stacks of Supreme Core"
+    concept:
+      title: "&fConstruct Concept"
+      lore:
+        - "&7Requirement: The input slots are filled with 45 stacks of Resource"
+    quantum_singularity:
+      title: "&fConstruct Quantum Singularity"
+      lore:
+        - "&7Requirement: The input slots are filled with 45 stacks of any item"
+        - "&7Success chance: 0.05%"
+    primal_command_block_impulse:
+      title: "&fConstruct Primal Command Block - Impulse"
+      lore:
+        - "&7Requirement: The input slots are filled with 45 stacks of impulse command blocks"
+    primal_command_block_repeating:
+      title: "&fConstruct Primal Command Block - Repeating"
+      lore:
+        - "&7Requirement: The input slots are filled with 45 stacks of repeating command blocks"
+    primal_command_block_chain:
+      title: "&fConstruct Primal Command Block - Chain"
+      lore:
+        - "&7Requirement: The input slots are filled with 45 stacks of chain command blocks"
+  digital_capacitor:
+    title: "&fInsert a Digit to increase the stored energy by {Digit's value} J"
+    lore:
+  particle_collector:
+    title: "&fRandomly delays 1-50 SF ticks between operations"
+    lore:
+    proton:
+      title: "&fWhen the stored energy is a prime number, output a Proton"
+      lore:
+    zygote:
+      title: "&fWhen the stored energy is a composite number, output a Zygote"
+      lore:
+  symbol_constructor:
+    title: "&fConstruct Symbol"
+    lore:
+      - "&7Converts 1 Null into a Symbol representing a random"
+      - "&7mathematical operation every SF tick"
+  teleporter:
+    title: "&fInsert a Digit into the machine to configure the teleport distance"
+    lore:
+      - "&7Distance = {Digit's value} % 320"
+  stone_storage:
+    title: "&fSimilar to a double-chest"
+    lore:
+  uncontrollable_void_generator:
+    title: "&fGenerates 48 Uncontrollable Void every SF tick"
+    lore:
+  random_quantum_generator:
+    title: "&fGenerates Random Quantum"
+    lore:
+      - "&7Every SF tick, Random Quantum appears in a random machine's"
+      - "&7interaction slot and clear other slots"
+  compressed_mineral_quarry:
+    title: "&fGenerates 4 3-fold Compressed Minerals every SF tick"
+    lore: 
+  none_constructor:
+    title: "&fConstruct None"
+    lore: 
+      - "&7Requirement: Items in the input slots must differ in both type and quantity"
+  character_constructor:
+    title: "&fConstruct Character"
+    lore:
+      - "&7Place Primal Matter α, Primal Matter β and Null as the following order"
+      - "&7to construct random Characters"
+      - "&7Possible characters: qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM123456789_"
+  incrementer:
+    title: "&fInsert 2 Digits to calculate their sum"
+    lore:
+  calculator:
+    title: "&fInsert 2 Digits and a Symbol to calculate the result"
+    lore:
+  obtain_bug_formula:
+    title: "&fOutputs BUG - Formula when the input expression is invalid"
+    lore:
+  obtain_bug_decimal:
+    title: "&fOutputs BUG - Decimal when decimal precision exceeds 4 digits"
+    lore:
+  obtain_bug_date:
+    title: "&fOutputs BUG - Date when the result equals 1% of current's date"
+    lore:
+      - "&frepresented as a number (e.g., 202307.29)"
+  obtain_bug_positive_overflow:
+    title: "&fOutputs BUG - Positive Overflow when the result exceeds 16777216"
+    lore:
+  obtain_bug_negative_overflow:
+    title: "&fOutputs BUG - Negative Overflow when the result is smaller than -16777216"
+    lore:
+  obtain_bug_system:
+    title: "&fRandomly appears in calculation machines."
+    lore:
+      - "&fThe probability is closely related to the calculation result, online player count and TPS."
+  id_writer:
+    title: "&fUSed to add Characters to ID Card"
+    lore:
+      - "&7Please ensure that only 1 ID Card is in the machine"
+      - "&7Place ID Card in the left and Characters in the right"
+  eternal_particle_constructor:
+    title: "&fConstruct Eternal Particle"
+    lore:
+      - "&7Insert Null to increase the progress by 1"
+      - "&7Once completed, the new progress goal will increase"
+  null_generator:
+    title: "&fConverts any item in input slot into 8 Null every SF tick"
+    lore:
+  advanced_null_generator:
+    title: "&fGenerates 1 stack of Null every SF tick"
+    lore: 
+  primal_matter_constructor:
+    primal_matter_a:
+      title: "&fConstruct Primal Matter α"
+      lore:
+        - "&fRequirement: The number of items in each row must decrease steadily from left to right"
+    primal_matter_b:
+      title: "&fConstruct Primal Matter β"
+      lore:
+        - "&fRequirement: The number of items in each row must increase steadily from left to right"
+  infinity_cobblestone_generator:
+    title: "&fGenerates 48 stacks of cobblestone every SF tick"
+    lore:
+  infinity_ingot_former:
+    title: "&fAll dust in the input slots will be smelted into ingots every SF tick"
+    lore:
+  equipment_repairing_machine:
+    title: "&fRestores 1 durability for the equipment placed in the input slot every SF tick"
+    lore:
+  pumpkin_carving_machine:
+    title: "&fCarves all pumpkins in the input slots every SF tick"
+    lore:
+  geo_miner:
+    title: "&fMines GEO resources every SF tick, ignoring biomes and quantities"
+    lore:
+      - "&7Any GEO resource can be mined"
+  salt_quarry:
+    title: "&fGenerates a random amount(1-64) of Salt every SF tick"
+    lore:
+  light_and_dark_collector:
+    light:
+      title: "&fRequires netherite pickaxes to operate"
+      lore:
+        - "&71% to collect Light when the Y level"
+        - "&7of the machine is higher than 256"
+    dark:
+      title: "&fRequires netherite pickaxes to operate"
+      lore:
+        - "&71% to collect Dark when the Y level"
+        - "&7of the machine is lower than 0"
+  infinity_light_and_dark_collector:
+    light:
+      title: "&fRequires netherite pickaxes to operate"
+      lore:
+        - "&750% to collect Light when the Y level"
+        - "&7of the machine is higher than 256"
+    dark:
+      title: "&fRequires netherite pickaxes to operate"
+      lore:
+        - "&750% to collect Dark when the Y level"
+        - "&7of the machine is lower than 0"
+  digit_constructor:
+    title: "&fAutomatically converts 1 Null into a Digit with a random"
+    lore:
+      - "&finteger value ranging from 0 to 10 every SF tick"
+  resource_generator:
+    title: "&fGenerates a certain quantity of the following items every SF tick"
+    lore: 
+      - "&7The number of item generated per SF tick is equal to the machine's speed"
+  infinity_dust_generator:
+    title: "&fConverts 1 stack of cobblestone to 1 stack of dust every SF tick"
+    lore: 
+  primal_matter_generator:
+    title: "&fGenerates 1 Primal Matter every SF tick"
+    lore:
+  supported_sapplings:
+    title: "&fSupported saplings"
+    lore:
+  supported_plants:
+    title: "&fSupported plants"
+    lore:
+  require_netherite_pickaxe:
+    title: "&fRequires netherite pickaxes to operate"
+    lore:
+  possible_products:
+    title: "&fPossible products"
+    lore:
+guide:
+  digit:
+    name: "&e&lDigit"
+    lore:
+      - "&fCan be obtained from the &bDigit Constructor"
+      - "&fCan be obtained from the &bCalculator"
+      - "&fCan be obtained from the &bIncrementer"
+  symbol:
+    name: "&e&lSymbol"
+    lore:
+      - "&fCan be obtained from the &bSymbol Constructor"
+  null:
+    name: "&e&lNull"
+    lore:
+      - "&fRandomly drops when mining blocks with a wooden pickaxe"
+  bug_formula:
+    name: "&e&lBUG - Formula"
+    lore:
+      - "&7Obtained by using invalid expressions in calculation machines"
+  bug_decimal:
+    name: "&e&lBUG - Decimal"
+    lore:
+      - "&7Occurs in calculation machines when decimal precision exceeds 4 digits"
+  bug_positive_overflow:
+    name: "&e&lBUG - Positive Overflow"
+    lore:
+      - "&7Occurs in calculation machines when the result exceeds 16777216"
+  bug_negative_overflow:
+    name: "&e&lBUG - Negative Overflow"
+    lore:
+      - "&7Occurs in calculation machines when the result is smaller than -16777216"
+  bug_date:
+    name: "&e&lBUG - Date"
+    lore:
+      - "&7Occurs in calculation machines when the result equals 1% of current's date"
+      - "&7represented as a number (e.g., 202307.29)"
+  bug_system:
+    name: "&e&lBUG - System"
+    lore:
+      - "&7Randomly occurs in calculation machines."
+      - "&7The probability is closely related to the calculation result,"
+      - "&7online player count and TPS."
+  primal_matter:
+    name: "&e&lPrimal Matter α/β"
+    lore:
+      - "&7Can be constructed in the &bPrimal Matter Constructor"
+  primal_matter_y:
+    name: "&e&lPrimal Matter γ"
+    lore:
+      - "&750% chance to obtain from the &bQuantum Constructor &7when the input slots"
+      - "&7are filled with 45 stacks of Uncontrollable Void"
+  bug_crystal:
+    name: "&e&lBUG Crystal"
+    lore:
+      - "&7Obtained from the &bQuantum Constructor &7when only 6 types of bug are present"
+      - "&7and the total item count reaches 45x64"
+  quantum_singularity:
+    name: "&e&lQuantum Singularity"
+    lore:
+      - "&70.05% chance to obtain from the &bQuantum Constructor"
+      - "&7when then total item count reaches 45x64"
+  pure_primal_matter:
+    name: "&e&lPure Primal Matter"
+    lore:
+      - "&7Obtained from the &bQuantum Constructor &7when only Primal Matter α and β are present"
+      - "&7in the input slots, and the total item count reaches 45x64"
+  character:
+    name: "&e&lCharacter"
+    lore:
+      - "&7Can be obtained from the &bCharacter Constructor"
+  final_core:
+    name: "&e&lFinal Core"
+    lore:
+      - "&7Obtained from the &bQuantum Constructor &7when the input slots are filled with 45 stacks Supreme Core"
+  entangled_quantum:
+    name: "&e&lEntangled Quantum"
+    lore: 
+      - "&7Using &bQuantum &7at y ≥ 520 will spawn a dropped Entangled Quantum at y = -64"
+      - "&7within a 16-block radius of the player"
+  light:
+    name: "&e&lLight"
+    lore:
+      - "&7Can be collected by the &bLight And Dark Collector"
+  dark:
+    name: "&e&lDark"
+    lore:
+      - "&7Can be collected by the &bLight And Dark Collector"
+  random_quantum:
+    name: "&e&lRandom Quantum"
+    lore:
+      - "&7Can be obtained from the &bRandom Quantum Generator"
+  primal_command_block_impulse:
+    name: "&e&lPrimal Command Block - &bImpulse"
+    lore:
+      - "&7Obtained from the &bQuantum Constructor &7when the input slots are filled with 45 stacks of impulse command blocks"
+  primal_command_block_repeating:
+    name: "&e&lPrimal Command Block - &bRepeating"
+    lore:
+      - "&7Obtained from the &bQuantum Constructor &7when the input slots are filled with 45 stacks of repeating command blocks"
+  primal_command_block_chain:
+    name: "&e&lPrimal Command Block - Chain"
+    lore:
+      - "&7Obtained from the &bQuantum Constructor &7when the input slots are filled with 45 stacks of chain command blocks"
+  concept:
+    name: "&e&lConcept"
+    lore:
+      - "&7Obtained from the &bQuantum Constructor &7when the input slots are filled with 45 stacks of Resource"
+  eternal_particle:
+    name: "&e&lEternal Particle"
+    lore:
+      - "&7Can be constructed by the &bEternal Particle Constructor"
+  zygote:
+    name: "&e&lZygote"
+    lore:
+      - "&7Generated in the &bParticle Collector &7when the stored energy is a composite number"
+  proton:
+    name: "&e&lProton"
+    lore:
+      - "&7Generated in the &bParticle Collector &7when the stored energy is a prime number"

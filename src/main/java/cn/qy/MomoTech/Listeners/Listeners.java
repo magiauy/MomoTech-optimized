@@ -1,5 +1,6 @@
 package cn.qy.MomoTech.Listeners;
 
+import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.Maths;
@@ -32,7 +33,7 @@ public final class Listeners implements Listener {
         if (i <= 8) {
             World w = e.getBlock().getWorld();
             Location l = e.getBlock().getLocation();
-            w.dropItem(l, MomotechItem.empty_shell.clone());
+            w.dropItem(l, MomotechItem.nullItem.clone());
         }
     }
 
@@ -44,9 +45,9 @@ public final class Listeners implements Listener {
                 if(helmet.getType()==Material.TURTLE_HELMET){
                     SlimefunItem item=SlimefunItem.getByItem(helmet);
 
-                    if (item!=null&&"MOMOTECH_PROTECT_ITEM".equals(item.getId())) {
+                    if (item!=null&&"MOMOTECH_WEIRD_ARMOR".equals(item.getId())) {
                         if(item.isDisabled()){
-                            ((Player)e.getEntity()).sendMessage("§f§lThis item has been disabled!");
+                            ((Player)e.getEntity()).sendMessage(MomoTech.languageManager.getInfo("disabled_item"));
                         }else {
                             e.setDamage(0);
                             e.setCancelled(true);
@@ -60,18 +61,18 @@ public final class Listeners implements Listener {
             if(!hand.getType().isAir()){
                 SlimefunItem item=SlimefunItem.getByItem(hand);
                 if(item!=null){
-                    if ( "MOMOTECH_DAMAGE_ITEM".equals(item.getId())) {
+                    if ( "MOMOTECH_WEIRD_THING".equals(item.getId())) {
                         if (e.getEntity() instanceof Damageable) {
                             if(item.isDisabled()){
-                                ((Player)e.getDamager()).sendMessage("§f§lThis item has been disabled!");
+                                ((Player)e.getDamager()).sendMessage(MomoTech.languageManager.getInfo("disabled_item"));
                             }else{
                                 ((Damageable)e.getEntity()).setHealth(0.0);
                                 return;
                             }
                         }
-                    }else if("MOMOTECH_STONE_SWORD".equals(item.getId())) {
+                    }else if("MOMOTECH_INSTAKILL_SWORD".equals(item.getId())) {
                         if(item.isDisabled()){
-                            ((Player)e.getDamager()).sendMessage("§f§lThis item has been disabled!");
+                            ((Player)e.getDamager()).sendMessage(MomoTech.languageManager.getInfo("disabled_item"));
                         }
                         else{
                             e.setDamage(999999999999.99);

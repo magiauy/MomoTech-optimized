@@ -9,6 +9,8 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
+import cn.qy.MomoTech.MomoTech;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +26,7 @@ public class IDDisplay extends SlimefunItem implements RecipeDisplayItem {
         if(ans.isEmpty()){
             List<SlimefunItem> list=Slimefun.getRegistry().getEnabledSlimefunItems();
             for (SlimefunItem slimefunItem : list) {
-                ans.add(new CustomItemStack(slimefunItem.getItem(), slimefunItem.getItemName(), "&f&lID: " + slimefunItem.getId()));
+                ans.add(new CustomItemStack(slimefunItem.getItem(), slimefunItem.getItemName(), MomoTech.languageManager.getGeneric("id_display") + slimefunItem.getId()));
             }
         }
         return ans;

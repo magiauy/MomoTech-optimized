@@ -14,7 +14,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class MomoTech extends JavaPlugin implements SlimefunAddon {
@@ -45,20 +44,21 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
-        new UtilInitialization(this,"MomoTech").displayName("MomoTech").onEnable();
-        getLogger().info("MomoTech has been enabled.");
-        getLogger().info("---------< MomoTech >-------");
-        getLogger().info("|      Authors:QYhB05      |");
-        getLogger().info("|      Plugin:MomoTech     |");
-        getLogger().info("|      Version:1.1.11      |");
-        getLogger().info("----------------------------");
-        getLogger().info("> QQ Group:827684043");
-        getLogger().info("> E-mail:3392295184@qq.com");
-        getLogger().info("> Used API version: 1.20.1-R0.1-SNAPSHOT");
-        getLogger().info("> Slimefun4 version supported: Chinese version");
-        getLogger().info("> License:MIT");
-        getLogger().info("----------------------------");
-        getLogger().info("Loading MomoTech...");
+        languageManager = new LanguageManager(this);
+        new UtilInitialization(this,"MomoTech").displayName(MomoTech.languageManager.getInfo("momotech")).onEnable();
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l1"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l2"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l3"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l4"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l5"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l6"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l7"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l8"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l9"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l10"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l11"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l12"));
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_enabled.l13"));
         instance = this;
         config=new Config(this);
         saveDefaultConfig();
@@ -70,11 +70,11 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
             copierBlacklist.addAll(blacklist);
         }
         config.save();
-        languageManager = new LanguageManager(this);
-        getLogger().info("Registering Listener...");
+
+        getLogger().info(MomoTech.languageManager.getInfo("registering_listener"));
         getServer().getPluginManager().registerEvents(new Listeners(), this);
-        getLogger().info("Registered Listener successfully.");
-        getLogger().info("Initializing items...");
+        getLogger().info(MomoTech.languageManager.getInfo("registering_listener_succeed"));
+        getLogger().info(MomoTech.languageManager.getInfo("initializing_items"));
         Bukkit.getScheduler().runTaskTimer(this,()->{
             playerNumber = Bukkit.getOnlinePlayers().size();
             tps = Bukkit.getTPS()[0];
@@ -82,18 +82,18 @@ public class MomoTech extends JavaPlugin implements SlimefunAddon {
         init(getLogger(), getServer());
         logger = getLogger();
         server = getServer();
-        getLogger().info("Registering Items...");
+        getLogger().info(MomoTech.languageManager.getInfo("registering_items"));
         ItemRegisterTask.run(getLogger());
-        getLogger().info("Registered Items successfully.");
-        getLogger().info("Registering Machines...");
+        getLogger().info(MomoTech.languageManager.getInfo("registering_items_succeed"));
+        getLogger().info(MomoTech.languageManager.getInfo("registering_machines"));
         MachineRegisterTask.run(getLogger());
-        getLogger().info("Registered Machines successfully.");
+        getLogger().info(MomoTech.languageManager.getInfo("registering_machines_succeed"));
     }
 
     @Override
     public void onDisable() {
         // Logic for disabling the plugin...
-        getLogger().info("MomoTech has been disabled.");
+        getLogger().info(MomoTech.languageManager.getInfo("momotech_disabled"));
     }
 
     @Override

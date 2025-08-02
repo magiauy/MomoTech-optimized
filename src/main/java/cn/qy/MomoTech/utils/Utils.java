@@ -20,12 +20,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Utils {
-    public static final String[] mineral__ = {"DIAMOND_BLOCK", "NETHERITE_BLOCK", "COAL_BLOCK", "EMERALD_BLOCK",
-            "QUARTZ_BLOCK", "REDSTONE_BLOCK", "IRON_BLOCK", "GOLD_BLOCK", "LAPIS_BLOCK"};
-    public static final Material[] it = {Material.DIAMOND, Material.NETHERITE_INGOT, Material.COAL,
-            Material.EMERALD, Material.QUARTZ, Material.REDSTONE,
-            Material.IRON_INGOT, Material.GOLD_INGOT, Material.LAPIS_LAZULI};
-    public static final String[] id = {"I", "II", "III"};
+    public static final String[] compressedMineralID = {
+        "NETHERITE", "DIAMOND", "EMERALD",
+        "GOLD", "IRON", "QUARTZ",
+        "REDSTONE", "LAPIS", "COAL"
+    };
+    public static final Material[] compressedMineralMaterials = {
+        Material.NETHERITE_INGOT, Material.DIAMOND, Material.EMERALD, 
+        Material.GOLD_INGOT, Material.IRON_INGOT, Material.QUARTZ,
+        Material.REDSTONE, Material.LAPIS_LAZULI, Material.COAL
+    };
+    public static final String[] fold = {"1", "2", "3"};
 
     public static boolean checkOutput(BlockMenu inv, int[] output) {
         for (int i : output) {
@@ -44,7 +49,7 @@ public class Utils {
         if (SlimefunUtils.isItemSimilar(it, Items.MOMOTECH_SYMBOL_DIVISION, false, false)) return false;
         if (SlimefunUtils.isItemSimilar(it, Items.MOMOTECH_SYMBOL_MULTIPLICATION, false, false)) return false;
         if (SlimefunUtils.isItemSimilar(it, Items.MOMOTECH_SYMBOL_SUBTRACTION, false, false)) return false;
-        return !SlimefunUtils.isItemSimilar(it, Items.MOMOTECH_DIGITAL, false, false);
+        return !SlimefunUtils.isItemSimilar(it, Items.MOMOTECH_DIGIT, false, false);
     }
 
     public static List<SlimefunItem> getRecipeByRecipeType(@Nonnull RecipeType recipeType) {

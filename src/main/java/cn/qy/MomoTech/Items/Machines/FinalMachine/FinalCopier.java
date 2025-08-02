@@ -67,7 +67,7 @@ public class FinalCopier extends AbstractGUI implements RecipeDisplayItem {
         if (Utils.checkOutput(inv, getOutputSlots())) return;
         if (inv.getItemInSlot(4) == null) return;
         if (inv.getItemInSlot(1) == null) return;
-        if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(1), MomotechItem.quantum1_, true)) {
+        if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(1), MomotechItem.entangledQuantum, true)) {
             ItemStack copied = inv.getItemInSlot(4);
             if(!CopierUtils.isValidItem(copied)){
                 new BukkitRunnable() {
@@ -88,8 +88,8 @@ public class FinalCopier extends AbstractGUI implements RecipeDisplayItem {
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(4);
-        it.add(MomotechItem.quantum1_);
-        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("final_copier_usage")));
+        it.add(MomotechItem.entangledQuantum);
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescriptionTitle("final_copier"), MomoTech.languageManager.getRecipeDescriptionLore("final_copier")));
         return it;
     }
 }

@@ -8,7 +8,7 @@ public class Maths {
         return Math.abs(new Random().nextInt()) % (end + 1);
     }
 
-    public static boolean isDigital(String i) {
+    public static boolean isDigit(String i) {
         if (i.charAt(0) == '.' || i.charAt(i.length() - 1) == '.') return false;
         boolean check = true;
         for (int j = 0; j < i.length(); j++) {

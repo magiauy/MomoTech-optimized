@@ -103,7 +103,7 @@ public class RandomCopier extends AbstractGUI implements RecipeDisplayItem {
                     return;
             }
         }
-        if (!SlimefunUtils.isItemSimilar(inv.getItemInSlot(46), MomotechItem.creative_item_II, true, false))
+        if (!SlimefunUtils.isItemSimilar(inv.getItemInSlot(46), MomotechItem.primalMatterY, true, false))
             return;
         int j = Math.abs(r.nextInt() % 36);
         inv.consumeItem(46, 1);
@@ -117,8 +117,8 @@ public class RandomCopier extends AbstractGUI implements RecipeDisplayItem {
     @Override
     public List<ItemStack> getDisplayRecipes() {
         List<ItemStack> it = new ArrayList<>(8);
-        it.add(MomotechItem.creative_item_II.clone());
-        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescription("random_copier_usage"), MomoTech.languageManager.getRecipeDescription("random_copier_requirement")));
+        it.add(MomotechItem.primalMatterY.clone());
+        it.add(new CustomItemStack(Material.BOOK, MomoTech.languageManager.getRecipeDescriptionTitle("random_copier"), MomoTech.languageManager.getRecipeDescriptionLore("random_copier")));
         return it;
     }
 }
