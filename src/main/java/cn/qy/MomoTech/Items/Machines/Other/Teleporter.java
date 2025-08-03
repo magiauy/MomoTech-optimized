@@ -2,7 +2,6 @@ package cn.qy.MomoTech.Items.Machines.Other;
 
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
-import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -10,11 +9,11 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
+import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.handlers.SimpleBlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
+import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -22,10 +21,14 @@ import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.Directional;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
+
+import static cn.qy.MomoTech.Items.MomotechItem.bugDate;
+
 import java.util.ArrayList;
 import java.util.List;
 //TODO Open GUI with shift right click, teleport with right click, if digit is null or invalid send message MomoTech.languageManager.getGeneric("teleporter_not_configured_correctly") to player
@@ -33,6 +36,91 @@ public class Teleporter extends AbstractGUI implements RecipeDisplayItem {
 
     public Teleporter(ItemGroup itemGroup, String id, ItemStack it, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, new SlimefunItemStack(id, it), recipeType, recipe);
+        
+        // Add right-click handler for teleport and GUI opening
+        addItemHandler(new BlockUseHandler() {
+            @Override
+            public void onRightClick(PlayerRightClickEvent e) {
+                Player p = e.getPlayer();
+                Block block = e.getClickedBlock().orElse(null);
+                if (block == null) return;
+                
+                BlockMenu inv = Slimefun.getDatabaseManager().getBlockDataController().getBlockData(block.getLocation()).getBlockMenu();
+                if (inv == null) return;
+                e.cancel();
+                
+                if (p.isSneaking()) {
+                    // Shift + Right click: Open GUI
+                    inv.open(p);
+                } else {
+                    // Right click: Teleport
+                    ItemStack digitItem = inv.getInventory().getItem(4);
+                    if (digitItem == null || !isValidDigit(digitItem)) {
+                        // No digit or invalid digit: Send error message
+                        p.sendMessage(MomoTech.languageManager.getGeneric("teleporter_not_configured_correctly"));
+                        return;
+                    }
+                    
+                    // Perform teleport
+                    performTeleport(p, block, digitItem);
+                }
+            }
+        });
+    }
+    
+    private boolean isValidDigit(ItemStack item) {
+        return "MOMOTECH_DIGIT".equals(Slimefun.getItemDataService().getItemData(item).orElse(null));
+    }
+    
+    private void performTeleport(Player player, Block block, ItemStack digitItem) {
+        try {
+            String str = Utils.getLore(digitItem.getItemMeta()).get(0);
+            int distance = ((int) (Double.parseDouble(str.substring(str.indexOf('f') + 1)))) % 320;
+            
+            if (distance == 0) {
+                player.sendMessage(MomoTech.languageManager.getGeneric("teleporter_not_configured_correctly"));
+                return;
+            }
+            
+            Location blockLocation = block.getLocation();
+            BlockData blockData = block.getBlockData();
+            
+            if (blockData instanceof Directional) {
+                BlockFace blockFace = ((Directional) blockData).getFacing();
+                Location teleportLocation = calculateTeleportLocation(blockLocation, blockFace, distance);
+                if (teleportLocation != null) {
+                    teleportLocation.setYaw(player.getLocation().getYaw());
+                    teleportLocation.setPitch(player.getLocation().getPitch());
+                    player.teleport(teleportLocation);
+                } else {
+                    player.sendMessage(MomoTech.languageManager.getGeneric("teleporter_not_configured_correctly"));
+                }
+            }
+        } catch (Exception e) {
+            player.sendMessage(MomoTech.languageManager.getGeneric("teleporter_not_configured_correctly"));
+        }
+    }
+    
+    private Location calculateTeleportLocation(Location origin, BlockFace facing, int distance) {
+        double centerX = origin.getBlockX() + 0.5;
+        double centerY = origin.getBlockY() + 0.5;
+        double centerZ = origin.getBlockZ() + 0.5;
+        switch (facing) {
+            case DOWN:
+                return new Location(origin.getWorld(), centerX, centerY - distance - 0.5, centerZ);
+            case UP:
+                return new Location(origin.getWorld(), centerX, centerY + distance +0.5, centerZ);
+            case EAST:
+                return new Location(origin.getWorld(), centerX + distance, origin.getBlockY(), centerZ);
+            case WEST:
+                return new Location(origin.getWorld(), centerX - distance, origin.getBlockY(), centerZ);
+            case NORTH:
+                return new Location(origin.getWorld(), centerX, origin.getBlockY(), centerZ - distance);
+            case SOUTH:
+                return new Location(origin.getWorld(), centerX, origin.getBlockY(), centerZ + distance);
+            default:
+                return null;
+        }
     }
 
     @Override
@@ -40,7 +128,7 @@ public class Teleporter extends AbstractGUI implements RecipeDisplayItem {
     protected BlockBreakHandler onBlockBreak() {
         return new SimpleBlockBreakHandler() {
             public void onBlockBreak(@NotNull Block b) {
-                BlockMenu inv = BlockStorage.getInventory(b);
+                BlockMenu inv = Slimefun.getDatabaseManager().getBlockDataController().getBlockData(b.getLocation()).getBlockMenu();
                 if (inv != null) {
                     inv.dropItems(b.getLocation(), getInputSlots());
                     inv.dropItems(b.getLocation(), getOutputSlots());
@@ -83,48 +171,8 @@ public class Teleporter extends AbstractGUI implements RecipeDisplayItem {
 
     @Override
     protected void findNextRecipe(BlockMenu inv) {
-        if (inv.getItemInSlot(4) == null) return;
-        //SlimefunUtils.isItemSimilar(inv.getItemInSlot(4), new SlimefunItemStack("MOMOTECH_DIGITAL", Items.MOMOTECH_DIGITAL), false, false)
-        if (
-                "MOMOTECH_DIGIT".equals(  Slimefun.getItemDataService().getItemData(inv.getItemInSlot(4)).orElse(null) )
-        ) {
-            String str = Utils.getLore(inv.getItemInSlot(4).getItemMeta()).get(0);
-            int i = ((int) (Double.parseDouble(str.substring(str.indexOf('f') + 1)))) % 320;
-            if (i != 0) {
-                inv.addMenuOpeningHandler((p) -> {
-                    Location location = inv.getLocation();
-                    if (p != null) {
-                        p.closeInventory();
-                        BlockData blockData = inv.getBlock().getBlockData();
-                        if (blockData instanceof Directional) {
-                            BlockFace blockFace = ((Directional) blockData).getFacing();
-                            switch (blockFace) {
-                                case DOWN:
-                                    p.teleport(new Location(location.getWorld(), location.getBlockX(), location.getBlockY() - i, location.getBlockZ()));
-                                    break;
-                                case UP:
-                                    p.teleport(new Location(location.getWorld(), location.getBlockX(), location.getBlockY() + i, location.getBlockZ()));
-                                    break;
-                                case EAST:
-                                    p.teleport(new Location(location.getWorld(), location.getBlockX() + i, location.getBlockY(), location.getBlockZ()));
-                                    break;
-                                case WEST:
-                                    p.teleport(new Location(location.getWorld(), location.getBlockX() - i, location.getBlockY(), location.getBlockZ()));
-                                    break;
-                                case NORTH:
-                                    p.teleport(new Location(location.getWorld(), location.getBlockX(), location.getBlockY(), location.getBlockZ() - i));
-                                    break;
-                                case SOUTH:
-                                    p.teleport(new Location(location.getWorld(), location.getBlockX(), location.getBlockY(), location.getBlockZ() + i));
-                                    break;
-                                default:
-                                    break;
-                            }
-                        }
-                    }
-                });
-            }
-        }
+        // This method is no longer needed since we handle teleport via BlockUseHandler
+        // Just leave empty or add any passive functionality here if needed
     }
 
     @NotNull
