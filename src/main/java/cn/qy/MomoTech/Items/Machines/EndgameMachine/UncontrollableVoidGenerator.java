@@ -1,4 +1,4 @@
-package cn.qy.MomoTech.Items.Machines.FinalMachine;
+package cn.qy.MomoTech.Items.Machines.EndgameMachine;
 
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;

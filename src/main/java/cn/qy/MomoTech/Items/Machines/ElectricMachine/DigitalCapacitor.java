@@ -11,6 +11,7 @@ import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponen
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
@@ -66,7 +67,7 @@ public class DigitalCapacitor extends AbstractElectricGUI implements EnergyNetCo
     public void add(BlockMenuPreset b) {
         b.addItem(4, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("stored_default")), ChestMenuUtils.getEmptyClickHandler());
     }
-    //TODO Not working
+    
     @Override
     protected boolean findNextRecipe(BlockMenu inv) {
         int charge=this.getCharge(inv.getLocation());
@@ -75,21 +76,26 @@ public class DigitalCapacitor extends AbstractElectricGUI implements EnergyNetCo
         }
         for (int i : getInputSlots()) {
             if (inv.getItemInSlot(i) != null) {
-                if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.digit(0), false, false)) {
+                if (isValidDigit(inv.getInventory().getItem(i))) {
                     try{
                         String str = Objects.requireNonNull(inv.getItemInSlot(i).getLore()).get(0);
                         int j = (int) Double.parseDouble(str.substring(str.indexOf('f') + 1));
-                        if (charge + j <= 0) return false;
+                        if (j > 100000) continue;
+                        if (charge + j <= 0) continue;
                         this.setCharge(inv.getLocation(), charge + j);
                         inv.consumeItem(i, 1);
                     }catch(Throwable e){
                         MomoTech.getInstance().getLogger().log(Level.SEVERE,e.getMessage());
                     }
-                    return false;
+                    continue;
                 }
             }
         }
         return false;
+    }
+
+    private boolean isValidDigit(ItemStack item) {
+        return "MOMOTECH_DIGIT".equals(Slimefun.getItemDataService().getItemData(item).orElse(null));
     }
 
     @Override

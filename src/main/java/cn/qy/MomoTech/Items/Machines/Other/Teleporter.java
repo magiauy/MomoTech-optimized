@@ -31,7 +31,7 @@ import static cn.qy.MomoTech.Items.MomotechItem.bugDate;
 
 import java.util.ArrayList;
 import java.util.List;
-//TODO Open GUI with shift right click, teleport with right click, if digit is null or invalid send message MomoTech.languageManager.getGeneric("teleporter_not_configured_correctly") to player
+
 public class Teleporter extends AbstractGUI implements RecipeDisplayItem {
 
     public Teleporter(ItemGroup itemGroup, String id, ItemStack it, RecipeType recipeType, ItemStack[] recipe) {
@@ -171,8 +171,6 @@ public class Teleporter extends AbstractGUI implements RecipeDisplayItem {
 
     @Override
     protected void findNextRecipe(BlockMenu inv) {
-        // This method is no longer needed since we handle teleport via BlockUseHandler
-        // Just leave empty or add any passive functionality here if needed
     }
 
     @NotNull
