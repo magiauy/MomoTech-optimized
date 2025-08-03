@@ -168,8 +168,6 @@ public class Teleporter extends AbstractGUI implements RecipeDisplayItem {
 
     @Override
     protected void findNextRecipe(BlockMenu inv) {
-        // This method is no longer needed since we handle teleport via BlockUseHandler
-        // Just leave empty or add any passive functionality here if needed
     }
 
     @NotNull
