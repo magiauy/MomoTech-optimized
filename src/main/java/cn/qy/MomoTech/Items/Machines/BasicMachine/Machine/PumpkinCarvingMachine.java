@@ -2,13 +2,10 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
-import cn.qy.MomoTech.utils.MachineUtils;
-import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
@@ -59,7 +56,7 @@ public class PumpkinCarvingMachine extends AbstractGUI implements RecipeDisplayI
     protected void findNextRecipe(BlockMenu inv) {
         int[] inputSlot=getInputSlots();
         for(int i=0;i<inputSlot.length;i++){
-            ItemStack itemToBeConsumed=inv.getItemInSlot(inputSlot[i]);
+            ItemStack itemToBeConsumed=inv.getInventory().getItem(inputSlot[i]);
             if(itemToBeConsumed!=null){
                 if(itemToBeConsumed.getType()==Material.PUMPKIN&&!itemToBeConsumed.hasItemMeta()){
                     int amount=itemToBeConsumed.getAmount();

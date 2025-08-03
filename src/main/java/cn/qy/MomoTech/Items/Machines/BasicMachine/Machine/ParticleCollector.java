@@ -11,9 +11,9 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import org.bukkit.Material;
@@ -118,7 +118,7 @@ public class ParticleCollector extends AbstractProcessMachine implements EnergyN
 
     @Override
     protected void tick(Block b) {
-        BlockMenu inv = BlockStorage.getInventory(b);
+        BlockMenu inv = Slimefun.getDatabaseManager().getBlockDataController().getBlockData(b.getLocation()).getBlockMenu();
         this.findNextRecipe(inv);
     }
 

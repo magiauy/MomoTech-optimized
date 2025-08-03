@@ -5,13 +5,12 @@ import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.MomoTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import org.bukkit.Material;
@@ -25,7 +24,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.logging.Level;
 
-public class DigitalCapacitor extends AbstractElectricGUI implements EnergyNetComponent, RecipeDisplayItem {
+public class DigitalCapacitor extends AbstractElectricGUI implements RecipeDisplayItem {
 
     public DigitalCapacitor(ItemGroup itemGroup, String id, ItemStack it, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, id, it, recipeType, recipe);
@@ -74,10 +73,10 @@ public class DigitalCapacitor extends AbstractElectricGUI implements EnergyNetCo
             inv.replaceExistingItem(4, new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE, MomoTech.languageManager.getGeneric("stored") + charge + " J"));
         }
         for (int i : getInputSlots()) {
-            if (inv.getItemInSlot(i) != null) {
-                if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.digit(0), false, false)) {
+            if (inv.getInventory().getItem(i) != null) {
+                if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.digit(0), false, false)) {
                     try{
-                        String str = Objects.requireNonNull(inv.getItemInSlot(i).getLore()).get(0);
+                        String str = Objects.requireNonNull(inv.getInventory().getItem(i).getLore()).get(0);
                         int j = (int) Double.parseDouble(str.substring(str.indexOf('f') + 1));
                         if (charge + j <= 0) return false;
                         this.setCharge(inv.getLocation(), charge + j);
@@ -94,7 +93,7 @@ public class DigitalCapacitor extends AbstractElectricGUI implements EnergyNetCo
 
     @Override
     protected void tick(Block b) {
-        BlockMenu inv = BlockStorage.getInventory(b);
+        BlockMenu inv = Slimefun.getDatabaseManager().getBlockDataController().getBlockData(b.getLocation()).getBlockMenu();
         if (this.findNextRecipe(inv))
             this.setCharge(b.getLocation(), this.getCharge(b.getLocation()) - this.getEnergyConsumption());
     }

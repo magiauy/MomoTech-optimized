@@ -81,8 +81,8 @@ public class InfinityTreeGrowthChamber extends AbstractElectricGUI implements Re
 
     @Override
     protected boolean findNextRecipe(BlockMenu inv) {
-        if (inv.getItemInSlot(0) == null) return false;
-        ItemStack it = inv.getItemInSlot(0);
+        if (inv.getInventory().getItem(0) == null) return false;
+        ItemStack it = inv.getInventory().getItem(0);
         if (((it.getType()==Material.OAK_SAPLING))) {
             pushIt(inv,Material.OAK_LEAVES, Material.OAK_LOG, Material.OAK_SAPLING, Material.APPLE, Material.STICK);
             return true;

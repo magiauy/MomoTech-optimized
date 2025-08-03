@@ -9,9 +9,6 @@ import me.matl114.matlib.utils.CraftUtils;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.lang.invoke.VarHandle;
-import java.util.Objects;
-
 public class DistinctiveSlimefunItem extends SlimefunItem implements DistinctiveItem {
     public DistinctiveSlimefunItem(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe){
         super(itemGroup, item, recipeType, recipe);

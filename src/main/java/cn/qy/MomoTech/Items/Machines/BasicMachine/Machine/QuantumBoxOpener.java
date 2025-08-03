@@ -8,7 +8,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -55,9 +54,9 @@ public class QuantumBoxOpener extends AbstractGUI implements RecipeDisplayItem {
     @Override
     protected void findNextRecipe(BlockMenu inv) {
         MachineUtils.simpleNullonlyProcessor(inv,getInputSlots(),getOutputSlots(),MomotechItem.quantumBox,output);
-//        if (inv.getItemInSlot(1) == null) return;
-//        if (inv.getItemInSlot(7) != null) return;
-//        if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(1), MomotechItem.box_of_quantum, true, false)) {
+//        if (inv.getInventory().getItem(1) == null) return;
+//        if (inv.getInventory().getItem(7) != null) return;
+//        if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(1), MomotechItem.box_of_quantum, true, false)) {
 //            inv.consumeItem(1, 1);
 //            inv.pushItem(new SlimefunItemStack(MomotechItem.entangledQuantum, 4), getOutputSlots());
 //        }

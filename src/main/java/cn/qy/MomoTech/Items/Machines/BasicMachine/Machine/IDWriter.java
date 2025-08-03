@@ -6,13 +6,11 @@ import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -64,17 +62,17 @@ public class IDWriter extends AbstractGUI implements RecipeDisplayItem {
     @Override
     protected void findNextRecipe(BlockMenu inv) {
         for (int i : getInputSlots()) {
-            if (inv.getItemInSlot(i) == null)
+            if (inv.getInventory().getItem(i) == null)
                 return;
         }
-        if (inv.getItemInSlot(1).getAmount() != 1) return;
+        if (inv.getInventory().getItem(1).getAmount() != 1) return;
 
-        if (!"MOMOTECH_ID_CARD".equals(Slimefun.getItemDataService().getItemData(inv.getItemInSlot(1)).orElseGet(()->""))|| !"MOMOTECH_CHARACTER".equals(Slimefun.getItemDataService().getItemData( inv.getItemInSlot(7)).orElseGet(()->"")))
+        if (!"MOMOTECH_ID_CARD".equals(Slimefun.getItemDataService().getItemData(inv.getInventory().getItem(1)).orElseGet(()->""))|| !"MOMOTECH_CHARACTER".equals(Slimefun.getItemDataService().getItemData( inv.getInventory().getItem(7)).orElseGet(()->"")))
             return;
         String lore;
         try{
-            lore = Utils.getLore(inv.getItemInSlot(1).getItemMeta()).get(0);
-            lore = lore + (Utils.getLore(inv.getItemInSlot(7).getItemMeta()).get(0).charAt(2));
+            lore = Utils.getLore(inv.getInventory().getItem(1).getItemMeta()).get(0);
+            lore = lore + (Utils.getLore(inv.getInventory().getItem(7).getItemMeta()).get(0).charAt(2));
         }catch (Exception e){
             lore="null";
             e.printStackTrace();

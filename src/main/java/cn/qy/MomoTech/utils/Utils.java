@@ -34,7 +34,7 @@ public class Utils {
 
     public static boolean checkOutput(BlockMenu inv, int[] output) {
         for (int i : output) {
-            if (inv.getItemInSlot(i) == null) return false;
+            if (inv.getInventory().getItem(i) == null) return false;
         }
         return true;
     }

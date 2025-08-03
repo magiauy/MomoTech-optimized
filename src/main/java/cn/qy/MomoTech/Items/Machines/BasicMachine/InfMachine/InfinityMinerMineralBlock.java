@@ -2,9 +2,7 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
 import cn.qy.MomoTech.Items.RandomizedItemStack;
 import cn.qy.MomoTech.MomoTech;
-import cn.qy.MomoTech.GUI.AbstractResourceGeneratorGUI;
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
-import cn.qy.MomoTech.utils.Maths;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -74,7 +72,7 @@ public class InfinityMinerMineralBlock extends AbstractElectricGUI implements Re
     @Override
     protected boolean findNextRecipe(BlockMenu inv) {
         for (int i : getOutputSlots()) {
-            if (inv.getItemInSlot(i) == null) {
+            if (inv.getInventory().getItem(i) == null) {
                 inv.pushItem(output.clone(), getOutputSlots());
                 return true;
             }

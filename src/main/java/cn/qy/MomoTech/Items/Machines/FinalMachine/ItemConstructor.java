@@ -3,7 +3,6 @@ package cn.qy.MomoTech.Items.Machines.FinalMachine;
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.Items;
-import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
@@ -12,7 +11,6 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -20,7 +18,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class ItemConstructor extends AbstractGUI implements RecipeDisplayItem {
 
@@ -61,12 +58,12 @@ public class ItemConstructor extends AbstractGUI implements RecipeDisplayItem {
 
     @Override
     protected void findNextRecipe(BlockMenu inv) {
-        if (inv.getItemInSlot(1) == null) return;
-        if (inv.getItemInSlot(7) != null) return;
-        if (!"MOMOTECH_ID_CARD".equals(Slimefun.getItemDataService().getItemData(inv.getItemInSlot(1)).orElseGet(()->"")) ) return;
+        if (inv.getInventory().getItem(1) == null) return;
+        if (inv.getInventory().getItem(7) != null) return;
+        if (!"MOMOTECH_ID_CARD".equals(Slimefun.getItemDataService().getItemData(inv.getInventory().getItem(1)).orElseGet(()->"")) ) return;
         String lore;
         try{
-            lore= Utils.getLore(inv.getItemInSlot(1).getItemMeta()).get(0).substring(5);
+            lore= Utils.getLore(inv.getInventory().getItem(1).getItemMeta()).get(0).substring(5);
         }catch(Exception e){
             lore="";
             e.printStackTrace();

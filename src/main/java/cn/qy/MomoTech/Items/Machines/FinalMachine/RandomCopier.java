@@ -10,19 +10,14 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
-import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
-import io.github.thebusybiscuit.slimefun4.implementation.handlers.SimpleBlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -78,7 +73,7 @@ public class RandomCopier extends AbstractGUI implements RecipeDisplayItem {
     protected void findNextRecipe(BlockMenu inv) {
         if (Utils.checkOutput(inv, getOutputSlots())) return;
         for (int i = 0; i < 36; i++) {
-            ItemStack copied = inv.getItemInSlot(i);
+            ItemStack copied = inv.getInventory().getItem(i);
             if (copied == null)
                 return;
             else if(!CopierUtils.isValidItem(copied)){
@@ -91,24 +86,24 @@ public class RandomCopier extends AbstractGUI implements RecipeDisplayItem {
                 return;
             }
             for (int j = 0; j < 36; j++) {
-                if (inv.getItemInSlot(j) == null)
+                if (inv.getInventory().getItem(j) == null)
                     return;
                 if (i == j) continue;
-                ItemStack it = inv.getItemInSlot(i).clone(), it1 = inv.getItemInSlot(j).clone();
+                ItemStack it = inv.getInventory().getItem(i).clone(), it1 = inv.getInventory().getItem(j).clone();
                 it.setAmount(1);
                 it1.setAmount(1);
                 if (it.isSimilar(it1))
                     return;
-                if (inv.getItemInSlot(i).getAmount() == inv.getItemInSlot(j).getAmount())
+                if (inv.getInventory().getItem(i).getAmount() == inv.getInventory().getItem(j).getAmount())
                     return;
             }
         }
-        if (!SlimefunUtils.isItemSimilar(inv.getItemInSlot(46), MomotechItem.primalMatterY, true, false))
+        if (!SlimefunUtils.isItemSimilar(inv.getInventory().getItem(46), MomotechItem.primalMatterY, true, false))
             return;
         int j = Math.abs(r.nextInt() % 36);
         inv.consumeItem(46, 1);
         if (Maths.GetRandom(9) != 0) return;
-        ItemStack it = inv.getItemInSlot(j).clone();
+        ItemStack it = inv.getInventory().getItem(j).clone();
         it.setAmount(1);
         inv.pushItem(it.clone(), getOutputSlots());
     }

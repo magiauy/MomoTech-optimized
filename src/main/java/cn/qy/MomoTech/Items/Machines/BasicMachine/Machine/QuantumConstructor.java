@@ -2,7 +2,6 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
-import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.Maths;
 import cn.qy.MomoTech.utils.Utils;
@@ -65,21 +64,21 @@ public class QuantumConstructor extends AbstractGUI implements RecipeDisplayItem
     private boolean BUGChecker(BlockMenu inv) {
         boolean[] checker1 = {false, false, false, false, false, false};
         for (int i : getInputSlots()) {
-            ItemStack checker = inv.getItemInSlot(i);
+            ItemStack checker = inv.getInventory().getItem(i);
             if (!SlimefunUtils.isItemSimilar(checker, MomotechItem.bugFormula, true, false) && !SlimefunUtils.isItemSimilar(checker, MomotechItem.bugDecimal, true, false) && !SlimefunUtils.isItemSimilar(checker, MomotechItem.bugDate, true, false) && !SlimefunUtils.isItemSimilar(checker, MomotechItem.bugNegativeOverflow, true, false) && !SlimefunUtils.isItemSimilar(checker, MomotechItem.bugPositiveOverflow, true, false) && !SlimefunUtils.isItemSimilar(checker, MomotechItem.bugSystem, true, false))
                 return false;
-            if (inv.getItemInSlot(i).getAmount() != 64) return false;
-            if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.bugFormula, true, false))
+            if (inv.getInventory().getItem(i).getAmount() != 64) return false;
+            if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.bugFormula, true, false))
                 checker1[0] = true;
-            if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.bugDecimal, true, false))
+            if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.bugDecimal, true, false))
                 checker1[1] = true;
-            if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.bugDate, true, false))
+            if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.bugDate, true, false))
                 checker1[2] = true;
-            if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.bugNegativeOverflow, true, false))
+            if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.bugNegativeOverflow, true, false))
                 checker1[3] = true;
-            if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.bugPositiveOverflow, true, false))
+            if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.bugPositiveOverflow, true, false))
                 checker1[4] = true;
-            if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.bugSystem, true, false))
+            if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.bugSystem, true, false))
                 checker1[5] = true;
         }
         return checker1[0] && checker1[1] && checker1[2] && checker1[3] && checker1[4] && checker1[5];
@@ -87,8 +86,8 @@ public class QuantumConstructor extends AbstractGUI implements RecipeDisplayItem
 
     private boolean UncontrollableVoidChecker(BlockMenu inv) {
         for (int i : getInputSlots()) {
-            if (inv.getItemInSlot(i).getAmount() != 64) return false;
-            if (!SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.uncontrollableVoid, true, false))
+            if (inv.getInventory().getItem(i).getAmount() != 64) return false;
+            if (!SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.uncontrollableVoid, true, false))
                 return false;
         }
         return true;
@@ -96,8 +95,8 @@ public class QuantumConstructor extends AbstractGUI implements RecipeDisplayItem
 
     private boolean ImpulseCommandBlockChecker(BlockMenu inv) {
         for (int i : getInputSlots()) {
-            if (inv.getItemInSlot(i).getAmount() != 64) return false;
-            ItemStack it = inv.getItemInSlot(i).clone();
+            if (inv.getInventory().getItem(i).getAmount() != 64) return false;
+            ItemStack it = inv.getInventory().getItem(i).clone();
             it.setAmount(1);
             if (!it.equals(new ItemStack(Material.COMMAND_BLOCK)))
                 return false;
@@ -107,8 +106,8 @@ public class QuantumConstructor extends AbstractGUI implements RecipeDisplayItem
 
     private boolean RepeatingCommandBlockChecker(BlockMenu inv) {
         for (int i : getInputSlots()) {
-            if (inv.getItemInSlot(i).getAmount() != 64) return false;
-            ItemStack it = inv.getItemInSlot(i).clone();
+            if (inv.getInventory().getItem(i).getAmount() != 64) return false;
+            ItemStack it = inv.getInventory().getItem(i).clone();
             it.setAmount(1);
             if (!it.equals(new ItemStack(Material.REPEATING_COMMAND_BLOCK)))
                 return false;
@@ -118,8 +117,8 @@ public class QuantumConstructor extends AbstractGUI implements RecipeDisplayItem
 
     private boolean ChainCommandBlockChecker(BlockMenu inv) {
         for (int i : getInputSlots()) {
-            if (inv.getItemInSlot(i).getAmount() != 64) return false;
-            ItemStack it = inv.getItemInSlot(i).clone();
+            if (inv.getInventory().getItem(i).getAmount() != 64) return false;
+            ItemStack it = inv.getInventory().getItem(i).clone();
             it.setAmount(1);
             if (!it.equals(new ItemStack(Material.CHAIN_COMMAND_BLOCK)))
                 return false;
@@ -129,37 +128,37 @@ public class QuantumConstructor extends AbstractGUI implements RecipeDisplayItem
 
     private boolean FinalCoreChecker(BlockMenu inv) {
         for (int i : getInputSlots()) {
-            if (!SlimefunUtils.isItemSimilar(MomotechItem.supremeCore, inv.getItemInSlot(i), true, false))
+            if (!SlimefunUtils.isItemSimilar(MomotechItem.supremeCore, inv.getInventory().getItem(i), true, false))
                 return false;
-            if (inv.getItemInSlot(i).getAmount() != 64) return false;
+            if (inv.getInventory().getItem(i).getAmount() != 64) return false;
         }
         return true;
     }
 
     private boolean ConceptChecker(BlockMenu inv) {
         for (int i : getInputSlots()) {
-            if (!SlimefunUtils.isItemSimilar(MomotechItem.resource, inv.getItemInSlot(i), true, false))
+            if (!SlimefunUtils.isItemSimilar(MomotechItem.resource, inv.getInventory().getItem(i), true, false))
                 return false;
-            if (inv.getItemInSlot(i).getAmount() != 64) return false;
+            if (inv.getInventory().getItem(i).getAmount() != 64) return false;
         }
         return true;
     }
 
     private void ConsumeItems(BlockMenu inv) {
         for (int i : getInputSlots()) {
-            inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+            inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
         }
     }
 
     private boolean PrimalMatterChecker(BlockMenu inv) {
         boolean[] checker = {false, false};
         for (int i : getInputSlots()) {
-            if (!SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.primalMatterB, true, false) && !SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.primalMatterA, true, false))
+            if (!SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.primalMatterB, true, false) && !SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.primalMatterA, true, false))
                 return false;
-            if (inv.getItemInSlot(i).getAmount() != 64) return false;
-            if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.primalMatterB, true, false))
+            if (inv.getInventory().getItem(i).getAmount() != 64) return false;
+            if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.primalMatterB, true, false))
                 checker[0] = true;
-            if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), MomotechItem.primalMatterA, true, false))
+            if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), MomotechItem.primalMatterA, true, false))
                 checker[1] = true;
         }
         return checker[0] && checker[1];
@@ -169,7 +168,7 @@ public class QuantumConstructor extends AbstractGUI implements RecipeDisplayItem
     protected void findNextRecipe(BlockMenu inv) {
         if (Utils.checkOutput(inv, getOutputSlots())) return;
         for (int i : getInputSlots()) {
-            if (inv.getItemInSlot(i) == null) {
+            if (inv.getInventory().getItem(i) == null) {
                 return;
             }
         }
@@ -216,8 +215,8 @@ public class QuantumConstructor extends AbstractGUI implements RecipeDisplayItem
             return;
         }
         for (int i : getInputSlots()) {
-            if (inv.getItemInSlot(i) == null) return;
-            if (inv.getItemInSlot(i).getAmount() == 64) {
+            if (inv.getInventory().getItem(i) == null) return;
+            if (inv.getInventory().getItem(i).getAmount() == 64) {
                 ConsumeItems(inv);
                 if (Maths.GetRandom(2000) == 0)
                     inv.pushItem(MomotechItem.quantumSingularity.clone(), getOutputSlots());

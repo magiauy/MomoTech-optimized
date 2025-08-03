@@ -1,12 +1,8 @@
 package cn.qy.MomoTech.Items;
 
-import org.bukkit.entity.Slime;
-
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Utils;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 
 public class MomotechItem {
     public static final SlimefunItemStack[] compressedCobblestone = new SlimefunItemStack[100];

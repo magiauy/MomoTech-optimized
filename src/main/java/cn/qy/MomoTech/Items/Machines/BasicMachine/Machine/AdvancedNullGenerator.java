@@ -3,7 +3,6 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
-import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -57,7 +56,7 @@ public class AdvancedNullGenerator extends AbstractGUI implements RecipeDisplayI
     protected void findNextRecipe(BlockMenu inv) {
         //if (Utils.checkOutput(inv, getOutputSlots())) return;
         for (int i : getOutputSlots()) {
-            if (inv.getItemInSlot(i) == null) {
+            if (inv.getInventory().getItem(i) == null) {
                 inv.replaceExistingItem(i,output);
                 return;
             }

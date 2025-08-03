@@ -1,8 +1,6 @@
 package cn.qy.MomoTech.utils;
 
 import cn.qy.MomoTech.Exceptions;
-import cn.qy.MomoTech.MomoTech;
-
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;

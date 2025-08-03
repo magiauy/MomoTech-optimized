@@ -3,16 +3,13 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
-import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
-import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
@@ -60,21 +57,20 @@ public class PrimalMatterConstructor extends AbstractGUI implements RecipeDispla
     public ItemStack outCreative2=new CustomItemStack(MomotechItem.primalMatterB);
     @Override
     protected void findNextRecipe(BlockMenu inv) {
-        ItemStack now=inv.getItemInSlot(getOutputSlots()[0]);
+        ItemStack now=inv.getInventory().getItem(getOutputSlots()[0]);
         if(now!=null&&now.getType()!=Material.END_CRYSTAL) {
             return;
         }
         int[] inputSlots=getInputSlots();
         int[] amount=new int[inputSlots.length];
         for(int i=0;i<amount.length;i++){
-            ItemStack stack=inv.getItemInSlot(inputSlots[i]);
+            ItemStack stack=inv.getInventory().getItem(inputSlots[i]);
             if(stack==null)return;
             else amount[i]=stack.getAmount();
         }
         for(int i=0;i<amount.length;i++){
-            inv.getItemInSlot(inputSlots[i]).setAmount(0);
+            inv.getInventory().getItem(inputSlots[i]).setAmount(0);
         }
-        ItemStack check;
         if(amount[0]==amount[1]){
             return;
         }

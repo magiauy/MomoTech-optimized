@@ -1,19 +1,14 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
-import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.Items.RandomizedItemStack;
 import cn.qy.MomoTech.utils.MachineUtils;
-import cn.qy.MomoTech.utils.Maths;
-import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -62,8 +57,8 @@ public class AlloyFabricator extends AbstractGUI implements RecipeDisplayItem {
         MachineUtils.simpleNullonlyProcessor(inv,getInputSlots(),getOutputSlots(),consumed,output.getInstance());
 //        if (Utils.checkOutput(inv, getOutputSlots())) return;
 //        for (int i : getInputSlots())
-//            if (inv.getItemInSlot(i) != null)
-//                if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), new SlimefunItemStack("MOMOTECH_METAL_ESSENCE", Items.MOMOTECH_METAL_ESSENCE).clone(), false, false, false)) {
+//            if (inv.getInventory().getItem(i) != null)
+//                if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), new SlimefunItemStack("MOMOTECH_METAL_ESSENCE", Items.MOMOTECH_METAL_ESSENCE).clone(), false, false, false)) {
 //                    inv.consumeItem(i, 1);
 //                    inv.pushItem(new SlimefunItemStack(list[Maths.GetRandom(list.length - 1)], 32), getOutputSlots());
 //                    return ;

@@ -1,7 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.FinalMachine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
-import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.CopierUtils;
@@ -65,10 +64,10 @@ public class FinalCopier extends AbstractGUI implements RecipeDisplayItem {
     @Override
     protected void findNextRecipe(BlockMenu inv) {
         if (Utils.checkOutput(inv, getOutputSlots())) return;
-        if (inv.getItemInSlot(4) == null) return;
-        if (inv.getItemInSlot(1) == null) return;
-        if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(1), MomotechItem.entangledQuantum, true)) {
-            ItemStack copied = inv.getItemInSlot(4);
+        if (inv.getInventory().getItem(4) == null) return;
+        if (inv.getInventory().getItem(1) == null) return;
+        if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(1), MomotechItem.entangledQuantum, true)) {
+            ItemStack copied = inv.getInventory().getItem(4);
             if(!CopierUtils.isValidItem(copied)){
                 new BukkitRunnable() {
                     public void run() {

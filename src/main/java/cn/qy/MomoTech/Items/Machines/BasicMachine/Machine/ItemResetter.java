@@ -52,17 +52,17 @@ public class ItemResetter extends AbstractGUI {
     protected void findNextRecipe(BlockMenu inv) {
         for (int i : getInputSlots()) {
             if (Utils.checkOutput(inv, getOutputSlots())) return;
-            if (inv.getItemInSlot(i) == null) continue;
+            if (inv.getInventory().getItem(i) == null) continue;
             try {
-                SlimefunItem it1 = SlimefunItem.getByItem(inv.getItemInSlot(i));
+                SlimefunItem it1 = SlimefunItem.getByItem(inv.getInventory().getItem(i));
                 if (it1 != null) {
-                    ItemStack it = new CustomItemStack(Objects.requireNonNull(SlimefunItem.getByItem(inv.getItemInSlot(i))).getItem());
-                    it.setAmount(inv.getItemInSlot(i).getAmount());
+                    ItemStack it = new CustomItemStack(Objects.requireNonNull(SlimefunItem.getByItem(inv.getInventory().getItem(i))).getItem());
+                    it.setAmount(inv.getInventory().getItem(i).getAmount());
                     inv.pushItem(it, getOutputSlots());
-                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
                 } else {
-                    inv.pushItem(inv.getItemInSlot(i).clone(), getOutputSlots());
-                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+                    inv.pushItem(inv.getInventory().getItem(i).clone(), getOutputSlots());
+                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
                 }
             } catch (Exception ignored) {
             }

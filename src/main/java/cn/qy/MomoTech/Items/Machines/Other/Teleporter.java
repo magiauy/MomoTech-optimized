@@ -27,11 +27,8 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 
-import static cn.qy.MomoTech.Items.MomotechItem.bugDate;
-
 import java.util.ArrayList;
 import java.util.List;
-//TODO Open GUI with shift right click, teleport with right click, if digit is null or invalid send message MomoTech.languageManager.getGeneric("teleporter_not_configured_correctly") to player
 public class Teleporter extends AbstractGUI implements RecipeDisplayItem {
 
     public Teleporter(ItemGroup itemGroup, String id, ItemStack it, RecipeType recipeType, ItemStack[] recipe) {

@@ -1,18 +1,11 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
 import cn.qy.MomoTech.MomoTech;
-import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.Items.Machines.BasicMachine.Machine.LightAndDarkCollector;
-import cn.qy.MomoTech.utils.MachineUtils;
-import cn.qy.MomoTech.utils.Maths;
-import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -20,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InfinityLightAndDarkCollector extends LightAndDarkCollector implements RecipeDisplayItem {
+public class InfinityLightAndDarkCollector extends LightAndDarkCollector {
     public InfinityLightAndDarkCollector(ItemGroup itemGroup, String id, ItemStack it, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, id,it, recipeType, recipe);
         this.threshold=51;
@@ -72,8 +65,8 @@ public class InfinityLightAndDarkCollector extends LightAndDarkCollector impleme
 //    protected boolean findNextRecipe(BlockMenu inv) {
 //        if (Utils.checkOutput(inv, getOutputSlots())) return false;
 //        for (int i : getInputSlots()) {
-//            if (inv.getItemInSlot(i) == null) continue;
-//            ItemStack it = inv.getItemInSlot(i);
+//            if (inv.getInventory().getItem(i) == null) continue;
+//            ItemStack it = inv.getInventory().getItem(i);
 //            if (it.getType()==Material.NETHERITE_PICKAXE&&!it.hasItemMeta()) {
 //                inv.replaceExistingItem(i, null,false);
 //                int k = inv.getLocation().getBlockY();

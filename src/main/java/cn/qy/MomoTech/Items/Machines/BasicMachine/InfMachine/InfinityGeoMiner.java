@@ -81,13 +81,13 @@ public class InfinityGeoMiner extends AbstractElectricGUI implements RecipeDispl
     protected boolean findNextRecipe(BlockMenu inv) {
         if (Utils.checkOutput(inv, getOutputSlots())) return false;
         for (int i : getInputSlots()) {
-            ItemStack it = inv.getItemInSlot(i);
+            ItemStack it = inv.getInventory().getItem(i);
             if (it != null) {
                 if (it.getType()==Material.NETHERITE_PICKAXE&&!it.hasItemMeta()) {
                     List<ItemStack> item = getGeoResources();
                     ItemStack output = item.get(Maths.GetRandom(item.size() - 1));
                     for (int j : getOutputSlots()) {
-                        if (inv.getItemInSlot(j) == null) {
+                        if (inv.getInventory().getItem(j) == null) {
                             ItemStack out=output.clone();
                             out.setAmount(16);
                             inv.pushItem(out, getOutputSlots());

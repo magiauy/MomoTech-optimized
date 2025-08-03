@@ -55,7 +55,7 @@ public class EquipmentRepairingMachine extends AbstractGUI implements RecipeDisp
 
     @Override
     protected void findNextRecipe(BlockMenu inv) {
-        ItemStack itemStack = inv.getItemInSlot(4);
+        ItemStack itemStack = inv.getInventory().getItem(4);
         if (itemStack != null && itemStack.hasItemMeta()) {
             ItemMeta itemMeta = itemStack.getItemMeta();
             if (itemMeta instanceof Damageable) {

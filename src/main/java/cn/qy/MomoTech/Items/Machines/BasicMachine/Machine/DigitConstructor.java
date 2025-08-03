@@ -6,14 +6,11 @@ import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.Items.RandomizedItemStack;
 import cn.qy.MomoTech.utils.MachineUtils;
-import cn.qy.MomoTech.utils.Maths;
-import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -77,9 +74,9 @@ public class DigitConstructor extends AbstractElectricGUI implements RecipeDispl
         return MachineUtils.simpleNullonlyProcessor(inv, getInputSlots(), getOutputSlots(), Items.MOMOTECH_NULL, digits.getInstance());
 //        if (Utils.checkOutput(inv, getOutputSlots())) return false;
 //        for (int i : this.getInputSlots())
-//            if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(i), Items.MOMOTECH_EMPTY_SHELL, true, false)) {
+//            if (SlimefunUtils.isItemSimilar(inv.getInventory().getItem(i), Items.MOMOTECH_EMPTY_SHELL, true, false)) {
 //                for (int j : getOutputSlots()) {
-//                    if (inv.getItemInSlot(j) == null) {
+//                    if (inv.getInventory().getItem(j) == null) {
 //                        inv.consumeItem(i, 1);
 //                        inv.replaceExistingItem(j, digitals.clone());
 //                        return true;

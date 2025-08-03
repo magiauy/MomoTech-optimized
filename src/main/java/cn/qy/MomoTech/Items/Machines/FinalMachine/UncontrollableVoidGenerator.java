@@ -63,7 +63,7 @@ public class UncontrollableVoidGenerator extends AbstractGUI implements RecipeDi
     protected void findNextRecipe(BlockMenu inv) {
         if (Utils.checkOutput(inv, getOutputSlots())) return;
         for (int i : getOutputSlots()) {
-            if (inv.getItemInSlot(i) == null) {
+            if (inv.getInventory().getItem(i) == null) {
                 inv.replaceExistingItem(i,OUTPUT,false);
                 return;
             }

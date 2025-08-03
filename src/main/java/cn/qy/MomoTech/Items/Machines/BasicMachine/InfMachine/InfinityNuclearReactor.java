@@ -2,14 +2,12 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import cn.qy.MomoTech.utils.MachineUtils;
-import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -53,17 +51,18 @@ public class InfinityNuclearReactor extends AbstractElectricGUI implements Recip
     public int[] getOutputSlots() {
         return new int[]{4, 5, 6, 7};
     }
-    HashMap<ItemStack,ItemStack> recipeMap=new HashMap(){{
-        put(new CustomItemStack(SlimefunItems.URANIUM),new CustomItemStack(SlimefunItems.NEPTUNIUM,8));
-        put(new CustomItemStack(SlimefunItems.NEPTUNIUM, 8),new CustomItemStack(SlimefunItems.PLUTONIUM,8));
-    }};
+    HashMap<ItemStack, ItemStack> recipeMap = new HashMap<>();
+    {
+        recipeMap.put(new CustomItemStack(SlimefunItems.URANIUM), new CustomItemStack(SlimefunItems.NEPTUNIUM, 8));
+        recipeMap.put(new CustomItemStack(SlimefunItems.NEPTUNIUM, 8), new CustomItemStack(SlimefunItems.PLUTONIUM, 8));
+    }
     @Override
     protected boolean findNextRecipe(BlockMenu inv) {
         return MachineUtils.simpleProcessor(inv,getInputSlots(),getOutputSlots(),recipeMap);
 //        if (Utils.checkOutput(inv, getOutputSlots())) return false;
 //        for (int i : getInputSlots()) {
-//            if (inv.getItemInSlot(i) == null) continue;
-//            ItemStack it = inv.getItemInSlot(i).clone();
+//            if (inv.getInventory().getItem(i) == null) continue;
+//            ItemStack it = inv.getInventory().getItem(i).clone();
 //            it.setAmount(1);
 //            if (SlimefunUtils.isItemSimilar(it, SlimefunItems.URANIUM, false, false)) {
 //                inv.consumeItem(i, 1);

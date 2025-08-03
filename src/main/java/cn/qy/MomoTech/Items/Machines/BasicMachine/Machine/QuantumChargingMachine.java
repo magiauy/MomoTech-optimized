@@ -1,6 +1,5 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
-import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -11,8 +10,6 @@ import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecip
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
-
-import static cn.qy.MomoTech.Items.MomotechItem.chargedIngot;
 
 import java.util.ArrayList;
 import java.util.List;

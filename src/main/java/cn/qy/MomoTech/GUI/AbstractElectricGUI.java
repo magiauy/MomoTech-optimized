@@ -8,22 +8,21 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineProcessHolder;
-import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.core.machines.MachineProcessor;
 import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
 import io.github.thebusybiscuit.slimefun4.implementation.handlers.SimpleBlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.operations.CraftingOperation;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecipe;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.interfaces.InventoryBlock;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
+
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -65,7 +64,7 @@ public abstract class AbstractElectricGUI extends SlimefunItem implements Invent
     protected BlockBreakHandler onBlockBreak() {
         return new SimpleBlockBreakHandler() {
             public void onBlockBreak(@NotNull Block b) {
-                BlockMenu inv = BlockStorage.getInventory(b);
+                BlockMenu inv = Slimefun.getDatabaseManager().getBlockDataController().getBlockData(b.getLocation()).getBlockMenu();
                 if (inv != null) {
                     inv.dropItems(b.getLocation(), AbstractElectricGUI.this.getInputSlots());
                     inv.dropItems(b.getLocation(), AbstractElectricGUI.this.getOutputSlots());
@@ -187,7 +186,7 @@ public abstract class AbstractElectricGUI extends SlimefunItem implements Invent
 
     protected void tick(Block b) {
 
-        BlockMenu inv = BlockStorage.getInventory(b);
+        BlockMenu inv = Slimefun.getDatabaseManager().getBlockDataController().getBlockData(b.getLocation()).getBlockMenu();
         if (this.takeCharge(b.getLocation())) {
             if (this.findNextRecipe(inv))
                 this.setCharge(b.getLocation(), this.getCharge(b.getLocation()) - this.getEnergyConsumption());

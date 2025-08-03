@@ -4,8 +4,6 @@ import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.MachineUtils;
-import cn.qy.MomoTech.utils.Maths;
-import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -92,8 +90,8 @@ public class LightAndDarkCollector extends AbstractElectricGUI implements Recipe
         },true);
 //        if (Utils.checkOutput(inv, getOutputSlots())) return false;
 //        for (int i : getInputSlots()) {
-//            if (inv.getItemInSlot(i) == null) continue;
-//            ItemStack it = inv.getItemInSlot(i);
+//            if (inv.getInventory().getItem(i) == null) continue;
+//            ItemStack it = inv.getInventory().getItem(i);
 //            if (it.getType()==Material.NETHERITE_PICKAXE&&!it.hasItemMeta()) {
 //                inv.replaceExistingItem(i, null,false);
 //                int k = inv.getLocation().getBlockY();

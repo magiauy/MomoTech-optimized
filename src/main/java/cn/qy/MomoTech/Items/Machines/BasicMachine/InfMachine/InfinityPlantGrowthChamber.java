@@ -96,8 +96,8 @@ public class InfinityPlantGrowthChamber extends AbstractElectricGUI implements R
 
     @Override
     protected boolean findNextRecipe(BlockMenu inv) {
-        if (inv.getItemInSlot(0) == null) return false;
-        ItemStack it = inv.getItemInSlot(0);
+        if (inv.getInventory().getItem(0) == null) return false;
+        ItemStack it = inv.getInventory().getItem(0);
         if (it.getType()==Material.POTATO) {
             pushIt(inv,Material.POTATO, Material.POISONOUS_POTATO);
             return true;

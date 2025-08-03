@@ -68,8 +68,8 @@ public class InfinityDustExtractor extends AbstractElectricGUI implements  Recip
     protected boolean findNextRecipe(BlockMenu inv) {
         if (Utils.checkOutput(inv, getOutputSlots())) return false;
         for (int i : getInputSlots()) {
-            if (inv.getItemInSlot(i) == null) continue;
-            ItemStack it = inv.getItemInSlot(i).clone();
+            if (inv.getInventory().getItem(i) == null) continue;
+            ItemStack it = inv.getInventory().getItem(i).clone();
             if (it.getAmount() != 64) continue;
             it.setAmount(1);
             if (it.equals(new ItemStack(Material.COBBLESTONE))) {

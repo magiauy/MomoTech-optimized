@@ -3,14 +3,12 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.utils.MachineUtils;
-import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -56,61 +54,62 @@ public class InfinityIngotFormer extends AbstractGUI implements RecipeDisplayIte
     public int[] getOutputSlots() {
         return new int[]{10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25};
     }
-    HashMap<ItemStack,ItemStack> recipeMap=new HashMap(){{
-        put(SlimefunItems.ALUMINUM_DUST,new CustomItemStack( SlimefunItems.ALUMINUM_INGOT));
-        put(SlimefunItems.COPPER_DUST,new CustomItemStack(SlimefunItems.COPPER_INGOT));
-        put(SlimefunItems.TIN_DUST,new CustomItemStack(SlimefunItems.TIN_INGOT));
-        put(SlimefunItems.LEAD_DUST,new CustomItemStack(SlimefunItems.LEAD_INGOT));
-        put( SlimefunItems.GOLD_DUST,new CustomItemStack(SlimefunItems.GOLD_4K));
-        put(SlimefunItems.MAGNESIUM_DUST,new CustomItemStack(SlimefunItems.MAGNESIUM_INGOT));
-        put(SlimefunItems.SILVER_DUST,new CustomItemStack(SlimefunItems.SILVER_INGOT));
-        put(SlimefunItems.IRON_DUST,new CustomItemStack(Material.IRON_INGOT));
-        put(SlimefunItems.ZINC_DUST,new CustomItemStack(SlimefunItems.ZINC_INGOT));
-    }};
+    HashMap<ItemStack, ItemStack> recipeMap = new HashMap<>();
+    {
+        recipeMap.put(SlimefunItems.ALUMINUM_DUST, new CustomItemStack(SlimefunItems.ALUMINUM_INGOT));
+        recipeMap.put(SlimefunItems.COPPER_DUST, new CustomItemStack(SlimefunItems.COPPER_INGOT));
+        recipeMap.put(SlimefunItems.TIN_DUST, new CustomItemStack(SlimefunItems.TIN_INGOT));
+        recipeMap.put(SlimefunItems.LEAD_DUST, new CustomItemStack(SlimefunItems.LEAD_INGOT));
+        recipeMap.put(SlimefunItems.GOLD_DUST, new CustomItemStack(SlimefunItems.GOLD_4K));
+        recipeMap.put(SlimefunItems.MAGNESIUM_DUST, new CustomItemStack(SlimefunItems.MAGNESIUM_INGOT));
+        recipeMap.put(SlimefunItems.SILVER_DUST, new CustomItemStack(SlimefunItems.SILVER_INGOT));
+        recipeMap.put(SlimefunItems.IRON_DUST, new CustomItemStack(Material.IRON_INGOT));
+        recipeMap.put(SlimefunItems.ZINC_DUST, new CustomItemStack(SlimefunItems.ZINC_INGOT));
+    }
     @Override
     protected void findNextRecipe(BlockMenu inv) {
         MachineUtils.multiProcessor(inv,getInputSlots(),getOutputSlots(),recipeMap,false);
 //        if (Utils.checkOutput(inv, getOutputSlots())) return;
 //        for (int i : getInputSlots()) {
-//            if (inv.getItemInSlot(i) != null) {
-//                ItemStack it = inv.getItemInSlot(i).clone();
+//            if (inv.getInventory().getItem(i) != null) {
+//                ItemStack it = inv.getInventory().getItem(i).clone();
 //                it.setAmount(1);
 //                if (Utils.checkOutput(inv, getOutputSlots())) return;
 //                if (SlimefunUtils.isItemSimilar(it, SlimefunItems.ALUMINUM_DUST, false, false)) {
-//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.ALUMINUM_INGOT, inv.getItemInSlot(i).getAmount()), getOutputSlots());
-//                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.ALUMINUM_INGOT, inv.getInventory().getItem(i).getAmount()), getOutputSlots());
+//                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
 //                }
 //                if (SlimefunUtils.isItemSimilar(it, SlimefunItems.COPPER_DUST, false, false)) {
-//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.COPPER_INGOT, inv.getItemInSlot(i).getAmount()), getOutputSlots());
-//                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.COPPER_INGOT, inv.getInventory().getItem(i).getAmount()), getOutputSlots());
+//                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
 //                }
 //                if (SlimefunUtils.isItemSimilar(it, SlimefunItems.TIN_DUST, false, false)) {
-//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.TIN_INGOT, inv.getItemInSlot(i).getAmount()), getOutputSlots());
-//                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.TIN_INGOT, inv.getInventory().getItem(i).getAmount()), getOutputSlots());
+//                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
 //                }
 //                if (SlimefunUtils.isItemSimilar(it, SlimefunItems.LEAD_DUST, false, false)) {
-//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.LEAD_INGOT, inv.getItemInSlot(i).getAmount()), getOutputSlots());
-//                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.LEAD_INGOT, inv.getInventory().getItem(i).getAmount()), getOutputSlots());
+//                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
 //                }
 //                if (SlimefunUtils.isItemSimilar(it, SlimefunItems.GOLD_DUST, false, false)) {
-//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.GOLD_4K, inv.getItemInSlot(i).getAmount()), getOutputSlots());
-//                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.GOLD_4K, inv.getInventory().getItem(i).getAmount()), getOutputSlots());
+//                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
 //                }
 //                if (SlimefunUtils.isItemSimilar(it, SlimefunItems.MAGNESIUM_DUST, false, false)) {
-//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.MAGNESIUM_INGOT, inv.getItemInSlot(i).getAmount()), getOutputSlots());
-//                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.MAGNESIUM_INGOT, inv.getInventory().getItem(i).getAmount()), getOutputSlots());
+//                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
 //                }
 //                if (SlimefunUtils.isItemSimilar(it, SlimefunItems.SILVER_DUST, false, false)) {
-//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.SILVER_INGOT, inv.getItemInSlot(i).getAmount()), getOutputSlots());
-//                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.SILVER_INGOT, inv.getInventory().getItem(i).getAmount()), getOutputSlots());
+//                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
 //                }
 //                if (SlimefunUtils.isItemSimilar(it, SlimefunItems.IRON_DUST, false, false)) {
-//                    inv.pushItem(new CustomItemStack(Material.IRON_INGOT, inv.getItemInSlot(i).getAmount()), getOutputSlots());
-//                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+//                    inv.pushItem(new CustomItemStack(Material.IRON_INGOT, inv.getInventory().getItem(i).getAmount()), getOutputSlots());
+//                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
 //                }
 //                if (SlimefunUtils.isItemSimilar(it, SlimefunItems.ZINC_DUST, false, false)) {
-//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.ZINC_INGOT, inv.getItemInSlot(i).getAmount()), getOutputSlots());
-//                    inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+//                    inv.pushItem(new SlimefunItemStack(SlimefunItems.ZINC_INGOT, inv.getInventory().getItem(i).getAmount()), getOutputSlots());
+//                    inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
 //                }
 //            }
 //        }

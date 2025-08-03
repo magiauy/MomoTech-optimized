@@ -54,7 +54,7 @@ public class InfinityCobblestoneGenerator extends AbstractGUI implements RecipeD
     @Override
     protected void findNextRecipe(BlockMenu inv) {
         for (int i : getOutputSlots()) {
-            if (inv.getItemInSlot(i) == null) {
+            if (inv.getInventory().getItem(i) == null) {
                 inv.replaceExistingItem(i, out);
             }
         }

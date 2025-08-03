@@ -103,12 +103,12 @@ public class Calculator extends AbstractGUI implements RecipeDisplayItem {
     }
 
     protected void findNextRecipe(BlockMenu inv) {
-        if(inv.getItemInSlot(16)!=null){
+        if(inv.getInventory().getItem(16)!=null){
             return;
         }
-        ItemStack it1 = inv.getItemInSlot(getInputSlots()[0]),
-                it2 = inv.getItemInSlot(getInputSlots()[1]),
-                it3 = inv.getItemInSlot(getInputSlots()[2]);
+        ItemStack it1 = inv.getInventory().getItem(getInputSlots()[0]),
+                it2 = inv.getInventory().getItem(getInputSlots()[1]),
+                it3 = inv.getInventory().getItem(getInputSlots()[2]);
         if(it1==null||it2==null||it3==null){
             return;
         }

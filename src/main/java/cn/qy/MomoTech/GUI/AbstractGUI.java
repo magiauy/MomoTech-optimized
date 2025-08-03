@@ -6,19 +6,13 @@ import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.MachineProcessHolder;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockPlaceHandler;
-import io.github.thebusybiscuit.slimefun4.core.machines.MachineProcessor;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.implementation.handlers.SimpleBlockBreakHandler;
-import io.github.thebusybiscuit.slimefun4.implementation.operations.CraftingOperation;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecipe;
-import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.interfaces.InventoryBlock;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
@@ -36,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public abstract class AbstractGUI extends SlimefunItem implements InventoryBlock {
+public abstract class AbstractGUI extends SlimefunItem {
 
     //private final MachineProcessor<CraftingOperation> processor = new MachineProcessor<>(this);
     protected List<MachineRecipe> recipes = new ArrayList<>();
@@ -100,7 +94,7 @@ public abstract class AbstractGUI extends SlimefunItem implements InventoryBlock
         return new BlockBreakHandler(false,false) {
             public void onPlayerBreak(BlockBreakEvent var1, ItemStack var2, List<ItemStack> var3){
                 Block b=var1.getBlock();
-                BlockMenu inv = BlockStorage.getInventory(b);
+                BlockMenu inv = Slimefun.getDatabaseManager().getBlockDataController().getBlockData(b.getLocation()).getBlockMenu();
                 if (inv != null) {
                     inv.dropItems(b.getLocation(), AbstractGUI.this.getInputSlots());
                     inv.dropItems(b.getLocation(), AbstractGUI.this.getOutputSlots());
@@ -206,7 +200,7 @@ public abstract class AbstractGUI extends SlimefunItem implements InventoryBlock
 
     protected void tick(Block b) {
 
-        BlockMenu inv = BlockStorage.getInventory(b);
+        BlockMenu inv = Slimefun.getDatabaseManager().getBlockDataController().getBlockData(b.getLocation()).getBlockMenu();
         this.findNextRecipe(inv);
     }
 

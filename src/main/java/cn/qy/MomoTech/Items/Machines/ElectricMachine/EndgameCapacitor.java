@@ -4,7 +4,6 @@ import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetComponent;
 import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
@@ -16,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 
-public class EndgameCapacitor extends AbstractElectricGUI implements EnergyNetComponent {
+public class EndgameCapacitor extends AbstractElectricGUI {
 
     public EndgameCapacitor(ItemGroup itemGroup, String id, ItemStack it, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, id, it, recipeType, recipe);

@@ -61,17 +61,17 @@ public class CharacterConstructor extends AbstractGUI implements RecipeDisplayIt
     @Override
     protected void findNextRecipe(BlockMenu inv) {
         for (int i : getInputSlots()) {
-            if (inv.getItemInSlot(i) == null) return;
-            ItemStack it = inv.getItemInSlot(i);
+            if (inv.getInventory().getItem(i) == null) return;
+            ItemStack it = inv.getInventory().getItem(i);
             if (!SlimefunUtils.isItemSimilar(it, MomotechItem.nullItem, true, false) && !SlimefunUtils.isItemSimilar(it, MomotechItem.primalMatterB, true, false) && !SlimefunUtils.isItemSimilar(it, MomotechItem.primalMatterA, true, false))
                 return;
         }
         if (Utils.checkOutput(inv, getOutputSlots())) return;
-        if (!SlimefunUtils.isItemSimilar(inv.getItemInSlot(13), MomotechItem.nullItem, true, false)) return;
-        if (!(SlimefunUtils.isItemSimilar(inv.getItemInSlot(10), MomotechItem.primalMatterB, true, false)
-                && SlimefunUtils.isItemSimilar(inv.getItemInSlot(16), MomotechItem.primalMatterA, true, false))
-                && (!(SlimefunUtils.isItemSimilar(inv.getItemInSlot(10), MomotechItem.primalMatterA, true, false)
-                && SlimefunUtils.isItemSimilar(inv.getItemInSlot(16), MomotechItem.primalMatterB, true, false))))
+        if (!SlimefunUtils.isItemSimilar(inv.getInventory().getItem(13), MomotechItem.nullItem, true, false)) return;
+        if (!(SlimefunUtils.isItemSimilar(inv.getInventory().getItem(10), MomotechItem.primalMatterB, true, false)
+                && SlimefunUtils.isItemSimilar(inv.getInventory().getItem(16), MomotechItem.primalMatterA, true, false))
+                && (!(SlimefunUtils.isItemSimilar(inv.getInventory().getItem(10), MomotechItem.primalMatterA, true, false)
+                && SlimefunUtils.isItemSimilar(inv.getInventory().getItem(16), MomotechItem.primalMatterB, true, false))))
             return;
         String list = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM123456789_";//62个
         char ans = list.charAt(Maths.GetRandom(61));
@@ -81,7 +81,7 @@ public class CharacterConstructor extends AbstractGUI implements RecipeDisplayIt
         ItemStack it = new CustomItemStack(Material.SUGAR, MomoTech.languageManager.getItemName("character"), characterLore);
         ItemStack sfit = new SlimefunItemStack("MOMOTECH_CHARACTER", it);
         for (int j : getOutputSlots()) {
-            if (inv.getItemInSlot(j) == null) {
+            if (inv.getInventory().getItem(j) == null) {
                 inv.consumeItem(10, 1);
                 inv.consumeItem(13, 1);
                 inv.consumeItem(16, 1);

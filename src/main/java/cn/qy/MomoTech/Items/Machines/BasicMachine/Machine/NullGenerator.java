@@ -4,7 +4,6 @@ import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.MachineUtils;
-import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -61,7 +60,7 @@ public class NullGenerator extends AbstractGUI implements RecipeDisplayItem {
             stack.setAmount(8);
             return new Pair<>(stack,()->item.setAmount(amount-1));
         },false);
-//        if (inv.getItemInSlot(0) == null) return;
+//        if (inv.getInventory().getItem(0) == null) return;
 //        if (Utils.checkOutput(inv, getOutputSlots())) return;
 //        inv.consumeItem(0, 1);
 //        inv.pushItem(new SlimefunItemStack(MomotechItem.empty_shell, 8), getOutputSlots());

@@ -3,7 +3,6 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 import cn.qy.MomoTech.Exceptions;
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractGUI;
-import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.utils.NumberCombinator;
 import cn.qy.MomoTech.utils.Utils;
@@ -13,7 +12,6 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -90,11 +88,11 @@ public class Incrementer extends AbstractGUI implements RecipeDisplayItem {
     }
 
     protected void findNextRecipe(BlockMenu inv) {
-        if(inv.getItemInSlot(16)!=null){
+        if(inv.getInventory().getItem(16)!=null){
             return;
         }
-        ItemStack it1 = inv.getItemInSlot(getInputSlots()[0]),
-                it2 = inv.getItemInSlot(getInputSlots()[1]);
+        ItemStack it1 = inv.getInventory().getItem(getInputSlots()[0]),
+                it2 = inv.getInventory().getItem(getInputSlots()[1]);
         if(it1==null||it2==null){
             return;
         }

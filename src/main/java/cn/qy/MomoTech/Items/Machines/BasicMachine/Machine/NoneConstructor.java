@@ -14,7 +14,6 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
-
 import java.util.*;
 
 public class NoneConstructor extends AbstractGUI implements RecipeDisplayItem {
@@ -58,7 +57,7 @@ public class NoneConstructor extends AbstractGUI implements RecipeDisplayItem {
     protected void findNextRecipe(BlockMenu inv) {
         if (Utils.checkOutput(inv, getOutputSlots())) return;
         int[] inputSlots=getInputSlots();
-        ItemStack[] stacks= Arrays.stream(inputSlots).mapToObj(inv::getItemInSlot).toArray(ItemStack[]::new);
+        ItemStack[] stacks= Arrays.stream(inputSlots).mapToObj(slot -> inv.getInventory().getItem(slot)).toArray(ItemStack[]::new);
         Material[] materials = new Material[stacks.length];
         ItemMeta[] metas=new ItemMeta[stacks.length];
         int[] amounts=new int[stacks.length];

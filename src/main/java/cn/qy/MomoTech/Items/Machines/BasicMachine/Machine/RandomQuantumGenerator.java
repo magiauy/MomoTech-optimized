@@ -1,7 +1,6 @@
 package cn.qy.MomoTech.Items.Machines.BasicMachine.Machine;
 
 import cn.qy.MomoTech.GUI.AbstractGUI;
-import cn.qy.MomoTech.Items.Items;
 import cn.qy.MomoTech.Items.MomotechItem;
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.utils.Maths;
@@ -10,6 +9,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
@@ -79,7 +79,7 @@ public class RandomQuantumGenerator extends AbstractGUI implements RecipeDisplay
         super.onPlace(e);
         Chunk chunk=e.getBlock().getChunk();
         ConcurrentHashMap<Location,BlockMenu> map= MACHINE_POSITION.getOrDefault(chunk,new ConcurrentHashMap<>());
-        map.put(e.getBlock().getLocation(), BlockStorage.getInventory(e.getBlock()));
+        map.put(e.getBlock().getLocation(), Slimefun.getDatabaseManager().getBlockDataController().getBlockData(e.getBlock().getLocation()).getBlockMenu());
         MACHINE_POSITION.put(chunk,map);
     }
     public void newMenuInstance(BlockMenu inv, Block b){
@@ -126,7 +126,7 @@ public class RandomQuantumGenerator extends AbstractGUI implements RecipeDisplay
     protected void tickTask(BlockMenu inv) {
         if(inv.hasViewer()){
             for (int i = 0; i <= 53; ++i) {
-                if (inv.getItemInSlot(i) != null) inv.consumeItem(i, inv.getItemInSlot(i).getAmount());
+                if (inv.getInventory().getItem(i) != null) inv.consumeItem(i, inv.getInventory().getItem(i).getAmount());
             }
             int i = Maths.GetRandom(53);
             inv.replaceExistingItem(i, MomotechItem.randomQuantum.clone());

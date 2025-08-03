@@ -15,8 +15,6 @@ import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.qy.MomoTech.Items.MomotechItem;
-
 public class InfinityResourceCondenser extends AContainer implements RecipeDisplayItem {
     public InfinityResourceCondenser(ItemGroup itemGroup, String id, ItemStack it, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, new SlimefunItemStack(id, it), recipeType, recipe);

@@ -1,10 +1,8 @@
 package cn.qy.MomoTech.utils;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
-import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
@@ -23,12 +21,12 @@ public class MachineUtils {
         ItemStack testInput;
         ItemStack testOutput;
         while(i<inputlen && j<outputlen){
-            testInput=inv.getItemInSlot(inputSlots[i]);
+            testInput=inv.getInventory().getItem(inputSlots[i]);
             if(testInput==null||!consumeCondition.test(testInput)){
                 i++;
                 continue;
             }
-            testOutput=inv.getItemInSlot(outputSlots[j]);
+            testOutput=inv.getInventory().getItem(outputSlots[j]);
             if(testOutput!=null){
                 j++;
                 continue;
@@ -50,7 +48,7 @@ public class MachineUtils {
     }
     public static boolean consumeAndPushSimple(BlockMenu inv,int[] inputSlot,int[] outputSlots,Function<ItemStack, Pair<ItemStack,Runnable>> recipeCondition,boolean returnAfterPushed ){
         for(int i=0;i<inputSlot.length;i++){
-            ItemStack itemToBeConsumed=inv.getItemInSlot(inputSlot[i]);
+            ItemStack itemToBeConsumed=inv.getInventory().getItem(inputSlot[i]);
             if(itemToBeConsumed!=null){
                 Pair<ItemStack,Runnable> re=recipeCondition.apply(itemToBeConsumed);
                 if(re!=null){

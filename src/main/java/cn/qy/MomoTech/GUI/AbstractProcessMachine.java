@@ -11,15 +11,13 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineProcessHolder;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockBreakHandler;
 import io.github.thebusybiscuit.slimefun4.core.machines.MachineProcessor;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.handlers.SimpleBlockBreakHandler;
-import io.github.thebusybiscuit.slimefun4.implementation.operations.CraftingOperation;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
-import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecipe;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.interfaces.InventoryBlock;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 import org.bukkit.Material;
@@ -31,7 +29,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 //TODO fix this piece of shit
 public abstract class AbstractProcessMachine extends SlimefunItem implements InventoryBlock, MachineProcessHolder<SimpleOperation> {
 
@@ -63,7 +60,7 @@ public abstract class AbstractProcessMachine extends SlimefunItem implements Inv
     protected BlockBreakHandler onBlockBreak() {
         return new SimpleBlockBreakHandler() {
             public void onBlockBreak(@NotNull Block b) {
-                BlockMenu inv = BlockStorage.getInventory(b);
+                BlockMenu inv = Slimefun.getDatabaseManager().getBlockDataController().getBlockData(b.getLocation()).getBlockMenu();
                 if (inv != null) {
                     inv.dropItems(b.getLocation(), cn.qy.MomoTech.GUI.AbstractProcessMachine.this.getInputSlots());
                     inv.dropItems(b.getLocation(), cn.qy.MomoTech.GUI.AbstractProcessMachine.this.getOutputSlots());
@@ -159,7 +156,7 @@ public abstract class AbstractProcessMachine extends SlimefunItem implements Inv
     }
 
     protected void tick(Block b) {
-        BlockMenu inv = BlockStorage.getInventory(b);
+        BlockMenu inv = Slimefun.getDatabaseManager().getBlockDataController().getBlockData(b.getLocation()).getBlockMenu();
         this.findNextRecipe(inv);
     }
 

@@ -2,7 +2,6 @@ package cn.qy.MomoTech.Items.Machines.BasicMachine.InfMachine;
 
 import cn.qy.MomoTech.MomoTech;
 import cn.qy.MomoTech.GUI.AbstractElectricGUI;
-import cn.qy.MomoTech.utils.MachineUtils;
 import cn.qy.MomoTech.utils.Maths;
 import cn.qy.MomoTech.utils.Utils;
 import io.github.thebusybiscuit.slimefun4.api.geo.GEOResource;
@@ -18,7 +17,6 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class HighspeedGeoMiner extends AbstractElectricGUI implements RecipeDisplayItem {
@@ -82,13 +80,13 @@ public class HighspeedGeoMiner extends AbstractElectricGUI implements RecipeDisp
     protected boolean findNextRecipe(BlockMenu inv) {
         if (Utils.checkOutput(inv, getOutputSlots())) return false;
         for (int i : getInputSlots()) {
-            ItemStack it = inv.getItemInSlot(i);
+            ItemStack it = inv.getInventory().getItem(i);
             if (it != null) {
                 if (it.getType()==Material.NETHERITE_PICKAXE&&!it.hasItemMeta()) {
                     List<ItemStack> item = getGeoResources();
                     ItemStack output = item.get(Maths.GetRandom(item.size() - 1));
                     for (int j : getOutputSlots()) {
-                        if (inv.getItemInSlot(j) == null) {
+                        if (inv.getInventory().getItem(j) == null) {
                             inv.pushItem(output.clone(), getOutputSlots());
                             it.setAmount(0);
                             return true;
